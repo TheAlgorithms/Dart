@@ -1,0 +1,10 @@
+language: dart
+dart:
+# Install the latest stable release
+- stable
+# Install the latest dev release
+- dev
+# Install a specific stable release - 1.15.0
+- "1.15.0"
+# Install a specific dev release, using a partial download URL - 1.16.0-dev.3.0
+- "dev/release/1.16.0-dev.3.0"
