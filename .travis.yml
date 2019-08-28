@@ -1,0 +1,17 @@
+language: dart
+dart:
+# Install the latest stable release
+- stable
+# Install the latest dev release
+- dev
+# Install a specific stable release - 1.15.0
+- "1.15.0"
+# Install a specific dev release, using a partial download URL - 1.16.0-dev.3.0
+- "dev/release/1.16.0-dev.3.0"
+dart_task:
+
+# As long as you don't want any other configuration, you can just use the name
+# of a task instead of "name: true".
+
+# Warnings are fatal, but we only analyze the lib/ directory.
+- dartanalyzer: --fatal-warnings lib
