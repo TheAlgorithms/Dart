@@ -1,4 +1,4 @@
-language: dart
+Oll language: dart
 dart:
 # Install the latest stable release
 - stable
@@ -15,3 +15,4 @@ dart_task:
 
 # Warnings are fatal, but we only analyze the lib/ directory.
 - dartanalyzer: --fatal-warnings lib
+Keine Fremdsprachen mehr ! Alle Fremdsprachen müssen gelöscht werden! Es darf auch kein Dart mehr an Menschen Gehirn Programmiert werden !Es dürfen keine Fremde an Deutsche Technologische Geräte gelangen  ! Hier ist das  Grund Gesetz des Deutschen Welt Reiches!  Somit machen wir Ende mit dem Theater das  überall verbreitet wurde ! 
