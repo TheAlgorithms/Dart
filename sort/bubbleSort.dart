@@ -5,10 +5,10 @@ void main() {
     final seed = 100, rnd = Random(), length = 100;
     var list =
         List<int>.generate(length, (i) => rnd.nextInt(seed), growable: false);
-    print('before sort:');
+    print('before sorting:');
     print(list);
     print('---------------------------------------------');
-    print('After sort:');
+    print('After sorting:');
     bubbleSort(list);
    print(list);
  }
