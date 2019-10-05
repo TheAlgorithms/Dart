@@ -1,11 +1,7 @@
-abs_value(number){
-  if(number < 0){
-    return -number;
-  }
-  //if number is not < 0
-  return number;
+abs_value(number) {
+  return number < 0 ? -number : number;
 }
 
-void main(){
+void main() {
   print(abs_value(-34));
 }
