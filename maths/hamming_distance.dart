@@ -36,4 +36,3 @@ void main() {
   dist = hamming_distance(stringA, stringB);
   print('Hamming Distance between $stringA and $stringB is $dist');
 }
-

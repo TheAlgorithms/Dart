@@ -1,4 +1,5 @@
 import 'dart:math' show Random;
+
 // quickSort
 // O(n*log n)
 void main() {
@@ -19,7 +20,7 @@ List<int> quickSort(List<int> a) {
     return a;
   } else {
     var pivot = a[0];
-    var less = <int>[]; 
+    var less = <int>[];
     var greater = <int>[];
     a.removeAt(0);
     for (var i in a) {
