@@ -1,16 +1,16 @@
-moveDisk(String fp, String tp){
+moveDisk(String fp, String tp) {
   print('moving disk from ' + fp + ' to ' + tp);
 }
 
-moveTower(int height, var fromPole, var toPole, var withPole){
-  if(height >= 1){
+moveTower(int height, var fromPole, var toPole, var withPole) {
+  if (height >= 1) {
     moveTower(height - 1, fromPole, withPole, fromPole);
-    moveDisk(fromPole,toPole);
+    moveDisk(fromPole, toPole);
     moveTower(height - 1, withPole, toPole, fromPole);
   }
 }
 
-void main(){
+void main() {
   int height = 3;
   moveTower(height, 'A', 'B', 'C');
   /*

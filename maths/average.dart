@@ -1,8 +1,8 @@
 //Find mean of a list of numbers.
 
-average(List numbers){
+average(List numbers) {
   var sum = 0;
-  for(var x in numbers){
+  for (var x in numbers) {
     sum += x;
   }
   var avg = sum / numbers.length;
@@ -10,6 +10,6 @@ average(List numbers){
   return avg;
 }
 
-void main(){
+void main() {
   average([2, 8, 6, 90, 60]);
 }
