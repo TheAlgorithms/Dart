@@ -1,4 +1,9 @@
-int binary_search(List a, int l, int r, int x) {
+import '../sort/test/utils.dart';
+
+int binary_search(List<int> a, int l, int r, int x) {
+
+  if(!isSorted(a)) throw new ArgumentError("Input list for binary search must be sorted.");
+
   if (r >= l) {
     int middle = (l + (r - l) / 2).toInt();
 
