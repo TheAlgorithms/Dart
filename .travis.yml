@@ -14,4 +14,4 @@ dart_task:
 # of a task instead of "name: true".
 
 # Warnings are fatal, but we only analyze the lib/ directory.
-- dartanalyzer: --fatal-warnings lib
+- dartanalyzer: --fatal-warnings .
