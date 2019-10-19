@@ -1,0 +1,6 @@
+name: The_Algorithms_Dart
+version: 1.0.0
+description: >-
+  All algorithms implemented in Dart (for education) These implementations are for learning purposes. They may be less efficient than the implementations in the Dart standard library.
+dev_dependencies:
+  test: ^1.9.2
