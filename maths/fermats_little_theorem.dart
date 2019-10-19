@@ -22,7 +22,4 @@ void main() {
 
   // using binary exponentiation function, O(log(p)):
   print((a / b) % p == (a * binary_exponentiation(b, p - 2, p)) % p);
-
-  // using Python operators:
-  print((a / b) % p == (a * b ^ (p - 2)) % p);
 }
