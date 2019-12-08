@@ -19,6 +19,9 @@ Chetan Kaushik
 &nbsp; [GitHub](https://github.com/dynamitechetan)
 &nbsp; [LinkedIn](https://www.linkedin.com/in/chetankaushik/)]
 
+## List of Algorithms
+See our [directory](https://github.com/TheAlgorithms/Dart/blob/master/DIRECTOPY.md)
+
 ## Community Channel
 
 We're on [Gitter](https://gitter.im/TheAlgorithms)! Please join us.
