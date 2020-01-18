@@ -23,6 +23,7 @@
   * [Palindrome number](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_number.dart)
   * [Palindrome string](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
+  * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/Pow.dart)
 
 ## Other
  * [Euclidean algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/gcd.dart)
