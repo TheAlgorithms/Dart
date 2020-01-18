@@ -20,7 +20,7 @@ Chetan Kaushik
 &nbsp; [LinkedIn](https://www.linkedin.com/in/chetankaushik/)]
 
 ## List of Algorithms
-See our [directory](https://github.com/TheAlgorithms/Dart/blob/master/DIRECTOPY.md)
+See our [directory](https://github.com/TheAlgorithms/Dart/blob/master/DIRECTORY.md)
 
 ## Community Channel
 
