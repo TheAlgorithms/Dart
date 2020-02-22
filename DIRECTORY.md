@@ -4,6 +4,8 @@
   * [Quick Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/quickSort.dart)
   * [Select Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/selectSort.dart)
   * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shellSort.dart)
+  * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heapSort.dart)
+
   
 ## Search
   * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binarySearch.dart)
