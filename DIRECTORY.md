@@ -1,4 +1,5 @@
 ## Sorts
+
   * [Bubble Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/bubbleSort.dart)
   * [Insert Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/insertSort.dart)
   * [Quick Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/quickSort.dart)
@@ -8,11 +9,16 @@
 
   
 ## Search
+
   * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binarySearch.dart)
   * [Jump Search](https://github.com/TheAlgorithms/Dart/blob/master/search/jumpSearch.dart)
   * [Linear Search](https://github.com/TheAlgorithms/Dart/blob/master/search/linearSearch.dart)
+  * [Ternary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/ternarySearch.dart)
+  * [Fibonacci Search](https://github.com/TheAlgorithms/Dart/blob/master/search/fibonacciSearch.dart)
+  
   
 ## Maths
+
   * [abs](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs.dart)
   * [abs_max](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_max.dart)
   * [abs_min](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_min.dart)
@@ -26,8 +32,11 @@
   * [Palindrome string](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/Pow.dart)
+  * [Simpson rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
+  * [Symmetric derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
 
 ## Other
+
  * [Euclidean algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/gcd.dart)
  * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
-  
+ * [Collatz](https://github.com/TheAlgorithms/Dart/blob/master/other/collatz.dart)
