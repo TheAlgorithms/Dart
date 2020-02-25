@@ -34,9 +34,16 @@
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/Pow.dart)
   * [Simpson rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Symmetric derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
+  
+## Graphs
+
+  * [Nearest Neighbour](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
 
 ## Other
 
  * [Euclidean algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/gcd.dart)
  * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
  * [Collatz](https://github.com/TheAlgorithms/Dart/blob/master/other/collatz.dart)
+ * [LCM](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
+ * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
+ * [Haversine Formula](https://github.com/TheAlgorithms/Dart/blob/master/other/haversine_formula.dart)
