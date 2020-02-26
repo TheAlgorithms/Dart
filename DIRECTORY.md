@@ -34,6 +34,7 @@
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/Pow.dart)
   * [Simpson rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Symmetric derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
+  * [Newton Method](https://github.com/TheAlgorithms/Dart/blob/master/maths/newton_method.dart)
   
 ## Graphs
 
@@ -47,3 +48,5 @@
  * [LCM](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
  * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
  * [Haversine Formula](https://github.com/TheAlgorithms/Dart/blob/master/other/haversine_formula.dart)
+ * [Heap Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/heap_algorithm.dart)
+ * [Fisher yates Shuffle](https://github.com/TheAlgorithms/Dart/blob/master/other/fisher_yates_shuffle.dart)
