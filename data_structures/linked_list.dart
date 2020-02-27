@@ -3,6 +3,7 @@ class Node<T> {
   T value;
 
   Node(this.value);
+  Node.before(this.next, this.value);
 }
 
 class LinkedListIterator<T> extends Iterator<T> {
@@ -51,6 +52,23 @@ class LinkedList<T> extends Iterable<T> {
     }
   }
 
+  T pop() {
+    if (this._head != null) {
+      T value = this._head.value;
+      this._head = this._head.next;
+      this._length--;
+
+      return value;
+    }
+    
+    return null;
+  }
+
+  void push(T item) {
+    this._head = new Node.before(this._head, item);
+    this._length++;
+  }
+
   void add(T item) {
     if (this._head == null) {
       this._head = new Node(item);
@@ -84,4 +102,17 @@ main(List<String> args) {
   print(linkedList.join(", ") + " size=${linkedList.length}");
   linkedList.remove(4);
   print(linkedList.join(", ") + " size=${linkedList.length}");
+
+  LinkedList<double> stack = new LinkedList();
+  stack.push(2);
+  stack.push(4);
+  stack.push(6);
+
+  print(stack.join(", ") + " size=${stack.length}");
+  stack.pop();
+  print(stack.join(", ") + " size=${stack.length}");
+  stack.pop();
+  stack.pop();
+  stack.pop();
+  print(stack.join(", ") + " size=${stack.length}");
 }
