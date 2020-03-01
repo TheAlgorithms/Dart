@@ -15,7 +15,7 @@
   * [Linear Search](https://github.com/TheAlgorithms/Dart/blob/master/search/linearSearch.dart)
   * [Ternary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/ternarySearch.dart)
   * [Fibonacci Search](https://github.com/TheAlgorithms/Dart/blob/master/search/fibonacciSearch.dart)
-  * [](https://github.com/TheAlgorithms/Dart/blob/master/search/interpolationSearch.dart)
+  * [Interpolation Search](https://github.com/TheAlgorithms/Dart/blob/master/search/interpolationSearch.dart)
   
   
 ## Maths
