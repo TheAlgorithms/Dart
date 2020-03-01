@@ -15,6 +15,7 @@
   * [Linear Search](https://github.com/TheAlgorithms/Dart/blob/master/search/linearSearch.dart)
   * [Ternary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/ternarySearch.dart)
   * [Fibonacci Search](https://github.com/TheAlgorithms/Dart/blob/master/search/fibonacciSearch.dart)
+  * [](https://github.com/TheAlgorithms/Dart/blob/master/search/interpolationSearch.dart)
   
   
 ## Maths
@@ -35,10 +36,15 @@
   * [Simpson rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Symmetric derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
   * [Newton Method](https://github.com/TheAlgorithms/Dart/blob/master/maths/newton_method.dart)
+  * [LU Decomposition](https://github.com/TheAlgorithms/Dart/blob/master/maths/lu_decomposition.dart)
   
 ## Graphs
 
   * [Nearest Neighbour](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
+
+## Data_Structures
+
+  * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
 
 ## Other
 
@@ -48,5 +54,5 @@
  * [LCM](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
  * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
  * [Haversine Formula](https://github.com/TheAlgorithms/Dart/blob/master/other/haversine_formula.dart)
- * [Heap Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/heap_algorithm.dart)
+ * [Heaps Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/heaps_algorithm.dart)
  * [Fisher yates Shuffle](https://github.com/TheAlgorithms/Dart/blob/master/other/fisher_yates_shuffle.dart)
