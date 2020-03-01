@@ -37,4 +37,4 @@ Please read our [CONTRIBUTING.md](https://github.com/TheAlgorithms/Dart/blob/mas
 
 ## License
 
-MIT
+[MIT](https://github.com/markaster/Dart/blob/master/LICENSE)
