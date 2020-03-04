@@ -1,8 +1,6 @@
 import 'dart:math';
 
-double sinh(double x) => pow(e, x) - pow(e, -x) / 2;
-
-/// Approximation for gamma([x] + 1) discovered by Srinivasa Ramanujanea
+/// Approximation for gamma(x + 1) discovered by Srinivasa Ramanujanea
 double factorial(double x) {
   return sqrt(pi) *
       pow(x / e, x) *
