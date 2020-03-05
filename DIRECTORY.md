@@ -6,6 +6,7 @@
   * [Select Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/selectSort.dart)
   * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shellSort.dart)
   * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heapSort.dart)
+  * [Gnome Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/gnomeSort.dart)
 
   
 ## Search
@@ -37,6 +38,7 @@
   * [Symmetric derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
   * [Newton Method](https://github.com/TheAlgorithms/Dart/blob/master/maths/newton_method.dart)
   * [LU Decomposition](https://github.com/TheAlgorithms/Dart/blob/master/maths/lu_decomposition.dart)
+  * [Factorial Approximation](https://github.com/TheAlgorithms/Dart/blob/master/maths/factorial_approximation.dart)
   
 ## Graphs
 
@@ -45,6 +47,15 @@
 ## Data_Structures
 
   * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
+  * HashMap
+    * [Hashing](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/HashMap/Hashing.dart)
+  * Binary Tree
+    * [Basic Binary Tree](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/binary_tree/basic_binary_tree.dart)
+  
+
+## Conversions
+
+  * [DecimalToBinary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/DecimalToBinary.dart)
 
 ## Other
 
