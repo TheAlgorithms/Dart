@@ -7,6 +7,7 @@
   * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shellSort.dart)
   * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heapSort.dart)
   * [Gnome Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/gnomeSort.dart)
+  * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/timSort.dart)
 
   
 ## Search
