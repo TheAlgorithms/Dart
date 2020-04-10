@@ -31,7 +31,7 @@ See our [directory](https://github.com/TheAlgorithms/Dart/blob/master/DIRECTORY.
 
 We're on [Gitter](https://gitter.im/TheAlgorithms)! Please join us.
 
-## contribution
+## Contribution
 
 Please read our [CONTRIBUTING.md](https://github.com/TheAlgorithms/Dart/blob/master/CONTRIBUTING.md).
 
