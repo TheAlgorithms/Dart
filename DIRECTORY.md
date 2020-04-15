@@ -1,6 +1,6 @@
 
 ## Conversions
-  * [Decimaltobinary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/DecimalToBinary.dart)
+  * [Decimal To Binary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Decimal_To_Binary.dart)
 
 ## Data Structures
   * Binary Tree
@@ -48,20 +48,20 @@
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
 
 ## Search
+  * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_Search.dart)
   * [Binary Search Recursion](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_search_recursion.dart)
-  * [Binarysearch](https://github.com/TheAlgorithms/Dart/blob/master/search/binarySearch.dart)
-  * [Fibonaccisearch](https://github.com/TheAlgorithms/Dart/blob/master/search/fibonacciSearch.dart)
-  * [Interpolationsearch](https://github.com/TheAlgorithms/Dart/blob/master/search/interpolationSearch.dart)
-  * [Jumpsearch](https://github.com/TheAlgorithms/Dart/blob/master/search/jumpSearch.dart)
-  * [Linearsearch](https://github.com/TheAlgorithms/Dart/blob/master/search/linearSearch.dart)
-  * [Ternarysearch](https://github.com/TheAlgorithms/Dart/blob/master/search/ternarySearch.dart)
+  * [Fibonacci Search](https://github.com/TheAlgorithms/Dart/blob/master/search/fibonacci_Search.dart)
+  * [Interpolation Search](https://github.com/TheAlgorithms/Dart/blob/master/search/interpolation_Search.dart)
+  * [Jump Search](https://github.com/TheAlgorithms/Dart/blob/master/search/jump_Search.dart)
+  * [Linear Search](https://github.com/TheAlgorithms/Dart/blob/master/search/linear_Search.dart)
+  * [Ternary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/ternary_Search.dart)
 
 ## Sort
-  * [Bubblesort](https://github.com/TheAlgorithms/Dart/blob/master/sort/bubbleSort.dart)
-  * [Gnomesort](https://github.com/TheAlgorithms/Dart/blob/master/sort/gnomeSort.dart)
-  * [Heapsort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heapSort.dart)
-  * [Insertsort](https://github.com/TheAlgorithms/Dart/blob/master/sort/insertSort.dart)
-  * [Quicksort](https://github.com/TheAlgorithms/Dart/blob/master/sort/quickSort.dart)
-  * [Selectsort](https://github.com/TheAlgorithms/Dart/blob/master/sort/selectSort.dart)
-  * [Shellsort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shellSort.dart)
-  * [Timsort](https://github.com/TheAlgorithms/Dart/blob/master/sort/timSort.dart)
+  * [Bubble Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/bubble_Sort.dart)
+  * [Gnome Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/gnome_Sort.dart)
+  * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heap_Sort.dart)
+  * [Insert Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/insert_Sort.dart)
+  * [Quick Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/quick_Sort.dart)
+  * [Select Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/select_Sort.dart)
+  * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shell_Sort.dart)
+  * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/tim_Sort.dart)
