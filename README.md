@@ -20,8 +20,7 @@ Chetan Kaushik
 &nbsp; [LinkedIn](https://www.linkedin.com/in/chetankaushik/)]
 
 Shawn
-&nbsp; [[Gmail](stepfencurryxiao@gmail.com)
-&nbsp; [GitHub](https://github.com/stepfencurryxiao)]
+&nbsp; [[GitHub](https://github.com/StepfenShawn)]
 
 ## List of Algorithms
 
