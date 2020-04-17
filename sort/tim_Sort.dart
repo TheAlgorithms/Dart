@@ -51,7 +51,7 @@ void merge(List list, int left, int middle, int right) {
 }
 
 void timSort(List list, int n) {
-  for (int i = 0; i < n; i+=RUN) {
+  for (int i = 0; i < n; i += RUN) {
     insertionSort(list, i, min((i+31), n-1));
   }
 
@@ -62,4 +62,12 @@ void timSort(List list, int n) {
       merge(list, left, middle, right);
     }
   }
+}
+
+void main(){
+  //Get the array
+  List arr = [12,213,45,9,107];
+  print("Before sorting: $arr\n");
+  timSort(arr,arr.length);
+  print("After sorting: $arr");
 }
