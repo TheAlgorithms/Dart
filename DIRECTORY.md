@@ -11,8 +11,11 @@
     * Binary Heap
       * [Min Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Min_Heap.dart)
   * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
+  * Queue
+    * [List Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/List_Queue.dart)
   * Stack
     * [Array Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Array_Stack.dart)
+    * [Linked List Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Linked_List_Stack.dart)
 
 ## Graphs
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
