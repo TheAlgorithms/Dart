@@ -7,7 +7,12 @@
     * [Basic Binary Tree](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/binary_tree/basic_binary_tree.dart)
   * Hashmap
     * [Hashing](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/HashMap/Hashing.dart)
+  * Heap
+    * Binary Heap
+      * [Min Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Min_Heap.dart)
   * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
+  * Stack
+    * [Array Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Array_Stack.dart)
 
 ## Graphs
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
