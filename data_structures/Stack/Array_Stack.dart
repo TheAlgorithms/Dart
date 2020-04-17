@@ -1,9 +1,9 @@
 //Author: Shawn
 //Email: stepfencurryxiao@gmail.com
 
-class ArrayStack{
+class ArrayStack<T>{
   //stack
-  List stack;
+  List<T> stack;
   //element of the stack
   int count;
   //size of stack
@@ -12,12 +12,12 @@ class ArrayStack{
   //Init the array stack
   ArrayStack(var n){
     this.n = n;
-    this.stack = new List(n);
+    this.stack = new List<T>(n);
     this.count = 0;
   }
   
   //Push a item to the stack
-  void push(String item){
+  void push(T item){
     if(count == n){
       print("The stack is full\n");
     }
@@ -26,11 +26,12 @@ class ArrayStack{
   }
   
   //Pop a item from the stack
-  String pop(){
+  T pop(){
     if(count == 0){
       print("No data in the stack!\n");
     }
-    String pop_data = stack[count - 1];
+    T pop_data = stack[count - 1];
+    stack[count - 1] = null;
     count--;
     return pop_data;
   }
@@ -41,7 +42,7 @@ class ArrayStack{
 }
 
 void main(){
-  ArrayStack array_stack = new ArrayStack(6);
+  ArrayStack<String> array_stack = new ArrayStack<String>(6);
   
   array_stack.push('1');
   array_stack.push("2");
@@ -57,4 +58,6 @@ void main(){
   print("Pop $pop_data from stack\n");
   pop_data = array_stack.pop();
   print("Pop $pop_data from stack\n");
+  print("Now the stock:");
+   array_stack.Display();
 }
