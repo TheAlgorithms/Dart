@@ -13,7 +13,7 @@
  * Array:[1,2,3,5,4,6,7,8,9]
  * 
  * rightchild : 2n + 1
- * leftcgild : 2n + 1
+ * leftcgild : 2n + 2
 */
 
 List upAdjust(List arr,int length){
