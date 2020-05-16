@@ -1,5 +1,6 @@
 # The Algorithms - Dart 
 
+[![Build Status](https://travis-ci.com/TheAlgorithms/Dart.svg?branch=master)](https://travis-ci.com/TheAlgorithms/Dart)
 [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/TheAlgorithms/100) &nbsp;
 [![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/TheAlgorithms) &nbsp;
 
