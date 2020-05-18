@@ -22,9 +22,9 @@ int hamming_distance(String stringA, String stringB) {
 }
 
 void main() {
-  var stringA;
-  var stringB;
-  var dist;
+  String stringA;
+  String stringB;
+  int dist;
 
   stringA = 'karolin';
   stringB = 'kathrin';
