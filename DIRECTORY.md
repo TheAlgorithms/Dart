@@ -1,6 +1,7 @@
 
 ## Conversions
   * [Decimal To Binary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Decimal_To_Binary.dart)
+  * [Integer To Roman](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Integer_To_Roman.dart)
 
 ## Data Structures
   * Binary Tree
