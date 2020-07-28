@@ -41,7 +41,7 @@
   * [Palindrome Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_number.dart)
   * [Palindrome String](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string.dart)
   * [Palindrome String Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string_recursion.dart)
-  * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/Pow.dart)
+  * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/pow.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
   * [Simpson Rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Symmetric Derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
