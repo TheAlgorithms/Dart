@@ -18,15 +18,15 @@ int binary_search(List a, int l, int r, int x) {
 }
 
 void main() {
-  var list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
-  var x = 55;
+  List list = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+  int x = 55;
   int n = list.length;
-  var index = binary_search(list, 0, n - 1, x);
+  int index = binary_search(list, 0, n - 1, x);
   print('list:');
   print(list);
   if (index != -1) {
-    print(x.toString() + ' found at positions: ' + index.toString());
+    print('$x found at positions: $index');
   } else {
-    print(x.toString() + ' Not found');
+    print('$x Not found');
   }
 }
