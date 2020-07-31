@@ -57,6 +57,10 @@
   * [Lcm](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
 
+## Project Euler
+  * Problem 1
+    * [Sol1](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_1/sol1.dart)
+
 ## Search
   * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_Search.dart)
   * [Binary Search Recursion](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_search_recursion.dart)
