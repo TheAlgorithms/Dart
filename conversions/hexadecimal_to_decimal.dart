@@ -19,8 +19,8 @@ int hexadecimal_to_decimal(String hex_string) {
   if (hex_string == null || hex_string == "") {
     throw Exception("An empty value was passed to the function");
   }
-  bool isNegative = hex_string[0] == "-";
-  if (isNegative) hex_string = hex_string.substring(1);
+  bool is_negative = hex_string[0] == "-";
+  if (is_negative) hex_string = hex_string.substring(1);
   int decimal_val = 0;
   for (int i = 0; i < hex_string.length; i++) {
     if (int.parse(hex_string[i], onError: (e) => null) == null &&
@@ -31,5 +31,5 @@ int hexadecimal_to_decimal(String hex_string) {
           int.parse((hex_string[i]), onError: (e) => hex_table[hex_string[i]]);
     }
   }
-  return isNegative ? -1 * decimal_val : decimal_val;
+  return is_negative ? -1 * decimal_val : decimal_val;
 }
