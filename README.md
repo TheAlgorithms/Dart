@@ -112,6 +112,36 @@ Comparing the complexity of sorting algorithms (Bubble Sort, Insertion Sort, Sel
 
 [Complexity Graphs](https://github.com/prateekiiest/Python/blob/master/sorts/sortinggraphs.png)
 
+[bubble-toptal]: https://www.toptal.com/developers/sorting-algorithms/bubble-sort
+[bubble-wiki]: https://en.wikipedia.org/wiki/Bubble_sort
+[bubble-image]: https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Bubblesort-edited-color.svg/220px-Bubblesort-edited-color.svg.png "Bubble Sort"
+
+[insertion-toptal]: https://www.toptal.com/developers/sorting-algorithms/insertion-sort
+[insertion-wiki]: https://en.wikipedia.org/wiki/Insertion_sort
+[insertion-image]: https://upload.wikimedia.org/wikipedia/commons/7/7e/Insertionsort-edited.png "Insertion Sort"
+
+[quick-toptal]: https://www.toptal.com/developers/sorting-algorithms/quick-sort
+[quick-wiki]: https://en.wikipedia.org/wiki/Quicksort
+[quick-image]: https://upload.wikimedia.org/wikipedia/commons/6/6a/Sorting_quicksort_anim.gif "Quick Sort"
+
+[merge-toptal]: https://www.toptal.com/developers/sorting-algorithms/merge-sort
+[merge-wiki]: https://en.wikipedia.org/wiki/Merge_sort
+[merge-image]: https://upload.wikimedia.org/wikipedia/commons/c/cc/Merge-sort-example-300px.gif "Merge Sort"
+
+[selection-toptal]: https://www.toptal.com/developers/sorting-algorithms/selection-sort
+[selection-wiki]: https://en.wikipedia.org/wiki/Selection_sort
+[selection-image]: https://upload.wikimedia.org/wikipedia/commons/thumb/b/b0/Selection_sort_animation.gif/250px-Selection_sort_animation.gif "Selection Sort Sort"
+
+[shell-toptal]: https://www.toptal.com/developers/sorting-algorithms/shell-sort
+[shell-wiki]: https://en.wikipedia.org/wiki/Shellsort
+[shell-image]: https://upload.wikimedia.org/wikipedia/commons/d/d8/Sorting_shellsort_anim.gif "Shell Sort"
+
+[linear-wiki]: https://en.wikipedia.org/wiki/Linear_search
+[linear-image]: http://www.tutorialspoint.com/data_structures_algorithms/images/linear_search.gif
+
+[binary-wiki]: https://en.wikipedia.org/wiki/Binary_search_algorithm
+[binary-image]: https://upload.wikimedia.org/wikipedia/commons/f/f7/Binary_search_into_array.png
+
 ----------------------------------------------------------------------------------
 
 ## Community Channel
