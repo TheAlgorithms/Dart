@@ -1,4 +1,5 @@
-//Convert a positive Decimal Number to Any Other Representation
+//Convert a Decimal Number to Any Other Representation
+//https://en.wikipedia.org/wiki/Positional_notation#Base_conversion
 
 void main() {
   print(decimal_to_any(0, 2)); //Expected '0'
