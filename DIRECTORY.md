@@ -50,6 +50,7 @@
   * [Sigmoid](https://github.com/TheAlgorithms/Dart/blob/master/maths/sigmoid.dart)
   * [Simpson Rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Symmetric Derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
+  * [Sieve of Eratosthenes](https://github.com/TheAlgorithms/Dart/blob/master/maths/sieve_of_eratosthenes.dart)
 
 ## Other
   * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
