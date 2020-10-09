@@ -30,6 +30,7 @@
   * [Abs Max](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_max.dart)
   * [Abs Min](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_min.dart)
   * [Average](https://github.com/TheAlgorithms/Dart/blob/master/maths/average.dart)
+  * [Eulers Totient](https://github.com/TheAlgorithms/Dart/blob/master/maths/eulers_totient.dart)
   * [Factorial](https://github.com/TheAlgorithms/Dart/blob/master/maths/factorial.dart)
   * [Factorial Approximation](https://github.com/TheAlgorithms/Dart/blob/master/maths/factorial_approximation.dart)
   * [Factorial Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/factorial_recursion.dart)
@@ -48,11 +49,10 @@
   * [Palindrome String Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string_recursion.dart)
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/pow.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
+  * [Sieve Of Eratosthenes](https://github.com/TheAlgorithms/Dart/blob/master/maths/sieve_of_eratosthenes.dart)
   * [Sigmoid](https://github.com/TheAlgorithms/Dart/blob/master/maths/sigmoid.dart)
   * [Simpson Rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Symmetric Derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
-  * [Sieve of Eratosthenes](https://github.com/TheAlgorithms/Dart/blob/master/maths/sieve_of_eratosthenes.dart)
-  * [Euler's totient function](https://github.com/TheAlgorithms/Dart/blob/master/maths/eulers_totient.dart)
 
 ## Other
   * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
