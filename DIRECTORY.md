@@ -58,6 +58,7 @@
 
 ## Other
   * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
+  * [Binpow](https://github.com/TheAlgorithms/Dart/blob/master/other/binpow.dart)
   * [Collatz](https://github.com/TheAlgorithms/Dart/blob/master/other/collatz.dart)
   * [Fisher Yates Shuffle](https://github.com/TheAlgorithms/Dart/blob/master/other/fisher_yates_shuffle.dart)
   * [Fizzbuzz](https://github.com/TheAlgorithms/Dart/blob/master/other/FizzBuzz.dart)
