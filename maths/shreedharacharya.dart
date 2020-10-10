@@ -5,7 +5,7 @@ import 'dart:math';
 List shreedharacharya(double a,double b,double c) 
 {
   double d = b*b - 4*a*c;
-  List A=[0,0];
+  List A= [];
   if(d<0)
   {
     print('Imaginary roots');
