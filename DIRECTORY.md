@@ -48,6 +48,7 @@
   * [Palindrome Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_number.dart)
   * [Palindrome String](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string.dart)
   * [Palindrome String Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string_recursion.dart)
+  * [Perfect Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/perfect_number.dart)
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/pow.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
   * [Sieve Of Eratosthenes](https://github.com/TheAlgorithms/Dart/blob/master/maths/sieve_of_eratosthenes.dart)
