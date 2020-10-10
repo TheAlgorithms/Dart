@@ -11,7 +11,7 @@ List shreedharacharya(double a,double b,double c)
     print('Imaginary roots');
   }
   else{
-    A[0] = (-b + pow(d,0.5))/(2*a);
+   A.add((-b + sqrt(d))/(2*a));
     A[1] = (-b - pow(d,0.5))/(2*a);
     return A;
   }
