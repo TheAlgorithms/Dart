@@ -43,6 +43,7 @@
   * [Find Min](https://github.com/TheAlgorithms/Dart/blob/master/maths/find_min.dart)
   * [Find Min Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/find_min_recursion.dart)
   * [Hamming Distance](https://github.com/TheAlgorithms/Dart/blob/master/maths/hamming_distance.dart)
+  * [Lineardiophantineeqn](https://github.com/TheAlgorithms/Dart/blob/master/maths/LinearDiophantineEqn.dart)
   * [Lu Decomposition](https://github.com/TheAlgorithms/Dart/blob/master/maths/lu_decomposition.dart)
   * [Newton Method](https://github.com/TheAlgorithms/Dart/blob/master/maths/newton_method.dart)
   * [Palindrome Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_number.dart)
