@@ -67,7 +67,6 @@
   * [Kadanealgo](https://github.com/TheAlgorithms/Dart/blob/master/other/kadaneAlgo.dart)
   * [Lcm](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
-  * [Kadane's Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/kadaneAlgo.dart)
 
 ## Project Euler
   * Problem 1
