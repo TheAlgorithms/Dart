@@ -9,18 +9,21 @@ List shreedharacharya(double a,double b,double c)
   if(d<0)
   {
     print('Imaginary roots');
+    A=[null,null];
+  }
+  else if(d==0){
+    A.add(-b/(2*a));
+    A.add(-b/(2*a));
   }
   else{
    A.add((-b + sqrt(d))/(2*a));
     A.add((-b - sqrt(d))/(2*a));
-    return A;
   }
-  
+  return A;
 }
 void main()
 {
-  double a=1.00,b=0.00,c=-4.00;
+  double a=1.00,b=-4.00,c=4.00;
     List p=shreedharacharya(a,b,c);
-  print(p);
-  
+  print(p); 
 }
