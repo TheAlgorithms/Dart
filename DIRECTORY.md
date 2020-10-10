@@ -64,6 +64,7 @@
   * [Gcd](https://github.com/TheAlgorithms/Dart/blob/master/other/gcd.dart)
   * [Haversine Formula](https://github.com/TheAlgorithms/Dart/blob/master/other/haversine_formula.dart)
   * [Heaps Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/heaps_algorithm.dart)
+  * [Kadanealgo](https://github.com/TheAlgorithms/Dart/blob/master/other/kadaneAlgo.dart)
   * [Lcm](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
 
