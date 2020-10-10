@@ -88,6 +88,7 @@
 
 ## Sort
   * [Bubble Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/bubble_Sort.dart)
+  * [Comb Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/comb_sort.dart)
   * [Gnome Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/gnome_Sort.dart)
   * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heap_Sort.dart)
   * [Insert Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/insert_Sort.dart)
