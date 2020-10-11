@@ -9,7 +9,6 @@ List shreedharacharya(double a,double b,double c)
   if(d<0)
   {
     print('Imaginary roots');
-    A=[null,null];
   }
   else if(d==0){
     A.add(-b/(2*a));
