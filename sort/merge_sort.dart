@@ -45,3 +45,15 @@ void mergeSort(List list, int lIndex, int rIndex) {
     merge(list, lIndex, mIndex, rIndex); 
   }
 }
+
+
+
+void main() {
+  var list = [3, 4, 2, 5, 1, 6]; // dummy array
+  print('Before sorting:');
+  print(list);
+  print('--------------------------------------');
+  print('After sorting:');
+  mergeSort(list,0,5);
+  print(list);
+}
