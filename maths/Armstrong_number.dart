@@ -11,12 +11,7 @@ bool Armstrong_no(var x)
     sum = sum + pow(r,d);
     n=n~/10;
   }
-  if(sum == x){
-    print('yes');
-  }
-  else{
-    print('no');
-  }
+  return sum == x;
 }
 void main(){
   
