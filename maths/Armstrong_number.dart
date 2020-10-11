@@ -14,8 +14,15 @@ bool Armstrong_no(var x)
   return sum == x;
 }
 void main(){
-  
-  var x  = 10;
-  Armstrong_no(x);
-  
+  for (var x in [0, 10, 370, 371])
+  {
+    if (Armstrong_no(x))
+    {
+      print("${x} is armstrong number");
+    }
+    else
+    {
+      print("${x} is not Armstrong number");
+    }
+  }
 }
