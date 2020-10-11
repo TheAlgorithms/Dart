@@ -83,6 +83,8 @@
     * [Sol4](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_4/sol4.dart)
   * Problem 5
     * [Sol5](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_5/sol5.dart)
+  * Problem 6
+    * [Sol6](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_6/sol6.dart)
 
 ## Search
   * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_Search.dart)
