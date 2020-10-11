@@ -1,3 +1,5 @@
+import 'dart:math' show Random;
+
 void merge(List list, int lIndex, int mIndex, int rIndex) {
   int lSize = mIndex - lIndex + 1;
   int rSize = rIndex - mIndex;
@@ -42,12 +44,9 @@ void mergeSort(List list, int lIndex, int rIndex) {
     mergeSort(list, lIndex, mIndex); // sorts the first half of the list
     mergeSort(list, mIndex + 1, rIndex); // sorts the second half of the list
 
-    merge(list, lIndex, mIndex, rIndex); 
+    merge(list, lIndex, mIndex, rIndex);
   }
 }
-
-
-import 'dart:math' show Random;
 
 void main() {
   final seed = 100, rnd = Random(), length = 100;
@@ -57,6 +56,6 @@ void main() {
   print(list);
   print('--------------------------------------');
   print('After sorting:');
-  mergeSort(list);
+  mergeSort(list, 0, list.length - 1);
   print(list);
 }
