@@ -19,6 +19,7 @@
   * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
   * Queue
     * [List Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/List_Queue.dart)
+    * [Priority Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/Priority_Queue.dart)
   * Stack
     * [Array Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Array_Stack.dart)
     * [Linked List Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Linked_List_Stack.dart)
