@@ -13,7 +13,6 @@ List shreedharacharya(double a,double b,double c)
   }
   else if(d==0){
     A.add(-b/(2*a));
-    A.add(-b/(2*a));
   }
   else{
    A.add((-b + sqrt(d))/(2*a));
