@@ -1,5 +1,5 @@
 import 'dart:math';
-void Armstrong_no(var x)
+bool Armstrong_no(var x)
 {
   var n=x;
   var s =n.toString();
