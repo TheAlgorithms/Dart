@@ -53,6 +53,7 @@
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/pow.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
   * [Relu Function](https://github.com/TheAlgorithms/Dart/blob/master/maths/relu_function.dart)
+  * [Shreedharacharya](https://github.com/TheAlgorithms/Dart/blob/master/maths/shreedharacharya.dart)
   * [Sieve Of Eratosthenes](https://github.com/TheAlgorithms/Dart/blob/master/maths/sieve_of_eratosthenes.dart)
   * [Sigmoid](https://github.com/TheAlgorithms/Dart/blob/master/maths/sigmoid.dart)
   * [Simpson Rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
