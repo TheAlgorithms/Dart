@@ -60,3 +60,18 @@ class QueueItem<T> {
     return '$item - $priority';
   }
 }
+
+void main()
+{
+  PriorityQueue<int> queue = new PriorityQueue();
+  queue.enqueue(1, 2);
+  queue.enqueue(2, 1);
+  queue.enqueue(3, 3);
+  queue.enqueue(4, 2);
+  
+  
+  print(queue.dequeue());
+  print(queue.dequeue());
+  print(queue.dequeue());
+  print(queue.dequeue());
+}
