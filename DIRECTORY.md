@@ -30,6 +30,7 @@
   * [Abs](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs.dart)
   * [Abs Max](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_max.dart)
   * [Abs Min](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_min.dart)
+  * [Amicable Numbers](https://github.com/TheAlgorithms/Dart/blob/master/maths/amicable_numbers.dart)
   * [Armstrong Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/Armstrong_number.dart)
   * [Average](https://github.com/TheAlgorithms/Dart/blob/master/maths/average.dart)
   * [Eulers Totient](https://github.com/TheAlgorithms/Dart/blob/master/maths/eulers_totient.dart)
