@@ -78,6 +78,8 @@
 ## Project Euler
   * Problem 1
     * [Sol1](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_1/sol1.dart)
+  * Problem 13
+    * [Sol13](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_13/sol13.dart)
   * Problem 2
     * [Sol2](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_2/sol2.dart)
   * Problem 3
