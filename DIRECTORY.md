@@ -92,6 +92,8 @@
     * [Sol7](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_7/sol7.dart)
   * Problem 8
     * [Sol8](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_8/sol8.dart)
+  * Problem 9
+    * [Sol9](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_9/sol9.dart)
 
 ## Search
   * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_Search.dart)
