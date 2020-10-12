@@ -94,6 +94,20 @@ __Properties__
 
 ###### View the algorithm in [action][selection-toptal]
 
+
+### Merge
+![alt text][merge-image]
+
+From [Wikipedia][merge-wiki]: Merge sort (also commonly spelled mergesort) is a divide and conquer algorithm that was invented by John von Neumann in 1945. The algorithm dirst divides the list into the smallest unit (1 element), then compares each element with the adjacent list to sort and merge the two adjacent lists. Finally all the elements are sorted and merged. It is an efficient, general-purpose, comparison-based sorting algorithm.
+
+__Properties__
+* Worst case performance    O(n log n)
+* Best case performance    O(n log n)
+* Average case performance    O(n log n)
+
+###### View the algorithm in [action][merge-toptal]
+
+
 ### Shell
 ![alt text][shell-image]
 
