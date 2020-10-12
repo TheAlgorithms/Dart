@@ -1,8 +1,5 @@
 // Email : mau1361317@gmail.com
 
-
-import '../problem_9/sol9.dart';
-
 /**
  * [Problem 13](https://projecteuler.net/problem=13) solution
  * Work out the first ten digits of the sum of the following one-hundred 50-digit numbers.
