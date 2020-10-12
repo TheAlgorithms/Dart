@@ -9,7 +9,6 @@
  * There exists exactly one Pythagorean triplet for which a + b + c = 1000.
  * Find the product abc.
  */
-import 'dart:math';
 
 void main() {
   
@@ -19,6 +18,7 @@ void main() {
       if (i * i + j * j == k * k) {
         var sol = i * j * k;
         print("Solution :  $sol");
+        break;
       }
     }
   }
