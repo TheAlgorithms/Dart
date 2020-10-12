@@ -88,6 +88,8 @@
     * [Sol5](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_5/sol5.dart)
   * Problem 6
     * [Sol6](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_6/sol6.dart)
+  * Problem 7
+    * [Sol7](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_7/sol7.dart)
 
 ## Search
   * [Binary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/binary_Search.dart)
@@ -110,3 +112,6 @@
   * [Select Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/select_Sort.dart)
   * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shell_Sort.dart)
   * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/tim_Sort.dart)
+
+## Strings
+  * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
