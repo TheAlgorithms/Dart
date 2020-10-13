@@ -11,6 +11,7 @@ class Node<T> {
 
   /// The [value] the [Node] should store.
   T value;
+
   /// The directional edges it has to other nodes.
   List<Node<T>> edges;
 
@@ -32,24 +33,23 @@ class Node<T> {
   }
 
   @override
-  int get hashCode => value.hashCode^edges.hashCode;
+  int get hashCode => value.hashCode ^ edges.hashCode;
 }
 
 /// Can store a set of nodes that represent disjointed graphs as a single graph.
 class Graph<T> {
-
   /// Initialize graph with set of nodes from a [flattenedGraph].
   Graph.fromNodes(List<Node<T>> flattenedGraph) {
     _nodes = _mapFlattenedGraph(flattenedGraph);
   }
 
   /// Builds a graph from the provided [node].
-  Graph.build(Node<T> node, {initWithDfs =true}) {
+  Graph.build(Node<T> node, {initWithDfs = true}) {
     _nodes = _mapFlattenedGraph(flattenGraph(node, useDfs: initWithDfs));
   }
 
   /// Map of all nodes in the graph keyed with the value of the node.
-  Map<T,Node<T>> _nodes = {};
+  Map<T, Node<T>> _nodes = {};
 
   @override
   String toString() {
@@ -60,7 +60,8 @@ class Graph<T> {
 
   /// takes a graph that's flattened to a list of all it's [nodes] and maps
   /// the value of each node to that respective node. For faster reading.
-  Map<T, Node<T>> _mapFlattenedGraph(List<Node<T>> nodes, {bool reset = false}) {
+  Map<T, Node<T>> _mapFlattenedGraph(List<Node<T>> nodes,
+      {bool reset = false}) {
     final flatGraph = <T, Node<T>>{};
     nodes.forEach((node) => flatGraph[node.value] = node);
     return flatGraph;
@@ -117,7 +118,6 @@ class Graph<T> {
     useDfs ? dfs<E>(node, handler) : bfs<E>(node, handler);
   }
 
-
   /// Traverses the entire graph given a [node] and returns a list of all nodes
   /// found during traversal. If [useDfs] is true, which it defaults to,
   /// then the traversal will leverage Depth First Search; otherwise it will
@@ -156,13 +156,14 @@ class Graph<T> {
     var continueSearch = true; // initialize loop short-circuit.
     while (stack.isNotEmpty && continueSearch) {
       var nextNode = stack.removeLast(); // remove node from stack
-      continueSearch = nodeHandler(nextNode); // determine whether to short-circuit.
-      final unVisitedEdges = nextNode.edges.where( // get list of unVisited edge nodes.
-              (edge) => !visitedList.contains(edge)
-      ).toList();
+      continueSearch =
+          nodeHandler(nextNode); // determine whether to short-circuit.
+      final unVisitedEdges =
+          nextNode.edges.where(// get list of unVisited edge nodes.
+              (edge) => !visitedList.contains(edge)).toList();
       stack.addAll(unVisitedEdges
-        ..forEach((edge) => visitedList.add(edge))
-      ); // Push all unvisited nodes to stack and add them to the visited list.
+        ..forEach((edge) => visitedList.add(
+            edge))); // Push all unvisited nodes to stack and add them to the visited list.
     }
   }
 
@@ -177,12 +178,14 @@ class Graph<T> {
     var continueSearch = true; // initialize loop short-circuit.
     while (queue.isNotEmpty && continueSearch) {
       var nextNode = queue.removeAt(0); // remove node from queue
-      continueSearch = nodeHandler(nextNode); // determine whether to short-circuit.
-      final unVisitedEdge = nextNode.edges.where( // get list of unVisited edge nodes.
-              (edge) => !visitedList.contains(edge)
-      ).toList();
-      queue.addAll(unVisitedEdge..forEach((edge) => visitedList.add(edge))
-      ); // Queue up unvisited nodes and add them to the visited list.
+      continueSearch =
+          nodeHandler(nextNode); // determine whether to short-circuit.
+      final unVisitedEdge =
+          nextNode.edges.where(// get list of unVisited edge nodes.
+              (edge) => !visitedList.contains(edge)).toList();
+      queue.addAll(unVisitedEdge
+        ..forEach((edge) => visitedList.add(
+            edge))); // Queue up unvisited nodes and add them to the visited list.
     }
   }
 }
