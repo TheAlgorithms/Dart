@@ -148,7 +148,8 @@ class Graph<T> {
   /// This function uses Depth First Search (DFS) to find a [value].
   ///
   /// returns a [Node<T>] whose value equals [value].
-  /// returns [null] if graph is empty or a matching Node for [value] isn't found
+  /// returns [null] if graph is empty or a matching Node for [value] isn't found.
+  /// You can read more about Depth First Search here: https://en.wikipedia.org/wiki/Depth-first_search
   static void dfs<E>(Node<E> node, NodeHandler nodeHandler) {
     final stack = <Node<E>>[node]; // initialize stack and add the node to it.
     final visitedList = [node]; // initialize visitedList and add node to it.
@@ -168,7 +169,8 @@ class Graph<T> {
   /// This function uses Depth First Search (DFS) to find a [value].
   ///
   /// returns a [Node<T>] whose value equals [value].
-  /// returns [null] if graph is empty or a matching Node for [value] isn't found
+  /// returns [null] if graph is empty or a matching Node for [value] isn't found.
+  /// You can read more about Depth First Search here: https://en.wikipedia.org/wiki/Breadth-first_search
   static void bfs<E>(Node<E> node, NodeHandler nodeHandler) {
     final queue = <Node<E>>[node]; // initialize queue and add the node to it.
     final visitedList = [node]; // initialize visitedList and add node to it.
