@@ -6,6 +6,6 @@ dart_task:
   - dartanalyzer
   - dartfmt
 jobs:
-  allow_failures
+  allow_failures:
     - dart_task: dartanalyzer  # TODO: remove after #86 is closed
     - dart_task: dartfmt       # TODO: remove after #87 is closed
