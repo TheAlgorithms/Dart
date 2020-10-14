@@ -6,7 +6,7 @@ jobs:
     container: google/dart:2
     steps:
       - uses: actions/checkout@v2
-      - run: dart test
+      # - run: dart test
       - run: dart analyze
       - name: dart format
         run: |
