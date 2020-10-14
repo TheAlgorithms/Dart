@@ -11,5 +11,5 @@ jobs:
       - name: dart format
         run: |
           OUTPUT=$(dart format . -o none)
-          echo $OUTPUT
+          printf $OUTPUT
           if [ ! -z "$OUTPUT" ]; then exit 1; fi
