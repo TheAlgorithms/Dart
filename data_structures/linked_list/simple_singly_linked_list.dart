@@ -2,25 +2,29 @@ class Node {
   int value;
   Node next = null;
   Node(this.value);
+
+  int get nodeValue {
+    return this.value;
+  }
 }
 
 class LinkedList {
-  Node head;
-  Node tail;
+  Node _headNode;
+  Node _tailNode;
 
-  Node getHead() {
-    return this.head;
+  Node get head {
+    return this._headNode;
   }
 
   void insert(int value) {
     Node newNode = Node(value);
 
-    if (this.head == null) {
-      this.head = newNode;
-      this.tail = newNode;
+    if (this._headNode == null) {
+      this._headNode = newNode;
+      this._tailNode = newNode;
     } else {
-      this.tail.next = newNode;
-      this.tail = this.tail.next;
+      this._tailNode.next = newNode;
+      this._tailNode = this._tailNode.next;
     }
   }
 }
@@ -34,7 +38,7 @@ void main() {
   Node head = linkedList.head;
   Node node = head;
   while (node != null) {
-    print('${node.value}');
+    print('${node.nodeValue}');
     node = node.next;
   }
 }
