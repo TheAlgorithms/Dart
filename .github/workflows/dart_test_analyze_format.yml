@@ -9,9 +9,3 @@ jobs:
       # - run: dart test
       - run: dart analyze || true  # TODO: remove `|| true` when #86 is closed
       - run: dartfmt . || true  # TODO: remove `|| true` when #87 is closed
-      - run: dart format . || true  # TODO: remove `|| true` when #87 is closed
-      - name: dart format
-        run: |          
-          OUTPUT=$(dart format . -o none)
-          printf ${OUTPUT}
-          if [ ! -z "$OUTPUT" ]; then exit 1; fi
