@@ -1,4 +1,4 @@
-name: test_flutter:
+name: test_flutter
 on: [push, pull_request]
 jobs:
   test_flutter:
