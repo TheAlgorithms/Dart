@@ -11,7 +11,7 @@
 
 List<bool> sieve_of_eratosthenes(int n) {
   // Input: n: int
-  // Output: is_prime: List<bool> denoting whether ith element is prime or not 
+  // Output: is_prime: List<bool> denoting whether ith element is prime or not
   List<bool> is_prime = new List.filled(n + 1, true);
   is_prime[0] = false;
   is_prime[1] = false;
@@ -26,7 +26,7 @@ List<bool> sieve_of_eratosthenes(int n) {
   return is_prime;
 }
 
-main () {
+main() {
   // Prints all the primes under 50
   List<bool> primes = sieve_of_eratosthenes(50);
   for (int i = 2; i <= 50; i++) {

@@ -11,7 +11,6 @@
  */
 
 void main() {
-  
   for (int i = 0; i <= 300; ++i) {
     for (int j = 0; j <= 400; ++j) {
       int k = 1000 - i - j;
@@ -22,5 +21,4 @@ void main() {
       }
     }
   }
-
 }

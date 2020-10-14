@@ -11,29 +11,39 @@
  */
 
 //Recursive function to return gcd of a and b
-double gcd(var a,var b){
-  if(a == 0){
+double gcd(var a, var b) {
+  if (a == 0) {
     return b;
   }
-  return gcd(b % a,a);
+  return gcd(b % a, a);
 }
 
 //Function to return LCM of two numbers
-double lcm(var a,var b){
-  return (a * b) / gcd(a,b);
+double lcm(var a, var b) {
+  return (a * b) / gcd(a, b);
 }
 
 //Driver program
-void main(){
-  var a,b;
+void main() {
+  var a, b;
   //Test case1:
   a = 15;
   b = 20;
   //print the result
-  print("LCM of " + a.toString() + " and " + b.toString() + " is " + lcm(a,b).toString());
+  print("LCM of " +
+      a.toString() +
+      " and " +
+      b.toString() +
+      " is " +
+      lcm(a, b).toString());
   //Test case2:
   a = 12;
   b = 18;
   //print the result
-  print("LCM of " + a.toString() + " and " + b.toString() + " is " + lcm(a,b).toString());
+  print("LCM of " +
+      a.toString() +
+      " and " +
+      b.toString() +
+      " is " +
+      lcm(a, b).toString());
 }

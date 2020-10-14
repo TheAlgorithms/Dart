@@ -60,7 +60,7 @@ class LinkedList<T> extends Iterable<T> {
 
       return value;
     }
-    
+
     return null;
   }
 

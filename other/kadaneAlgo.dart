@@ -1,4 +1,4 @@
-// Program to find the Maximum contiguous sum (Kadane's Algorithm) 
+// Program to find the Maximum contiguous sum (Kadane's Algorithm)
 // Function to Calculate Maximum of Two Number
 int max(int a, int b) {
   if (a > b)
@@ -19,7 +19,7 @@ int maxSubArraySum(List a, int size) {
   return max_so_far;
 }
 
-// main function for validation of the above 
+// main function for validation of the above
 int main() {
   List a = [-2, -3, 4, -1, -2, 1, 5, -3];
   int n = a.length;

@@ -1,6 +1,7 @@
 void main() {
   print("factors: ${factorsOf(12)}"); //factors: [1, 2, 3, 4, 6, 12]
-  print(factorsOf(-1).toString());//Unhandled exception: Exception: A non-positive value was passed to the function
+  print(factorsOf(-1)
+      .toString()); //Unhandled exception: Exception: A non-positive value was passed to the function
 }
 
 List<int> factorsOf(int num) {
