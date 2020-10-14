@@ -22,7 +22,6 @@ class LinkedList{
   
   void insert(int data){
     
-    Node temp = head;
     Node newnode = new Node(data);
     
     size++;
