@@ -1,0 +1,14 @@
+name: dart_test_analyze_format
+on: [push, pull_request]
+jobs:
+  dart_test_analyze_format:
+    runs-on: ubuntu-latest
+    container: google/dart:2
+    steps:
+      - uses: actions/checkout@v2
+      - run: dart test
+      - run: dart analyze
+      - name: dart format
+        run: |
+          OUTPUT=$(dart format . -o none)
+          if [ ! -z "$OUTPUT" ]; then exit 1; fi
