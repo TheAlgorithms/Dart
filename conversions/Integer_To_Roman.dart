@@ -7,39 +7,56 @@
  * 
  */
 
-List<int> ArabianRomanNumbers = [1000, 900, 500, 400, 100, 90, 
-                                 50, 40, 10, 9, 5, 4, 1
-                                ];
+List<int> ArabianRomanNumbers = [
+  1000,
+  900,
+  500,
+  400,
+  100,
+  90,
+  50,
+  40,
+  10,
+  9,
+  5,
+  4,
+  1
+];
 
-List<String> RomanNumbers = ["M", "CM", "D", "CD", 
-                             "C", "XC", "L", "XL", 
-                             "X", "IX", "V", "IV", "I"
-                            ];
+List<String> RomanNumbers = [
+  "M",
+  "CM",
+  "D",
+  "CD",
+  "C",
+  "XC",
+  "L",
+  "XL",
+  "X",
+  "IX",
+  "V",
+  "IV",
+  "I"
+];
 
-List<String> integer_to_roman(int num)
-{
-  if(num < 0)
-  {
+List<String> integer_to_roman(int num) {
+  if (num < 0) {
     return null;
   }
-  
+
   List<String> result = [];
-  for(int i = 0; i < ArabianRomanNumbers.length; i++)
-  {
+  for (int i = 0; i < ArabianRomanNumbers.length; i++) {
     int times = num ~/ ArabianRomanNumbers[i];
-    for(int j = 0; j < times; j++)
-    {
+    for (int j = 0; j < times; j++) {
       print(RomanNumbers[i]);
     }
     num -= times * ArabianRomanNumbers[i];
   }
-  
+
   return result;
 }
 
-
-int main()
-{
+int main() {
   /* IV */
   integer_to_roman(4);
   /* II */

@@ -7,6 +7,7 @@ double derivative(double Function(double) f, double x, [double h = 1e-10]) {
 
 void main() {
   print("derivative(sin, pi) = ${derivative(sin, pi)}, cos(pi) = ${cos(pi)}");
-  print("derivative(sin, 2 * pi) = ${derivative(sin, 2 * pi)}, cos(2 * pi) = ${cos(2 * pi)}");
+  print(
+      "derivative(sin, 2 * pi) = ${derivative(sin, 2 * pi)}, cos(2 * pi) = ${cos(2 * pi)}");
   print("derivative(exp, 3) = ${derivative(exp, 3)}, exp(3) = ${exp(3)}");
 }

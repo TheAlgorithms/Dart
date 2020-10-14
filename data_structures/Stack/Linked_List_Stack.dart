@@ -1,46 +1,45 @@
 //Author: Shawn
 //Email: stepfencurryxiao@gmail.com
 
-class Node<T>{
+class Node<T> {
   //the data of the Node
   T data;
   Node next;
-  
-  Node(T data){
+
+  Node(T data) {
     this.data = data;
     this.next = null;
   }
 }
 
-class LinkedListStack<T>{
+class LinkedListStack<T> {
   //Top of stack
   Node<T> head;
-  
+
   //Size of stack
   int size;
-  
-  LinkedListStack(){
+
+  LinkedListStack() {
     this.head = null;
     this.size = 0;
   }
-  
+
   //Add element at top of the stack
-  
-  void push(T element){
-       Node<T> newNode = new Node<T>(element);
-       newNode.next = this.head;
-       this.head = newNode;
-       this.size++;
+
+  void push(T element) {
+    Node<T> newNode = new Node<T>(element);
+    newNode.next = this.head;
+    this.head = newNode;
+    this.size++;
   }
-  
+
   //Pop element from top at the stack
-  
-  T pop(){
+
+  T pop() {
     T returnData = null;
-    if(size == 0){
+    if (size == 0) {
       print("The stack is empty!!!");
-    }
-    else{
+    } else {
       Node<T> destroy = this.head;
       this.head = this.head.next;
       returnData = destroy.data;
@@ -48,17 +47,17 @@ class LinkedListStack<T>{
     }
     return returnData;
   }
-  
-  bool isEmpty(){
+
+  bool isEmpty() {
     return this.size == 0;
   }
-  
-  int getSize(){
+
+  int getSize() {
     return this.size;
   }
 }
 
-int main(){
+int main() {
   LinkedListStack<String> Stack = new LinkedListStack<String>();
   var returnData;
   print("Push 2 5 9 7 to the stack\n");

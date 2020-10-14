@@ -8,18 +8,18 @@ import "dart:math" show pow;
  * to a binary number using a bitwise
  * algorithm
  */
-void bitwiseConversion(var n){
-  int b = 0,c = 0,d;
+void bitwiseConversion(var n) {
+  int b = 0, c = 0, d;
   print("Bitwise conversion.\n");
-  while(n != 0){
+  while (n != 0) {
     d = (n & 1);
-    b += d * (pow(10,c++).toInt());
+    b += d * (pow(10, c++).toInt());
     n >>= 1;
   }
   print("\tBinary number: $b");
 }
 
 //Main method
-void main(){
+void main() {
   bitwiseConversion(8);
 }
