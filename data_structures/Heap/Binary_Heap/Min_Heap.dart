@@ -20,7 +20,7 @@ List upAdjust(List arr,int length){
   //Mark inserted nodes
   var child = length - 1;
   //Father nodes
-  int parent = ((child - 1) / 2).toInt();
+  int parent = (child - 1) ~/ 2;
   //Save the inserted node temporarily
   int temp = arr[child];
   
@@ -28,7 +28,7 @@ List upAdjust(List arr,int length){
     //When temp finds the correct location, we will assign the value of temp to this node
     arr[child] = arr[parent];
     child = parent;
-    parent = ((child - 1) / 2).toInt();
+    parent = (child - 1) ~/ 2;
   }
   arr[child] = temp;
   return arr;
@@ -65,7 +65,7 @@ List downAdjust(List arr,int parent,int length){
 
 List buildHead(List arr,int length) {
        //Sink from the last non leaf node
-       for (int i = ((length - 2) / 2).toInt(); i >= 0; i--) {
+       for (int i = (length - 2) ~/ 2; i >= 0; i--) {
            arr = downAdjust(arr, i, length);
        }
        return arr;
