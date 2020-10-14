@@ -3,9 +3,9 @@ on: [push, pull_request]
 jobs:
   dart_test_analyze_format:
     runs-on: ubuntu-latest
-    container: google/dart:2
+    container: google/dart
     steps:
       - uses: actions/checkout@v2
-      # - run: dart test
-      - run: dart analyze || true  # TODO: remove `|| true` when #86 is closed
+      # - run: dart test  # See https://github.com/TheAlgorithms/Dart/issues/88
+      - run: dart analyze  || true  # TODO: remove `|| true` when #86 is closed
       - run: dart format . || true  # TODO: remove `|| true` when #87 is closed
