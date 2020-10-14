@@ -1,7 +1,7 @@
 //Convert a Decimal Number to Any Other Representation
 //https://en.wikipedia.org/wiki/Positional_notation#Base_conversion
 
-void main(){
+void main() {
   print(decimal_to_any(0, 2)); //Expected '0'
   print(decimal_to_any(5, 4)); //Expected '11'
   print(decimal_to_any(20, 3)); //Expected '202'
