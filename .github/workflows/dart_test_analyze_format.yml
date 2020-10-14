@@ -8,4 +8,4 @@ jobs:
       - uses: actions/checkout@v2
       # - run: dart test
       - run: dart analyze || true  # TODO: remove `|| true` when #86 is closed
-      - run: dartfmt . || true  # TODO: remove `|| true` when #87 is closed
+      - run: dart format . || true  # TODO: remove `|| true` when #87 is closed
