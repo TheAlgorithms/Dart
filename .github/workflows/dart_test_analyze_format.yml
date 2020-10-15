@@ -8,5 +8,5 @@ jobs:
       - uses: actions/checkout@v2
       - run: dart pub get
       - run: dart test . -n */*.dart -n */*/*.dart
-      - run: dart analyze  || true  # TODO: remove `|| true` when #86 is closed
+      - run: dart analyze
       - run: dart format --set-exit-if-changed .
