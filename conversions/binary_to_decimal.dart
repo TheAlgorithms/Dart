@@ -3,7 +3,11 @@ import "dart:math" show pow;
 void main() {
   print(binary_to_decimal("-111")); // -7
   print(binary_to_decimal(" 101011 ")); // 43
-  print(binary_to_decimal("1a1")); //error
+  try {
+    print(binary_to_decimal("1a1")); //error
+  } catch (ex) {
+    print(ex);
+  }
 }
 
 int binary_to_decimal(String bin_string) {
