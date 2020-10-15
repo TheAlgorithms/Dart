@@ -5,7 +5,7 @@ int kadanesAlgorithm(List<int> array) {
   int maxSoFar = array[0];
 
   for (int num in array.sublist(1, array.length)) {
-    maxEndingHere = [maxEndingHere + num , num ].reduce(max);
+    maxEndingHere = [maxEndingHere + num, num].reduce(max);
     maxSoFar = [maxSoFar, maxEndingHere].reduce(max);
   }
   return maxSoFar;
@@ -16,22 +16,19 @@ void main() {
   int maxContiniousSubarraySum;
   maxContiniousSubarraySum = kadanesAlgorithm(array);
   print('${maxContiniousSubarraySum == 19}');
-  
-  
+
   array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   maxContiniousSubarraySum;
   maxContiniousSubarraySum = kadanesAlgorithm(array);
   print('${maxContiniousSubarraySum == 55}');
-  
-  
+
   array = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10];
   maxContiniousSubarraySum;
   maxContiniousSubarraySum = kadanesAlgorithm(array);
   print('${maxContiniousSubarraySum == -1}');
-  
-  
+
   array = [1, 2, 3, 4, 5, 6, -22, 7, 8, 9, 10];
-   maxContiniousSubarraySum;
+  maxContiniousSubarraySum;
   maxContiniousSubarraySum = kadanesAlgorithm(array);
   print('${maxContiniousSubarraySum == 34}');
 }
