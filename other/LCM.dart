@@ -11,7 +11,7 @@
  */
 
 //Recursive function to return gcd of a and b
-double gcd(var a, var b) {
+int gcd(int a, int b) {
   if (a == 0) {
     return b;
   }
@@ -19,7 +19,7 @@ double gcd(var a, var b) {
 }
 
 //Function to return LCM of two numbers
-double lcm(var a, var b) {
+double lcm(int a, int b) {
   return (a * b) / gcd(a, b);
 }
 
