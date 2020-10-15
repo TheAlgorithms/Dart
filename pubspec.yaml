@@ -1,0 +1,4 @@
+name: dart
+
+dependencies:
+  test: ^1.15.4

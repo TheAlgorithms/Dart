@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 class Node<T> {
   Node<T> next;
   T value;
@@ -84,35 +86,69 @@ class LinkedList<T> extends Iterable<T> {
   }
 }
 
-main(List<String> args) {
-  LinkedList<double> linkedList = new LinkedList();
-  linkedList.add(2);
-  linkedList.add(4);
-  linkedList.add(6);
-  linkedList.add(8);
+main() {
+  test(".add is adding elements in order", () {
+    LinkedList<double> linkedList = new LinkedList();
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(3);
 
-  print(linkedList.join(", ") + " size=${linkedList.length}");
-  linkedList.remove(6);
-  print(linkedList.join(", ") + " size=${linkedList.length}");
-  linkedList.remove(2);
-  print("5 in linkedList - ${linkedList.contains(5)}");
-  print("4 in linkedList - ${linkedList.contains(4)}");
-  print(linkedList.join(", ") + " size=${linkedList.length}");
-  linkedList.remove(8);
-  print(linkedList.join(", ") + " size=${linkedList.length}");
-  linkedList.remove(4);
-  print(linkedList.join(", ") + " size=${linkedList.length}");
+    expect(linkedList, equals([1, 2, 3]));
+  });
 
-  LinkedList<double> stack = new LinkedList();
-  stack.push(2);
-  stack.push(4);
-  stack.push(6);
+  test(".remove is removing all elements with given value", () {
+    LinkedList<double> linkedList = new LinkedList();
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(3);
+    linkedList.add(2);
 
-  print(stack.join(", ") + " size=${stack.length}");
-  stack.pop();
-  print(stack.join(", ") + " size=${stack.length}");
-  stack.pop();
-  stack.pop();
-  stack.pop();
-  print(stack.join(", ") + " size=${stack.length}");
+    linkedList.remove(2);
+
+    expect(linkedList, equals([1, 3]));
+  });
+
+  test(".remove on empty list do nothing", () {
+    LinkedList<double> linkedList = new LinkedList();
+
+    linkedList.remove(2);
+
+    expect(linkedList, isEmpty);
+  });
+
+  test(".push is appending first element", () {
+    LinkedList<double> linkedList = new LinkedList();
+
+    linkedList.push(1);
+    expect(linkedList, equals([1]));
+
+    linkedList.push(2);
+    expect(linkedList, equals([2, 1]));
+
+    linkedList.push(3);
+    expect(linkedList, equals([3, 2, 1]));
+  });
+
+  test(".pop is returning and removing first element", () {
+    LinkedList<double> linkedList = new LinkedList();
+
+    linkedList.add(1);
+    linkedList.add(2);
+    linkedList.add(3);
+
+    expect(linkedList.pop(), equals(1));
+    expect(linkedList, equals([2, 3]));
+
+    expect(linkedList.pop(), equals(2));
+    expect(linkedList, equals([3]));
+
+    expect(linkedList.pop(), equals(3));
+    expect(linkedList, equals([]));
+  });
+
+  test(".pop is returning null when list is empty", () {
+    LinkedList<double> linkedList = new LinkedList();
+
+    expect(linkedList.pop(), isNull);
+  });
 }
