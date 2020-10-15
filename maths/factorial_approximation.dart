@@ -7,7 +7,7 @@ double factorial(double x) {
       pow(8 * pow(x, 3) + 4 * pow(x, 2) + x + 1 / 30, 1 / 6);
 }
 
-main(List<String> args) {
+main() {
   for (int i = 0; i < 10; i++) {
     print("$i! ~= ${factorial(i.toDouble())}");
   }

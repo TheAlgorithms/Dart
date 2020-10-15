@@ -10,8 +10,13 @@ Map<String, int> hex_table = {
 };
 void main() {
   print(hexadecimal_to_decimal("1abc")); // 6844
+
   print(hexadecimal_to_decimal(" -123 ")); // -291
-  print(hexadecimal_to_decimal("1x")); //error
+  try {
+    print(hexadecimal_to_decimal("1x")); //error
+  } catch (ex) {
+    print(ex);
+  }
 }
 
 int hexadecimal_to_decimal(String hex_string) {
