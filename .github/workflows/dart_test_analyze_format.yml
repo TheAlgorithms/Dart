@@ -10,6 +10,3 @@ jobs:
       - run: dart test data_structures/linked_list.dart
       - run: dart analyze
       - run: dart format --set-exit-if-changed .
-      - uses: actions/setup-python@v2
-      - run: pip install codespell
-      - run: codespell --quiet-level=2 || true  # --ignore-words-list="" --skip=""
