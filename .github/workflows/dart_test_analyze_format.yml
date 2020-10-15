@@ -6,6 +6,6 @@ jobs:
     container: google/dart
     steps:
       - uses: actions/checkout@v2
-      # - run: dart test  # See https://github.com/TheAlgorithms/Dart/issues/88
+      - run: dart test  # See https://github.com/TheAlgorithms/Dart/issues/88
       - run: dart analyze  || true  # TODO: remove `|| true` when #86 is closed
       - run: dart format --set-exit-if-changed .
