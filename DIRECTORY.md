@@ -22,6 +22,7 @@
     * [Priority Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/Priority_Queue.dart)
   * Stack
     * [Array Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Array_Stack.dart)
+    * [Balanced Brackets](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/balanced_brackets.dart)
     * [Linked List Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Linked_List_Stack.dart)
 
 ## Dynamic Programming
