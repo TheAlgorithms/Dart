@@ -24,30 +24,30 @@ bool isBalancedBrackets(String string) {
       }
     }
   }
-  return !stack.isNotEmpty;
+  return stack.isEmpty;
 }
 
 void main() {
   test(('Balanced Bracket'), () {
-    expect(isBalancedBrackets('([])(){}(())()()'), equals(true));
+    expect(isBalancedBrackets('([])(){}(())()()'), isTrue);
   });
 
   test(('Balanced Bracket'), () {
-    expect(isBalancedBrackets('()[]{}{'), equals(false));
+    expect(isBalancedBrackets('()[]{}{'), isFalse);
   });
 
   test(('Balanced Bracket'), () {
-    expect(isBalancedBrackets('()()[{()})]'), equals(false));
+    expect(isBalancedBrackets('()()[{()})]'), isFalse);
   });
 
   test(('Balanced Bracket'), () {
-    expect(isBalancedBrackets('()([])'), equals(true));
+    expect(isBalancedBrackets('()([])'), isTrue);
   });
 
   test(('Balanced Bracket'), () {
     expect(
         isBalancedBrackets(
             '(((((([[[[[[{{{{{{{{{{{{()}}}}}}}}}}}}]]]]]]))))))((([])({})[])[])[]([]){}(())'),
-        equals(true));
+        isTrue);
   });
 }
