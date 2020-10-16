@@ -45,6 +45,9 @@ void main() {
   });
 
   test(('Balanced Bracket'), () {
-    expect(isBalancedBrackets('(((((([[[[[[{{{{{{{{{{{{()}}}}}}}}}}}}]]]]]]))))))((([])({})[])[])[]([]){}(())'), equals(true));
+    expect(
+        isBalancedBrackets(
+            '(((((([[[[[[{{{{{{{{{{{{()}}}}}}}}}}}}]]]]]]))))))((([])({})[])[])[]([]){}(())'),
+        equals(true));
   });
 }
