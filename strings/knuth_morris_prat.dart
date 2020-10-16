@@ -9,6 +9,10 @@ import 'package:test/test.dart';
 /// Step through the text one character at a time and compare it to a character in
 /// the pattern updating our location within the pattern if necessary
 bool stringCompare(String string, String subString) {
+  if (subString.isEmpty || string.isEmpty) {
+    return true;
+  }
+
   List<int> pattern =
       new List<int>.generate(subString.length, (int index) => -1);
 
@@ -57,30 +61,35 @@ void main() {
   test(('KMP: '), () {
     string = 'aefoaefcdaefcdaed';
     subString = 'aefcdaed';
-    expect(stringCompare(string, subString), equals(true));
+    expect(stringCompare(string, subString), isTrue);
   });
 
   test(('KMP: '), () {
     string = 'testwafwafawfawfawfawfawfawfawfa';
     subString = 'fawfawfawfawfa';
-    expect(stringCompare(string, subString), equals(true));
+    expect(stringCompare(string, subString), isTrue);
   });
 
   test(('KMP: '), () {
     string = 'aabc';
     subString = 'abc';
-    expect(stringCompare(string, subString), equals(true));
+    expect(stringCompare(string, subString), isTrue);
   });
 
   test(('KMP: '), () {
     string = 'adafccfefbbbfeeccbcfd';
     subString = 'ecb';
-    expect(stringCompare(string, subString), equals(false));
+    expect(stringCompare(string, subString), isFalse);
   });
 
   test(('KMP: '), () {
     string = 'akash';
     subString = 'christy';
-    expect(stringCompare(string, subString), equals(false));
+    expect(stringCompare(string, subString), isFalse);
+  });
+  test(('KMP: '), () {
+    string = '';
+    subString = '';
+    expect(stringCompare(string, subString), isTrue);
   });
 }
