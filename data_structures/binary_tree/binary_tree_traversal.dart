@@ -94,13 +94,13 @@ void main() {
     expect(postOrder(root, result), equals([]));
   });
 
-    test(('inOrder traversal'), () {
+  test(('inOrder traversal'), () {
     result = [];
     root = null;
     expect(inOrder(root, result), equals([]));
   });
 
-    test(('preOrder traversal'), () {
+  test(('preOrder traversal'), () {
     result = [];
     root = null;
     expect(preOrder(root, result), equals([]));
