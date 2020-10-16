@@ -8,7 +8,6 @@ jobs:
       - uses: actions/checkout@v2
       - run: dart pub get
       # - run: dart test
-      - run: pub run test_coverage -h
-      - run: pub run test_coverage
+      - run: pub run test_coverage --no-badge --print-test-output .
       - run: dart analyze
       - run: dart format --set-exit-if-changed .
