@@ -15,7 +15,7 @@ class Node {
   }
 }
 
-/*In order traversal of the tree*/
+/// In order traversal of the tree
 void display(var tree) {
   if (tree == null) {
     return;
@@ -34,10 +34,9 @@ void display(var tree) {
   return;
 }
 
-/*
- *This is the recursive function to find the depth of
- * binary tree.
-*/
+
+/// This is the recursive function to find the depth of
+/// binary tree.
 double depth_of_tree(var tree) {
   if (tree == null) {
     return 0;
@@ -53,7 +52,7 @@ double depth_of_tree(var tree) {
   }
 }
 
-/*This function returns that is it full binary tree or not*/
+/// This function returns that is it full binary tree or not
 bool is_full_binary_tree(var tree) {
   if (tree == null) {
     return true;
@@ -68,7 +67,6 @@ bool is_full_binary_tree(var tree) {
   }
 }
 
-//Main function for testing
 void main() {
   var tree = Node(1);
   tree.left = Node(2);
