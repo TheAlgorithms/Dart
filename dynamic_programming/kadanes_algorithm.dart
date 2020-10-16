@@ -25,21 +25,18 @@ void main() {
 
   test(('.Check the response for each test case'), () {
     array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    maxContiniousSubarraySum;
     maxContiniousSubarraySum = kadanesAlgorithm(array);
     expect(maxContiniousSubarraySum, equals(55));
   });
 
   test(('.Check the response for each test case'), () {
     array = [-1, -2, -3, -4, -5, -6, -7, -8, -9, -10];
-    maxContiniousSubarraySum;
     maxContiniousSubarraySum = kadanesAlgorithm(array);
     expect(maxContiniousSubarraySum, equals(-1));
   });
 
   test(('.Check the response for each test case'), () {
     array = [1, 2, 3, 4, 5, 6, -22, 7, 8, 9, 10];
-    maxContiniousSubarraySum;
     maxContiniousSubarraySum = kadanesAlgorithm(array);
     expect(maxContiniousSubarraySum, equals(34));
   });
