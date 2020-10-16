@@ -6,6 +6,7 @@ jobs:
     container: google/dart
     steps:
       - uses: actions/checkout@v2
+      - run: sudo apt-get install make
       - run: git clone https://github.com/linux-test-project/lcov.git
       - run: make -C lcov install
       - run: dart pub get
