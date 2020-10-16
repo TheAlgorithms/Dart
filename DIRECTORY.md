@@ -11,6 +11,7 @@
 ## Data Structures
   * Binary Tree
     * [Basic Binary Tree](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/binary_tree/basic_binary_tree.dart)
+    * [Binary Tree Traversal](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/binary_tree/binary_tree_traversal.dart)
   * Hashmap
     * [Hashing](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/HashMap/Hashing.dart)
   * Heap
