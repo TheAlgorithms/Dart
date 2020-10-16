@@ -6,9 +6,9 @@ jobs:
     container: google/dart
     steps:
       - uses: actions/checkout@v2
-      - run: apt-get install make
-      - run: git clone https://github.com/linux-test-project/lcov.git
-      - run: make -C lcov install
+      - run: (echo 'deb http://deb.debian.org/debian buster main contrib non-free') > /etc/apt/sources.list.d/buster.list
+      - run: apt-get update
+      - run: apt-get install --no-install-recommends -y -q lcov
       - run: dart pub get
       - run: dart test --coverage .
       - run: dart pub run coverage:format_coverage -i . -l > coverage.lcov
