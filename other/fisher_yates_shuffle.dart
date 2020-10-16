@@ -16,7 +16,7 @@ void shuffle<T>(List<T> collection) {
   }
 }
 
-main(List<String> args) {
+main() {
   List<double> someList = [1, 2, 3, 4, 5];
   print(someList);
   shuffle(someList);

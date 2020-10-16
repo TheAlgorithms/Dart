@@ -7,6 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: dart pub get
-      - run: dart test data_structures/linked_list.dart
+      - run: dart test
       - run: dart analyze
       - run: dart format --set-exit-if-changed .

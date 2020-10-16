@@ -3,12 +3,12 @@ void sort(List arr) {
   int n = arr.length;
 
   //Build heap (rearrange arrary)
-  for (var i = n / 2 - 1; i >= 0; i--) {
+  for (int i = (n / 2 - 1).round(); i >= 0; i--) {
     heapify(arr, n, i);
   }
 
   // One by one extract an element from heap
-  for (var i = n - 1; i >= 0; i--) {
+  for (int i = n - 1; i >= 0; i--) {
     //Move current root to end
     var temp = arr[0];
     arr[0] = arr[i];
