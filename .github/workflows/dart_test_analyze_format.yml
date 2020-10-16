@@ -7,7 +7,12 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: dart pub get
-      # - run: dart test
-      - run: pub run test_coverage --no-badge --print-test-output .
+      - run: pub global activate coverage
+      - run: collect_coverage -h || true
+      - run:  format_coverage -h || true
+      - run: dart test
+      - run: collect_coverage || true
+      - run: format_coverage  || true
+      # - run: pub run test_coverage --no-badge --print-test-output .
       - run: dart analyze
       - run: dart format --set-exit-if-changed .
