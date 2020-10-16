@@ -9,10 +9,10 @@ jobs:
       - run: dart pub get
       - run: pub global activate coverage
       - run: pub global run coverage:collect_coverage -h || true
-      - run: pub global run coverage:format_coverage  -h || true
+      - run: pub global run coverage:collect_coverage    || true
       - run: dart test
-      - run: pub global run coverage:collect_coverage || true
-      - run: pub global run coverage:format_coverage  || true
+      - run: pub global run coverage:format_coverage  -h || true
+      - run: pub global run coverage:format_coverage     || true
       # - run: pub run test_coverage --no-badge --print-test-output .
       - run: dart analyze
       - run: dart format --set-exit-if-changed .
