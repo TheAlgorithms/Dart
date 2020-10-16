@@ -1,9 +1,8 @@
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
-/*This is Class Node with constructor that contains
- * data variable to type data and left,right pointers
-*/
+/// This is Class Node with constructor that contains
+/// data variable to type data and left,right pointers
 class Node {
   var data;
   var left;
