@@ -1,0 +1,6 @@
+name: the_algorithms_dart
+
+repository: https://github.com/TheAlgorithms/Dart
+
+dependencies:
+  test: ^1.15.4

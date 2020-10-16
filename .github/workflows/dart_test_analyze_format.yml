@@ -1,0 +1,12 @@
+name: dart_test_analyze_format
+on: [push, pull_request]
+jobs:
+  dart_test_analyze_format:
+    runs-on: ubuntu-latest
+    container: google/dart
+    steps:
+      - uses: actions/checkout@v2
+      - run: dart pub get
+      - run: dart test
+      - run: dart analyze
+      - run: dart format --set-exit-if-changed .

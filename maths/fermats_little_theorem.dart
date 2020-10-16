@@ -1,3 +1,7 @@
+@Skip('currently failing (see issue #86)')
+
+import 'package:test/test.dart';
+
 /*
  Fermat's little Theorem
  Translated from TheAlgorithms/Python

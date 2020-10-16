@@ -9,7 +9,7 @@ void cocktailSort(List lst) //function to sort a list
 
     if (swap_done) {
       swap_done = false;
-      for (int i = lst.length - 2; i >=0 ; i--) {
+      for (int i = lst.length - 2; i >= 0; i--) {
         swap_done = swapItemCocktail(lst, i, swap_done);
       }
     }
@@ -17,7 +17,7 @@ void cocktailSort(List lst) //function to sort a list
 }
 
 bool swapItemCocktail(List lst, int i, bool swap_done) {
-  if(lst[i] > lst[i+1]) {
+  if (lst[i] > lst[i + 1]) {
     swap(lst, i);
     swap_done = true;
   }
@@ -26,15 +26,14 @@ bool swapItemCocktail(List lst, int i, bool swap_done) {
 
 void swap(List lst, int i) {
   int tmp = lst[i];
-  lst[i] = lst[i+1];
-  lst[i+1] = tmp;
+  lst[i] = lst[i + 1];
+  lst[i + 1] = tmp;
 }
 
-void main()//driver function 
-{ 
-   var lst = [5,3,6,7,3,378,3,1,-1];
-   print(lst);
+void main() //driver function
+{
+  var lst = [5, 3, 6, 7, 3, 378, 3, 1, -1];
+  print(lst);
   cocktailSort(lst);
   print(lst);
-  
 }

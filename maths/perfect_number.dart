@@ -15,12 +15,11 @@ bool perfect_number(int number) {
     if (number % i == 0) divisors.add(i);
   }
   return divisors.reduce((a, b) => a + b) == number;
-
 }
 
 void main() {
   print(perfect_number(-1)); // false
-  print(perfect_number(6));  // true
+  print(perfect_number(6)); // true
   print(perfect_number(12)); // false
   print(perfect_number(16)); // false
   print(perfect_number(26)); // false

@@ -28,5 +28,7 @@ squareSumOfFirst(n) {
 
 void main() {
   int n = 100;
-  print(squareDifference(n)); /// 25164150
+  print(squareDifference(n));
+
+  /// 25164150
 }

@@ -31,7 +31,7 @@ List<List<T>> permutations<T>(List<T> collection) {
   return output;
 }
 
-main(List<String> args) {
+main() {
   print(permutations([]));
   print(permutations([1, 2]));
   print(permutations([1, 2, 3]));
