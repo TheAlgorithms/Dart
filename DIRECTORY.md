@@ -24,6 +24,9 @@
     * [Array Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Array_Stack.dart)
     * [Linked List Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Linked_List_Stack.dart)
 
+## Dynamic Programming
+  * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
+
 ## Graphs
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
 
