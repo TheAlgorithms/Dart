@@ -7,6 +7,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: dart pub get
-      - run: dart test
+      # - run: dart test
+      - run: pub run test_coverage -h
+      - run: pub run test_coverage
       - run: dart analyze
       - run: dart format --set-exit-if-changed .
