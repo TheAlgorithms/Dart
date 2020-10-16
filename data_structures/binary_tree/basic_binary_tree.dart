@@ -34,7 +34,6 @@ void display(var tree) {
   return;
 }
 
-
 /// This is the recursive function to find the depth of
 /// binary tree.
 double depth_of_tree(var tree) {
