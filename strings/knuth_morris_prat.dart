@@ -1,5 +1,13 @@
 import 'package:test/test.dart';
 
+/// Preprocess pattern to identify any suffixes that are identical to prefixes
+/// in the given string.
+///
+/// Build a pattern which tells us where to continue iteration from if we
+///  get a mismatch between the character
+///
+/// Step through the text one character at a time and compare it to a character in
+/// the pattern updating our location within the pattern if necessary
 bool stringCompare(String string, String subString) {
   List<int> pattern =
       new List<int>.generate(subString.length, (int index) => -1);
