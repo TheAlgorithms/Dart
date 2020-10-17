@@ -87,26 +87,17 @@ void main() {
   MinHeap minheap = new MinHeap();
   List<int> array = [48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41];
   minheap.buildHeap(array);
-  test(('remove'), () {
+  test(('Test case 1'), () {
     expect(minheap.remove(), equals(-5));
-  });
-
-  test(('is empty'), () {
     expect(minheap.isEmpty(), isFalse);
-  });
-
-  test(('insert and peek'), () {
     minheap.insert(-100);
     expect(minheap.peek(), equals(-100));
-  });
-
-  test(('insert and remove'), () {
     minheap.insert(-100);
     expect(minheap.remove(), equals(-100));
     expect(minheap.remove(), equals(-100));
   });
 
-  test(('combined min heap tests'), () {
+  test(('Test case 2'), () {
     array = [-7, 2, 3, 8, -10, 4, -6, -10, -2, -7, 10, 5, 2, 9, -9, -5, 3, 8];
     minheap = new MinHeap();
     minheap.buildHeap(array);
