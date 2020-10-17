@@ -68,10 +68,6 @@ void main() {
 
   List<int> result;
   result = List();
-  var ans = postOrder(root, result);
-  for (int i in ans) {
-    print(i);
-  }
 
   test(('inOrder traversal'), () {
     result = List();
@@ -79,29 +75,29 @@ void main() {
   });
 
   test(('preOrder traversal'), () {
-    result = [];
+    result = List();
     expect(preOrder(root, result), equals([1, 2, 4, 5, 6, 3, 7, 8, 9]));
   });
 
   test(('postOrder traversal'), () {
-    result = [];
+    result = List();
     expect(postOrder(root, result), equals([4, 6, 5, 2, 9, 8, 7, 3, 1]));
   });
 
   test(('postOrder traversal'), () {
-    result = [];
+    result = List();
     root = null;
     expect(postOrder(root, result), equals([]));
   });
 
   test(('inOrder traversal'), () {
-    result = [];
+    result = List();
     root = null;
     expect(inOrder(root, result), equals([]));
   });
 
   test(('preOrder traversal'), () {
-    result = [];
+    result = List();
     root = null;
     expect(preOrder(root, result), equals([]));
   });
