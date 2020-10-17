@@ -127,4 +127,5 @@
   * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/tim_Sort.dart)
 
 ## Strings
+  * [Knuth Morris Prat](https://github.com/TheAlgorithms/Dart/blob/master/strings/knuth_morris_prat.dart)
   * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
