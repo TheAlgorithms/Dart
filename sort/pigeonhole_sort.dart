@@ -18,12 +18,12 @@ void pigeonholeSort(List arr) {
   range++;
 
   List phole = new List(range);
-  for(int i =0; i<range ; i++){
+  for(int i =0; i<range ; i++) {
     phole[i] = 0;
   }
 
   //Populate the pigeonholes.
-  for(int i = 0; i<n; i++){
+  for(int i = 0; i<n; i++) {
     phole[arr[i] - min];
     phole[arr[i] - min] = phole[arr[i] - min] + 1;
   }
