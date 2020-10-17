@@ -2,6 +2,11 @@ void pigeonholeSort(List arr) {
   //The length of the list
   int n = arr.length;
 
+  //checking the size
+  if (n <= 0) {
+    return;
+  }
+
   //Find minimum and maximum values in arr
   int min = arr[0];
   int max = arr[0];
