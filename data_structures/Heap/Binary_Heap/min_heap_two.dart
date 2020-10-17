@@ -8,8 +8,7 @@ class MinHeap {
   }
 
   List<int> _heapify(List<int> array) {
-    int firstParent;
-    firstParent = (array.length - 2) ~/ 2;
+    int firstParent = (array.length - 2) ~/ 2;
     for (int i = firstParent; i >= 0; i--) {
       _siftDown(i, array.length - 1, array);
     }
@@ -28,8 +27,7 @@ class MinHeap {
   }
 
   void _siftUp(int currentIndex) {
-    int parentIndex;
-    parentIndex = (currentIndex - 1) ~/ 2;
+    int parentIndex = (currentIndex - 1) ~/ 2;
     while (
         parentIndex >= 0 && this.heap[parentIndex] > this.heap[currentIndex]) {
       _swap(parentIndex, currentIndex, this.heap);
@@ -93,6 +91,10 @@ void main() {
     expect(minheap.remove(), equals(-5));
   });
 
+  test(('is empty'), () {
+    expect(minheap.isEmpty(), isFalse);
+  });
+
   test(('insert and peek'), () {
     minheap.insert(-100);
     expect(minheap.peek(), equals(-100));
@@ -101,13 +103,21 @@ void main() {
   test(('insert and remove'), () {
     minheap.insert(-100);
     expect(minheap.remove(), equals(-100));
-  });
-
-  test(('remove'), () {
     expect(minheap.remove(), equals(-100));
   });
 
-  test(('remove'), () {
-    expect(minheap.peek(), equals(2));
+  test(('combined min heap tests'), () {
+    array = [-7, 2, 3, 8, -10, 4, -6, -10, -2, -7, 10, 5, 2, 9, -9, -5, 3, 8];
+    minheap = new MinHeap();
+    minheap.buildHeap(array);
+    expect(minheap.remove(), equals(-10));
+    expect(minheap.peek(), equals(-10));
+    minheap.insert(-8);
+    expect(minheap.peek(), equals(-10));
+    expect(minheap.remove(), equals(-10));
+    expect(minheap.peek(), equals(-9));
+    expect(minheap.isEmpty(), isFalse);
+    minheap.insert(-8);
+    expect(minheap.peek(), equals(-9));
   });
 }
