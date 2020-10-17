@@ -9,8 +9,8 @@ import 'package:test/test.dart';
 /// Step through the text one character at a time and compare it to a character in
 /// the pattern updating our location within the pattern if necessary
 bool stringCompare(String string, String subString) {
-  if (subString.isEmpty || string.isEmpty) {
-    return true;
+  if (subString.isEmpty) {
+    return false;
   }
 
   List<int> pattern =
@@ -89,7 +89,13 @@ void main() {
   });
   test(('KMP: '), () {
     string = '';
+    subString = 'asd';
+    expect(stringCompare(string, subString), isFalse);
+  });
+
+  test(('KMP: '), () {
+    string = 'asd';
     subString = '';
-    expect(stringCompare(string, subString), isTrue);
+    expect(stringCompare(string, subString), isFalse);
   });
 }
