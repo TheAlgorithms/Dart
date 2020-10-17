@@ -16,6 +16,7 @@
   * Heap
     * Binary Heap
       * [Min Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Min_Heap.dart)
+      * [Min Heap Two](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/min_heap_two.dart)
   * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
   * Queue
     * [List Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/List_Queue.dart)
