@@ -73,6 +73,7 @@
   * [Sieve Of Eratosthenes](https://github.com/TheAlgorithms/Dart/blob/master/maths/sieve_of_eratosthenes.dart)
   * [Sigmoid](https://github.com/TheAlgorithms/Dart/blob/master/maths/sigmoid.dart)
   * [Simpson Rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
+  * [Sphenic Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/sphenic_number.dart)
   * [Symmetric Derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
 
 ## [N Bonacci](https://github.com/TheAlgorithms/Dart/blob/master//N_bonacci.dart)
