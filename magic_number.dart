@@ -1,9 +1,6 @@
 import 'package:test/test.dart';
 
 bool Magic_no(var x) {
-  var n = x;
-  var s = n.toString();
-  var d = s.length;
   var result = x % 9;
   if (result != 1) {
     return false;
