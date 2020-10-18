@@ -1,11 +1,8 @@
 var arr = new List<int>.filled(1001, 1, growable: false);
 void simple_seive() {
-  var i;
-
-  var p;
-  for (p = 2; p * p < 1001; p++) {
+  for (int p = 2; p * p < 1001; p++) {
     if (arr[p] == 1) {
-      for (i = p * 2; i < 1001; i = i + p) arr[i] = 0;
+      for (int i = p * 2; i < 1001; i = i + p) arr[i] = 0;
     }
   }
 }
