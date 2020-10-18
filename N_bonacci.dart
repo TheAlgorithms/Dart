@@ -12,7 +12,7 @@ List N_bonacci(int n, int m) {
     v[i] = 2 * v[i - 1] - v[i - 1 - n];
   }
 
-  print(v);
+  return v;
 }
 
 void main() {
