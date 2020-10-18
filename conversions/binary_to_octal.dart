@@ -3,10 +3,21 @@ import 'package:test/test.dart';
 //Author:VishnuPothan
 //Binary number to octal number conversion
 void main() {
-  print(binary_to_octal("-1111")); // -17
-  print(binary_to_octal("101011")); // 53
-  print(binary_to_octal("1011a01")); // error
-  print(binary_to_octal("")); // error
+  test("binary_to_octal -1111", () {
+    expect(binary_to_octal("-1111"), equals("-17"));
+  });
+
+  test("binary_to_octal 101011", () {
+    expect(binary_to_octal("101011"), equals("53"));
+  });
+
+  test("binary_to_octal rasies error when number is invalid", () {
+    expect(() => binary_to_octal("-1011a01"), throwsFormatException);
+  });
+
+  test("binary_to_octal of empty string raises error", () {
+    expect(() => binary_to_octal(""), throwsFormatException);
+  });
 }
 
 String binary_to_octal(String bin_string) {
