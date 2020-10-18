@@ -16,6 +16,7 @@
     * [Hashing](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/HashMap/Hashing.dart)
   * Heap
     * Binary Heap
+      * [Max Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/max_heap.dart)
       * [Min Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Min_Heap.dart)
       * [Min Heap Two](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/min_heap_two.dart)
   * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
