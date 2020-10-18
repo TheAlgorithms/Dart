@@ -1,6 +1,7 @@
 
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
+  * [Binary To Octal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_octal.dart)
   * [Decimal To Any](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Decimal_To_Any.dart)
   * [Decimal To Binary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Decimal_To_Binary.dart)
   * [Decimal To Hexadecimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Decimal_to_Hexadecimal.dart)
