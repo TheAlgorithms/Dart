@@ -33,5 +33,4 @@ void main() {
   print(majorityElement(a3, a3.length));
   List<int> a4 = [100, 4000, 220, 220, 220, 100, 4000];
   print(majorityElement(a4, a4.length));
-  return;
 }
