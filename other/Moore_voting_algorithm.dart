@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 int majorityElement(List<int> arr, int n) {
   arr.sort();
 
