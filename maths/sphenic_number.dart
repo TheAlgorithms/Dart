@@ -1,16 +1,16 @@
-var arr = new List<int>.filled(1001, 1, growable: false);
+var arr = new List<bool>.filled(1001, true, growable: false);
 void simple_seive() {
   for (int p = 2; p * p < 1001; p++) {
-    if (arr[p] == 1) {
-      for (int i = p * 2; i < 1001; i = i + p) arr[i] = 0;
+    if (arr[p] == true) {
+      for (int i = p * 2; i < 1001; i = i + p) arr[i] = false;
     }
   }
 }
 
-int sphenic_number(int N) {
+bool sphenic_number(int N) {
   var arr1 = new List<int>.filled(9, 0, growable: false);
 
-  var count 0;
+  var count = 0;
   var j = 0;
 
   for (int i = 1; i <= N; i++) {
@@ -22,8 +22,9 @@ int sphenic_number(int N) {
   }
 
   if (count == 8 &&
-      (arr[arr1[0]] == 1 && arr[arr1[1]] == 1 && arr[arr1[2]] == 1)) return 1;
-  return 0;
+      (arr[arr1[0]] == true && arr[arr1[1]] == true && arr[arr1[2]] == true))
+    return true;
+  return false;
 }
 
 void main() {
