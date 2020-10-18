@@ -4,11 +4,11 @@ bool Magic_no(var x) {
   var n = x;
   var s = n.toString();
   var d = s.length;
-  var result = x%9;
-  if(result != 1) {
+  var result = x % 9;
+  if (result != 1) {
     return false;
-  }
-  else return true;
+  } else
+    return true;
 }
 
 void main() {
