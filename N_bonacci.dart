@@ -16,8 +16,24 @@ List N_bonacci(int n, int m) {
 }
 
 void main() {
-  N_bonacci(5, 10);
-  N_bonacci(4, 12);
-  N_bonacci(6, 13);
-  N_bonacci(8, 19);
+  test("For n=2 N_bonacci is same as fibbonaci", () {
+    expect(N_bonacci(2, 6), equals([0, 1, 1, 2, 3, 5]));
+  });
+
+  test("For n=3 N_bonacci is same as tribbonaci", () {
+    expect(N_bonacci(3, 7), equals([0, 0, 1, 1, 2, 4, 7]));
+  });
+
+  test("n=4 N_bonacci", () {
+    expect(N_bonacci(4, 10), equals([0, 0, 0, 1, 1, 2, 4, 8, 15, 29]));
+  });
+
+  test("n=6 N_bonacci", () {
+    expect(N_bonacci(6, 10), equals([0, 0, 0, 0, 0, 1, 1, 2, 4, 8]));
+  });
+
+  test("n=8 N_bonacci", () {
+    expect(N_bonacci(8, 10), equals([0, 0, 0, 0, 0, 0, 0, 1, 1, 2]));
+  });
+
 }
