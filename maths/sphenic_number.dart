@@ -31,7 +31,7 @@ bool sphenic_number(int N) {
 
 void main() {
   simple_seive();
-test("Test Sphenic_no returns false for non-sphenic numbers", () {
+  test("Test Sphenic_no returns false for non-sphenic numbers", () {
     expect(sphenic_number(0), isFalse);
     expect(sphenic_number(371), isFalse);
     expect(sphenic_number(509), isFalse);
