@@ -33,7 +33,7 @@ String binary_to_octal(String bin_string) {
   try {
     binary = int.parse(bin_string);
   } catch (e) {
-    return ("An invalid value was passed to the function");
+    throw new FormatException("An invalid value was passed to the function");
   }
   int curr_bit;
   int j = 1;
