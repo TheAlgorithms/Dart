@@ -1,0 +1,42 @@
+//Author:VishnuPothan
+//Binary number to octal number conversion
+void main() {
+  print(binary_to_octal("-1111")); // -17
+  print(binary_to_octal("101011")); // 53
+  print(binary_to_octal("1011a01")); // error
+  print(binary_to_octal("")); // error
+}
+
+String binary_to_octal(String bin_string) {
+  bin_string = bin_string.trim();
+  if (bin_string == null || bin_string == "") {
+    return ("An empty value was passed to the function");
+  }
+  bool is_negative = bin_string[0] == "-";
+  if (is_negative) bin_string = bin_string.substring(1);
+
+  String octal_val = "";
+  int binary;
+  try {
+    binary = int.parse(bin_string);
+  } catch (e) {
+    return ("An invalid value was passed to the function");
+  }
+  int curr_bit;
+  int j = 1;
+  while (binary > 0) {
+    int code_3 = 0;
+    for (int i = 0; i < 3; i++) {
+      curr_bit = binary % 10;
+      binary = binary ~/ 10;
+      code_3 += curr_bit * j;
+      j *= 2;
+    }
+    octal_val = code_3.toString() + octal_val;
+    j = 1;
+  }
+  if (is_negative) {
+    return "-" + octal_val;
+  }
+  return octal_val;
+}
