@@ -35,6 +35,8 @@
 ## Graphs
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
 
+## [Magic Number](https://github.com/TheAlgorithms/Dart/blob/master//magic_number.dart)
+
 ## Maths
   * [Abs](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs.dart)
   * [Abs Max](https://github.com/TheAlgorithms/Dart/blob/master/maths/abs_max.dart)
