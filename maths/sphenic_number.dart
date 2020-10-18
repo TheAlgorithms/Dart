@@ -11,10 +11,8 @@ int sphenic_number(int N) {
   var arr1 = new List<int>.filled(9, 0, growable: false);
   var i;
 
-  var count;
-  var j;
-  count = 0;
-  j = 0;
+  var count 0;
+  var j = 0;
 
   for (int i = 1; i <= N; i++) {
     if (N % i == 0 && count < 9) {
