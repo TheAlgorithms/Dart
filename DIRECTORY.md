@@ -29,6 +29,7 @@
     * [Linked List Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Linked_List_Stack.dart)
 
 ## Dynamic Programming
+  * [Coin Change](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/coin_change.dart)
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
 
 ## Graphs
