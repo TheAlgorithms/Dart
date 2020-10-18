@@ -39,11 +39,28 @@ void pigeonholeSort(List arr) {
 }
 
 void main() {
-  List list = [87, 48, 5, 7, 135, 85];
-  print('Before sorting:');
-  print(list);
-  print('--------------------------------------');
-  print('After sorting:');
-  pigeonholeSort(list);
-  print(list);
+  test("Sort empty list returns empty list", () {
+    List list = [];
+    pigeonholeSort(list);
+    expect(list, isEmpty);
+  });
+
+  test("Already sorted list remain sorted", () {
+    List list = [1, 2, 3, 4, 5];
+    pigeonholeSort(list);
+    expect(list, equals([1, 2, 3, 4, 5]));
+  });
+
+  test("Sort", () {
+    List list = [87, 48, 5, 7, 135, 85];
+    pigeonholeSort(list);
+    expect(list, equals([5, 7, 48, 85, 87, 135]));
+  });
+
+  test("Sorted list size doesnt change", () {
+    List list = [1, 1, 4, 1, -12, -12, 77];
+    pigeonholeSort(list);
+    expect(list.length, equals(7));
+    expect(list, [-12, -12, 1, 1, 1, 4, 77]);
+  });
 }
