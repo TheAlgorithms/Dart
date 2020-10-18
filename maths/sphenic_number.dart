@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 var arr = new List<bool>.filled(1001, true, growable: false);
 void simple_seive() {
   for (int p = 2; p * p < 1001; p++) {
@@ -29,17 +31,14 @@ bool sphenic_number(int N) {
 
 void main() {
   simple_seive();
-  var ans;
-  ans = sphenic_number(30);
-  print(ans);
-  ans = sphenic_number(60);
-  print(ans);
-  ans = sphenic_number(70);
-  print(ans);
-  ans = sphenic_number(101);
-  print(ans);
-  ans = sphenic_number(130);
-  print(ans);
-  ans = sphenic_number(240);
-  print(ans);
+test("Test Sphenic_no returns false for non-magic numbers", () {
+    expect(sphenic_number(0), isFalse);
+    expect(sphenic_number(371), isFalse);
+    expect(sphenic_number(509), isFalse);
+    expect(sphenic_number(501), isFalse);
+  });
+  test("Test sphenic_no returns true for magic numbers", () {
+    expect(sphenic_number(10), isTrue);
+    expect(sphenic_number(370), isTrue);
+  });
 }
