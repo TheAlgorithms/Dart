@@ -2,10 +2,7 @@ import 'package:test/test.dart';
 
 bool Magic_no(var x) {
   var result = x % 9;
-  if (result != 1) {
-    return false;
-  } else
-    return true;
+  return result == 1;
 }
 
 void main() {
