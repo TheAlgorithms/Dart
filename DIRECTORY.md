@@ -122,6 +122,7 @@
   * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heap_Sort.dart)
   * [Insert Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/insert_Sort.dart)
   * [Merge Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/merge_sort.dart)
+  * [Pigeonhole Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/pigeonhole_sort.dart)
   * [Quick Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/quick_Sort.dart)
   * [Select Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/select_Sort.dart)
   * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shell_Sort.dart)
