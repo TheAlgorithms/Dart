@@ -23,10 +23,7 @@ bool sphenic_number(int N) {
     }
   }
 
-  if (count == 8 &&
-      (arr[arr1[0]] == true && arr[arr1[1]] == true && arr[arr1[2]] == true))
-    return true;
-  return false;
+  return (count == 8 && arr[arr1[0]] && arr[arr1[1]] && arr[arr1[2]]);
 }
 
 void main() {
