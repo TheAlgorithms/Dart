@@ -25,12 +25,19 @@ int majorityElement(List<int> arr, int n) {
 
 // Driver code
 void main() {
-  List<int> a1 = [1, 2, 2, 2, 2, 5, 1];
-  print(majorityElement(a1, a1.length));
-  List<int> a2 = [3, 3, 22, 21, 21, 5, 21];
-  print(majorityElement(a2, a2.length));
-  List<int> a3 = [30, 30, 40, 30, 40, 30, 40];
-  print(majorityElement(a3, a3.length));
-  List<int> a4 = [100, 4000, 220, 220, 220, 100, 4000];
-  print(majorityElement(a4, a4.length));
+  test("majorityElement", () {
+    List<int> a1 = [1, 2, 2, 2, 2, 5, 1];
+    expect(majorityElement(a1, a1.length), equals(2));
+
+    List<int> a2 = [30, 30, 40, 30, 40, 30, 40];
+    expect(majorityElement(a2, a2.length), equals(30));
+  });
+
+  test("majorityElement returns -1 when there is no dominant element", () {
+    List<int> a1 = [3, 3, 22, 21, 21, 5, 21];
+    expect(majorityElement(a1, a1.length), equals(-1));
+
+    List<int> a2 = [100, 4000, 220, 220, 220, 100, 4000];
+    expect(majorityElement(a2, a2.length), equals(-1));
+  });
 }
