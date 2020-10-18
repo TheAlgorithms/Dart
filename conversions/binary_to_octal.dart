@@ -1,6 +1,5 @@
 import 'package:test/test.dart';
 
-//Author:VishnuPothan
 //Binary number to octal number conversion
 void main() {
   test("binary_to_octal -1111", () {
