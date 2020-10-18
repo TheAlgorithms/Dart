@@ -12,6 +12,4 @@ void main() {
   power_of_two(32);
   power_of_two(2234);
   power_of_two(2048);
-
-  return;
 }
