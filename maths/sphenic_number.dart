@@ -31,13 +31,13 @@ bool sphenic_number(int N) {
 
 void main() {
   simple_seive();
-test("Test Sphenic_no returns false for non-magic numbers", () {
+test("Test Sphenic_no returns false for non-sphenic numbers", () {
     expect(sphenic_number(0), isFalse);
     expect(sphenic_number(371), isFalse);
     expect(sphenic_number(509), isFalse);
     expect(sphenic_number(501), isFalse);
   });
-  test("Test sphenic_no returns true for magic numbers", () {
+  test("Test sphenic_no returns true for sphenic numbers", () {
     expect(sphenic_number(10), isTrue);
     expect(sphenic_number(370), isTrue);
   });
