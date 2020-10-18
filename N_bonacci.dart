@@ -35,5 +35,4 @@ void main() {
   test("n=8 N_bonacci", () {
     expect(N_bonacci(8, 10), equals([0, 0, 0, 0, 0, 0, 0, 1, 1, 2]));
   });
-
 }
