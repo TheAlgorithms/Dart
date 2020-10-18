@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 var arr = new List<bool>.filled(1001, true, growable: false);
 void simple_seive() {
   for (int p = 2; p * p < 1001; p++) {
-    if (arr[p] == true) {
+    if (arr[p]) {
       for (int i = p * 2; i < 1001; i = i + p) arr[i] = false;
     }
   }
