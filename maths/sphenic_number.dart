@@ -16,7 +16,7 @@ int sphenic_number(int N) {
   count = 0;
   j = 0;
 
-  for (i = 1; i <= N; i++) {
+  for (int i = 1; i <= N; i++) {
     if (N % i == 0 && count < 9) {
       count++;
       arr1[j] = i;
