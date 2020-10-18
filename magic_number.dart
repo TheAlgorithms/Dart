@@ -1,4 +1,4 @@
-import 'dart:math';
+import 'package:test/test.dart';
 
 bool Magic_no(var x) {
   var n = x;
