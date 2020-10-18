@@ -6,11 +6,15 @@ bool Magic_no(var x) {
 }
 
 void main() {
-  for (var x in [0, 10, 370, 371, 509, 501]) {
-    if (Magic_no(x)) {
-      print("${x} is magic number");
-    } else {
-      print("${x} is not magic number");
-    }
-  }
+  test("Test Magic_no returns false for non-magic numbers", () {
+    expect(Magic_no(0), isFalse);
+    expect(Magic_no(371), isFalse);
+    expect(Magic_no(509), isFalse);
+    expect(Magic_no(501), isFalse);
+  });
+
+  test("Test Magic_no returns true for magic numbers", () {
+    expect(Magic_no(10), isTrue);
+    expect(Magic_no(370), isTrue);
+  });
 }
