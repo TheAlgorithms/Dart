@@ -1,9 +1,7 @@
-void power_of_two(int n) {
-  int result = n & (n - 1);
-  if (result == 0)
-    print("Yes, the number $n is a power of 2");
-  else
-    print("No, the number $n is not a power of 2");
+import 'package:test/test.dart';
+
+bool power_of_two(int n) {
+  return (n & (n - 1)) == 0;
 }
 
 void main() {
