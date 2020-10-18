@@ -9,7 +9,6 @@ void simple_seive() {
 
 int sphenic_number(int N) {
   var arr1 = new List<int>.filled(9, 0, growable: false);
-  var i;
 
   var count 0;
   var j = 0;
