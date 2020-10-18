@@ -23,7 +23,7 @@ void main() {
 String binary_to_octal(String bin_string) {
   bin_string = bin_string.trim();
   if (bin_string == null || bin_string == "") {
-    return ("An empty value was passed to the function");
+    throw new FormatException("An empty value was passed to the function");
   }
   bool is_negative = bin_string[0] == "-";
   if (is_negative) bin_string = bin_string.substring(1);
