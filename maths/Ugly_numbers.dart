@@ -27,7 +27,7 @@ int getNthUglyNo(int n) {
 	becomes n*/
   while (n > count) {
     i++;
-    if (isUgly(i) == 1) count++;
+    if (isUgly(i)) count++;
   }
   return i;
 }
