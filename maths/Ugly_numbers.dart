@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 int maxDivide(int a, int b) {
   var n;
   while (a % b == 0) {
