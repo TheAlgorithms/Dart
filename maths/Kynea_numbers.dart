@@ -1,8 +1,3 @@
-// CPP code to find nth Kynea number
-
-//#include <bits/stdc++.h>
-//using namespace std;
-
 // Function to calculate nth kynea number
 int nthKyneaNumber(int n) {
   // Calculate nth kynea number
