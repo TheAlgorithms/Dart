@@ -124,6 +124,7 @@
   * [Interpolation Search](https://github.com/TheAlgorithms/Dart/blob/master/search/interpolation_Search.dart)
   * [Jump Search](https://github.com/TheAlgorithms/Dart/blob/master/search/jump_Search.dart)
   * [Linear Search](https://github.com/TheAlgorithms/Dart/blob/master/search/linear_Search.dart)
+  * [Peak Element](https://github.com/TheAlgorithms/Dart/blob/master/search/peak_element.dart)
   * [Ternary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/ternary_Search.dart)
 
 ## Sort
