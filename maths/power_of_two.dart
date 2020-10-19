@@ -1,8 +1,8 @@
 import 'package:test/test.dart';
 
 bool power_of_two(int n) {
-  if(n==0)
-    return false;
+  if (n == 0) return false;
+  
   return (n & (n - 1)) == 0;
 }
 
