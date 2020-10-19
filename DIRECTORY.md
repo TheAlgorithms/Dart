@@ -78,6 +78,7 @@
   * [Simpson Rule](https://github.com/TheAlgorithms/Dart/blob/master/maths/simpson_rule.dart)
   * [Sphenic Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/sphenic_number.dart)
   * [Symmetric Derivative](https://github.com/TheAlgorithms/Dart/blob/master/maths/symmetric_derivative.dart)
+  * [Ugly Numbers](https://github.com/TheAlgorithms/Dart/blob/master/maths/Ugly_numbers.dart)
 
 ## [N Bonacci](https://github.com/TheAlgorithms/Dart/blob/master//N_bonacci.dart)
 
