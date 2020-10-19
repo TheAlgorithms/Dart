@@ -13,7 +13,7 @@ bool isUgly(int no) {
   no = maxDivide(no, 3);
   no = maxDivide(no, 5);
 
-  return (no == 1) ? 1 : 0;
+  return no == 1;
 }
 
 /* Function to get the nth ugly number*/
