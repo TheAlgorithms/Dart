@@ -69,6 +69,7 @@
   * [Palindrome String Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/palindrome_string_recursion.dart)
   * [Perfect Number](https://github.com/TheAlgorithms/Dart/blob/master/maths/perfect_number.dart)
   * [Pow](https://github.com/TheAlgorithms/Dart/blob/master/maths/pow.dart)
+  * [Power Of Two](https://github.com/TheAlgorithms/Dart/blob/master/maths/power_of_two.dart)
   * [Prime Check](https://github.com/TheAlgorithms/Dart/blob/master/maths/prime_check.dart)
   * [Relu Function](https://github.com/TheAlgorithms/Dart/blob/master/maths/relu_function.dart)
   * [Shreedharacharya](https://github.com/TheAlgorithms/Dart/blob/master/maths/shreedharacharya.dart)
