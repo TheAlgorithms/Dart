@@ -34,6 +34,19 @@ int getNthUglyNo(int n) {
 
 /* Driver program to test above functions */
 void main() {
-  var no = getNthUglyNo(150);
-  print('150th ugly no. is $no');
+  test("getNthUglyNo(150) returns 5832", () {
+    expect(getNthUglyNo(150), equals(5832));
+  });
+
+  test("isUgly returns true for 6", () {
+    expect(isUgly(6), isTrue);
+  });
+
+  test("isUgly returns true for 5832", () {
+    expect(isUgly(5832), isTrue);
+  });
+
+  test("isUgly returns false for 5833", () {
+    expect(isUgly(5833), isFalse);
+  });
 }
