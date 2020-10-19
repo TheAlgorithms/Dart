@@ -8,7 +8,7 @@ int maxDivide(int a, int b) {
 }
 
 /* Function to check if a number is ugly or not */
-int isUgly(int no) {
+bool isUgly(int no) {
   no = maxDivide(no, 2);
   no = maxDivide(no, 3);
   no = maxDivide(no, 5);
