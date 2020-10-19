@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 // function to remove duplicate in string
 String removeDups(String s) {
   int j = 0;
