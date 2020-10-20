@@ -4,6 +4,15 @@ int swapbits(int n) {
 }
 
 void main() {
-  int n = 2;
-  print(swapbits(n));
+  test("swapbits returns 1 for 2", () {
+    expect(swapbits(2), equals(1));
+  });
+
+  test("swapbits returns 23 for 43", () {
+    expect(swapbits(43), equals(23));
+  });
+
+  test("swapbits returns 43 for 23", () {
+    expect(swapbits(23), equals(43));
+  });
 }
