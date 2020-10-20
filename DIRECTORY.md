@@ -98,6 +98,7 @@
   * [Kadanealgo](https://github.com/TheAlgorithms/Dart/blob/master/other/kadaneAlgo.dart)
   * [Lcm](https://github.com/TheAlgorithms/Dart/blob/master/other/LCM.dart)
   * [Moore Voting Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/other/Moore_voting_algorithm.dart)
+  * [Swap All Odd And Even Bits](https://github.com/TheAlgorithms/Dart/blob/master/other/swap_all_odd_and_even_bits.dart)
   * [Tower Of Hanoi](https://github.com/TheAlgorithms/Dart/blob/master/other/tower_of_hanoi.dart)
 
 ## Project Euler
