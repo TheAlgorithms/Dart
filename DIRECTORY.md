@@ -10,6 +10,7 @@
   * [Hexadecimal To Binary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/hexadecimal_to_binary.dart)
   * [Hexadecimal To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/hexadecimal_to_decimal.dart)
   * [Integer To Roman](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Integer_To_Roman.dart)
+  * [Octal To Binary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/octal_to_binary.dart)
 
 ## Data Structures
   * Binary Tree
