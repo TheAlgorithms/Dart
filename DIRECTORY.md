@@ -40,6 +40,7 @@
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
 
 ## Graphs
+  * [Breadth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/breadth_first_search.dart)
   * [Depth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/depth_first_search.dart)
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
 
