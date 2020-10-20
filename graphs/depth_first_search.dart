@@ -7,25 +7,32 @@ import 'package:test/test.dart';
 class Graph {
   /// Adjacency List representation using dynamic list and HashMap
   HashMap graph = new HashMap<int, List<dynamic>>();
-  int numberOfNodes;
+  List<int> nodes;
 
   void makeGraph() {
     /// initialise all nodes with empty lists.
     /// each node will have a list as value which stores
     /// the nodes to which it is connected to
-    for (int i = 0; i < this.numberOfNodes; i++) {
-      this.graph[i] = List();
+    for (int i = 0; i < this.nodes.length; i++) {
+      this.graph[nodes[i]] = List();
     }
   }
 
-  Graph(this.numberOfNodes);
+  Graph(this.nodes) {
+    this.makeGraph();
+  }
 
   int get numberOfNodesInGraph {
-    return this.numberOfNodes;
+    return this.nodes.length;
   }
 
   HashMap get graphDataStructure {
     return this.graph;
+  }
+
+  void addNodes(int newNode) {
+    this.nodes.add(newNode);
+    this.graph[newNode] = List();
   }
 
   void addEdges(int start, int end) {
@@ -59,7 +66,7 @@ List<int> depthFirstSearch(Graph graph, int numberOfNodes, int startNode) {
 
 void main() {
   test(('Test case 1:'), () {
-    int numberOfNodes = 4;
+    List<int> nodes = [0, 1, 2, 3];
     int numberOfEdges = 3;
 
     List<List<int>> edges = [
@@ -67,8 +74,7 @@ void main() {
       [1, 2],
       [0, 3]
     ];
-    Graph graph = Graph(numberOfNodes);
-    graph.makeGraph();
+    Graph graph = Graph(nodes);
 
     for (int i = 0; i < numberOfEdges; i++) {
       int start = edges[i][0];
@@ -76,12 +82,13 @@ void main() {
       graph.addEdges(start, end);
     }
     int startNode = 0;
-    List<int> answer = depthFirstSearch(graph, numberOfNodes, startNode);
+    List<int> answer =
+        depthFirstSearch(graph, graph.numberOfNodesInGraph, startNode);
     expect(answer, equals([0, 1, 2, 3]));
   });
 
   test(('Test case 2:'), () {
-    int numberOfNodes = 5;
+    List<int> nodes = [0, 1, 2, 3, 4];
     int numberOfEdges = 4;
 
     List<List<int>> edges = [
@@ -90,9 +97,7 @@ void main() {
       [0, 3],
       [2, 4]
     ];
-    Graph graph = Graph(numberOfNodes);
-
-    graph.makeGraph();
+    Graph graph = Graph(nodes);
 
     for (int i = 0; i < numberOfEdges; i++) {
       int start = edges[i][0];
@@ -100,7 +105,8 @@ void main() {
       graph.addEdges(start, end);
     }
     int startNode = 0;
-    List<int> answer = depthFirstSearch(graph, numberOfNodes, startNode);
+    List<int> answer =
+        depthFirstSearch(graph, graph.numberOfNodesInGraph, startNode);
     expect(answer, equals([0, 1, 2, 4, 3]));
   });
 }
