@@ -19,6 +19,20 @@ String reverseStringWords(String s) {
 }
 
 void main() {
-  String s = "abhishek.is.a.good.boy";
-  print(reverseStringWords(s));
+  test("reverseStringWords single word returns same word", () {
+    expect(reverseStringWords("word"), equals("word"));
+  });
+
+  test("reverseStringWords w1.w2 returns w2.w1", () {
+    expect(reverseStringWords("w1.w2"), equals("w2.w1"));
+  });
+
+  test("reverseStringWords on empty string returns empty string", () {
+    expect(reverseStringWords(""), equals(""));
+  });
+
+  test("reverseStringWords", () {
+    expect(reverseStringWords("abhishek.is.a.good.boy"),
+        equals("boy.good.a.is.abhishek"));
+  });
 }
