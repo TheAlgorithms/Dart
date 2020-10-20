@@ -40,6 +40,7 @@
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
 
 ## Graphs
+  * [Depth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/depth_first_search.dart)
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
 
 ## [Magic Number](https://github.com/TheAlgorithms/Dart/blob/master//magic_number.dart)
