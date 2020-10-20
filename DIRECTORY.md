@@ -9,6 +9,7 @@
   * [Decimal To Octal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Decimal_to_Octal.dart)
   * [Hexadecimal To Binary](https://github.com/TheAlgorithms/Dart/blob/master/conversions/hexadecimal_to_binary.dart)
   * [Hexadecimal To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/hexadecimal_to_decimal.dart)
+  * [Hexadecimal To Octal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/hexadecimal_to_octal.dart)
   * [Integer To Roman](https://github.com/TheAlgorithms/Dart/blob/master/conversions/Integer_To_Roman.dart)
 
 ## Data Structures
