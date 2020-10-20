@@ -152,3 +152,4 @@
 ## Strings
   * [Knuth Morris Prat](https://github.com/TheAlgorithms/Dart/blob/master/strings/knuth_morris_prat.dart)
   * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
+  * [Reverse Words Of String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_words_of_string.dart)
