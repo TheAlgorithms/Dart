@@ -1,7 +1,7 @@
 import "dart:math" show pow;
 import 'package:test/test.dart';
 
-// Hexadecimal nuber to octal number conversion program
+// Hexadecimal number to octal number conversion program
 String hexadecimal_to_octal(String hex_val) {
   int dec = 0;
 
@@ -72,13 +72,13 @@ String hexadecimal_to_octal(String hex_val) {
   // String oct to store the octal equivalent of a hexadecimal number.
   String oct_val = "";
 
-  //converting decimal to octal number.
+  // Converting decimal to octal number.
   while (dec > 0) {
     oct_val = (dec % 8).toString() + oct_val;
     dec = dec ~/ 8;
   }
 
-  // returning the value
+  // Returning the value
   if (is_negative) {
     return "-" + oct_val;
   }
@@ -86,7 +86,7 @@ String hexadecimal_to_octal(String hex_val) {
 }
 
 void main() {
-  // test cases with various input
+  // Test cases with various input
   test("hexadecimal_to_octal 43DF", () {
     expect(hexadecimal_to_octal("43DF"), equals("41737"));
   });
