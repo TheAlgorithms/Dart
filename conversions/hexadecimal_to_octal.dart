@@ -63,11 +63,12 @@ String hexadecimal_to_octal(String hex_val) {
         c--;
         break;
       default:
-        throw new FormatException("An invalid value was passed to the function");
+        throw new FormatException(
+            "An invalid value was passed to the function");
         break;
     }
   }
-  
+
   // String oct to store the octal equivalent of a hexadecimal number.
   String oct_val = "";
 
