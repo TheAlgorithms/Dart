@@ -1,12 +1,22 @@
 import "dart:math" show pow;
+import 'package:test/test.dart';
 
 // Hexadecimal nuber to octal number conversion program
 String hexadecimal_to_octal(String hex_val) {
   int dec = 0;
+
+  // checking for null string passed to function
+  if (hex_val == null || hex_val == "") {
+    throw new FormatException("An empty value was passed to the function");
+  }
+
+  // negative number check
+  bool is_negative = hex_val[0] == "-";
+  if (is_negative) hex_val = hex_val.substring(1);
   int c = hex_val.length - 1;
+
   // finding the decimal equivalent of the hexa decimal number
   for (int i = 0; i < hex_val.length; i++) {
-    //extracting each character from the string.
     var ch = hex_val.substring(i, i + 1);
     switch (ch) {
       case '0':
@@ -53,25 +63,42 @@ String hexadecimal_to_octal(String hex_val) {
         c--;
         break;
       default:
-        print("Invalid hexa input");
+        throw new FormatException("An invalid value was passed to the function");
         break;
     }
   }
+  
   // String oct to store the octal equivalent of a hexadecimal number.
-  String oct = "";
+  String oct_val = "";
 
   //converting decimal to octal number.
   while (dec > 0) {
-    oct = (dec % 8).toString() + oct;
-    dec ~/ 8;
+    oct_val = (dec % 8).toString() + oct_val;
+    dec = dec ~/ 8;
   }
 
-  // Printing the final output.
-  return ("Equivalent Octal Value = " + oct);
+  // returning the value
+  if (is_negative) {
+    return "-" + oct_val;
+  }
+  return oct_val;
 }
 
 void main() {
-  // taking 1AC as an example of hexadecimal Number.
-  String hexa = "1AC";
-  print(hexadecimal_to_octal(hexa));
+  // test cases with various input
+  test("hexadecimal_to_octal 43DF", () {
+    expect(hexadecimal_to_octal("43DF"), equals("41737"));
+  });
+
+  test("hexadecimal_to_octal -2CB", () {
+    expect(hexadecimal_to_octal("-2CB"), equals("-1313"));
+  });
+
+  test("hexadecimal_to_octal rasies error when number is invalid", () {
+    expect(() => hexadecimal_to_octal("AIO"), throwsFormatException);
+  });
+
+  test("hexadecimal_to_octal of empty string raises error", () {
+    expect(() => hexadecimal_to_octal(""), throwsFormatException);
+  });
 }
