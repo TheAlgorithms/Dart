@@ -25,6 +25,19 @@ String removeDups(String s) {
 }
 
 void main() {
-  String s = "dsasadshadjhs";
-  print(removeDups(s));
+  test("removeDups from string without duplicates returns same string", () {
+    expect(removeDups("1234"), equals("1234"));
+  });
+
+  test("removeDups from empty list returns empty list", () {
+    expect(removeDups(""), equals(""));
+  });
+
+  test("removeDups from 12341234 returns 1234", () {
+    expect(removeDups("12341234"), equals("1234"));
+  });
+
+  test("removeDups from aaaab returns ab", () {
+    expect(removeDups("aaaab"), equals("ab"));
+  });
 }
