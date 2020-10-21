@@ -37,6 +37,37 @@ String evaluateBoolExpr(String s) {
 
 // Driver code
 void main() {
-  String s = "1A0B1";
-  print(evaluateBoolExpr(s));
+  test("Test singleton boolean remains same", () {
+    expect(evaluateBoolExpr("1"), equals('1'));
+    expect(evaluateBoolExpr("0"), equals('0'));
+  });
+
+  test("Test AND", () {
+    expect(evaluateBoolExpr("1A1"), equals('1'));
+    expect(evaluateBoolExpr("0A1"), equals('0'));
+    expect(evaluateBoolExpr("1A0"), equals('0'));
+    expect(evaluateBoolExpr("0A0"), equals('0'));
+  });
+
+  test("Test OR", () {
+    expect(evaluateBoolExpr("1B1"), equals('1'));
+    expect(evaluateBoolExpr("0B1"), equals('1'));
+    expect(evaluateBoolExpr("1B0"), equals('1'));
+    expect(evaluateBoolExpr("0B0"), equals('0'));
+  });
+
+  test("Test XOR", () {
+    expect(evaluateBoolExpr("1C1"), equals('0'));
+    expect(evaluateBoolExpr("0C1"), equals('1'));
+    expect(evaluateBoolExpr("1C0"), equals('1'));
+    expect(evaluateBoolExpr("0C0"), equals('0'));
+  });
+
+  test("Test '0B0B0B0B0B1'", () {
+    expect(evaluateBoolExpr("0B0B0B0B0B1"), equals('1'));
+  });
+
+  test("Test '0B0B0B1A1'", () {
+    expect(evaluateBoolExpr("0B0B0B1A1"), equals('1'));
+  });
 }
