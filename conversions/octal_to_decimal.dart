@@ -2,6 +2,8 @@ import "dart:math" show pow;
 import 'package:test/test.dart';
 
 // octal number to decimal number conversion
+//
+// function to take oct string value and  return decmal string value
 String ocatal_to_decimal(String oct_val) {
   // checking for unexpected values
   oct_val = oct_val.trim();
@@ -43,6 +45,7 @@ String ocatal_to_decimal(String oct_val) {
   return dec_val.toString();
 }
 
+// driver function
 void main() {
   // test cases for different input
   test("ocatal_to_decimal 75", () {
