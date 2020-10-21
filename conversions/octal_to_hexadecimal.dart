@@ -1,7 +1,7 @@
 import "dart:math" show pow;
 import 'package:test/test.dart';
 
-// octal number to hex number 
+// octal number to hex number
 Map<String, String> hex_table = {
   "10": "A",
   "11": "B",
@@ -47,7 +47,7 @@ String ocatal_to_hex(String oct_val) {
   }
 
   // converting to decimal to hex
-   if (dec_val == 0) {
+  if (dec_val == 0) {
     return "0";
   }
   String hex_string = "";
@@ -70,13 +70,15 @@ String ocatal_to_hex(String oct_val) {
   return hex_string;
 }
 
+// driver function
 void main() {
+  // test input
   test("ocatal_to_hex 75", () {
-    expect(ocatal_to_hex("75"), equals("111101"));
+    expect(ocatal_to_hex("75"), equals("3D"));
   });
 
   test("ocatal_to_hex -62", () {
-    expect(ocatal_to_hex("-62"), equals("-110010"));
+    expect(ocatal_to_hex("-62"), equals("-32"));
   });
 
   test("ocatal_to_hex rasies error when number is invalid", () {
@@ -87,7 +89,7 @@ void main() {
     expect(() => ocatal_to_hex("as23"), throwsFormatException);
   });
 
-  test("ocatal_to_binary of empty string raises error", () {
-    expect(() => ocatal_to_binary(""), throwsFormatException);
+  test("ocatal_to_hex of empty string raises error", () {
+    expect(() => ocatal_to_hex(""), throwsFormatException);
   });
 }
