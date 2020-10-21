@@ -19,11 +19,21 @@ int nthKyneaNumber(int n) {
 }
 
 // Driver Program
-int main() {
-  int n = 8;
 
-  // print nth kynea number
-  print(nthKyneaNumber(n));
+void main() {
+  test("1th Kynea number equals to 7", () {
+    expect(nthKyneaNumber(1), equals(7));
+  });
 
-  return 0;
+  test("4th Kynea number equals to 287", () {
+    expect(nthKyneaNumber(4), equals(287));
+  });
+
+  test("6th Kynea number equals to 4223", () {
+    expect(nthKyneaNumber(6), equals(4223));
+  });
+
+  test("10th Kynea number equals to 1050623", () {
+    expect(nthKyneaNumber(10), equals(1050623));
+  });
 }
