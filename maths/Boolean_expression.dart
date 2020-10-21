@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 String evaluateBoolExpr(String s) {
   int n = s.length;
   // Traverse all operands by jumping
