@@ -17,27 +17,27 @@ int minimumNumberOfJumps(List<int> array) {
 
 void main() {
   List<int> array;
-  test(('test 1'), () {
+  test('test 1', () {
     array = [3, 4, 2, 1, 2, 3, 7, 1, 1, 1, 3];
     expect(minimumNumberOfJumps(array), 4);
   });
-  test(('test 2'), () {
+  test('test 2', () {
     array = [1];
     expect(minimumNumberOfJumps(array), 0);
   });
-  test(('test 3'), () {
+  test('test 3', () {
     array = [1, 1];
     expect(minimumNumberOfJumps(array), 1);
   });
-  test(('test 4'), () {
+  test('test 4', () {
     array = [1, 1, 1];
     expect(minimumNumberOfJumps(array), 2);
   });
-  test(('test 5'), () {
+  test('test 5', () {
     array = [2, 1, 2, 3, 1, 1, 1];
     expect(minimumNumberOfJumps(array), 3);
   });
-  test(('test 6'), () {
+  test('test 6', () {
     array = [3, 4, 2, 1, 2, 3, 7, 1, 1, 1, 3, 2, 3, 2, 1, 1, 1, 1];
     expect(minimumNumberOfJumps(array), 7);
   });
