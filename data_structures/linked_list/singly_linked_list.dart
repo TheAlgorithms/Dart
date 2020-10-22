@@ -8,14 +8,13 @@ class Node<T> {
   Node(this.element);
 }
 
-
 //linked list creation
 class LinkedList<T> {
   Node<T> front;
   LinkedList();
   int _size = 0;
 
-  int size(){
+  int size() {
     return _size;
   }
 
@@ -80,6 +79,7 @@ class LinkedList<T> {
     }
     return false;
   }
+
 //pos where a particular element is present
   int indexOf(T element) {
     var index = 0;
@@ -93,30 +93,29 @@ class LinkedList<T> {
     }
     return -1;
   }
+
 //remove a particular element
   T remove(T element) {
     var index = indexOf(element);
-    if(index != -1)
-      return removeAt(index);
+    if (index != -1) return removeAt(index);
     return null;
   }
+
 //printing the complete linked list
-  void printList()
-  {
+  void printList() {
     var current = front;
-    while(current != null)
-    {
+    while (current != null) {
       print(current.element);
       current = current.link;
     }
   }
 }
+
 //main function
-int main()
-{
+int main() {
   LinkedList<int> linkedList = new LinkedList<int>();
-  linkedlist.append(1);
-  linkedlist.append(2);
-  linkedlist.printList();
+  linkedList.append(1);
+  linkedList.append(2);
+  linkedList.printList();
   return 0;
 }
