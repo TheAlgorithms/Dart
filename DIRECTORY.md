@@ -40,6 +40,7 @@
 ## Dynamic Programming
   * [Coin Change](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/coin_change.dart)
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
+  * [Min Number Of Jumps](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/min_number_of_jumps.dart)
 
 ## Graphs
   * [Breadth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/breadth_first_search.dart)
