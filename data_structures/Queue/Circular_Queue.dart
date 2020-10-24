@@ -28,18 +28,20 @@ class CircularQueue<T> {
   }
 
   // remove elements from the queue
-  void deque() {
+  T deque() {
     if (start == -1) {
       print("The queue is empty!!!");
-      return;
+      return null;
     }
+    T here = queue[start];
     if (start == end) {
       start = -1;
       end = -1;
-      return;
+      return here;
     }
     start++;
     start %= MAX_SIZE;
+    return here;
   }
 
   // get the size of the queue
