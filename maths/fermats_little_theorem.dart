@@ -1,5 +1,3 @@
-@Skip('currently failing (see issue #86)')
-
 import 'package:test/test.dart';
 
 /*
@@ -21,12 +19,22 @@ void main() {
   // a prime number
   int p = 701;
 
-  double a = 1000000000;
+  int a = 1000000000;
   int b = 10;
 
   // using binary exponentiation function, O(log(p)):
-  print((a / b) % p == (a * binary_exponentiation(b, p - 2, p)) % p);
-
+  test(
+    'test 1',
+    () {
+      expect(
+          (a / b) % p == (a * binary_exponentiation(b, p - 2, p) % p), isTrue);
+    },
+  );
   // using Python operators:
-  print((a / b) % p == (a * b ^ (p - 2)) % p);
+  test(
+    'test 2',
+    () {
+      expect((a / b) % p == (a * b ^ (p - 2)) % p, isFalse);
+    },
+  );
 }
