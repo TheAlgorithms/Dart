@@ -2,9 +2,9 @@ import 'package:test/test.dart';
 import 'dart:math';
 
 /*
- Fermat's little Theorem
- Translated from TheAlgorithms/Python
-*/
+  Fermat's little Theorem
+  Translated from TheAlgorithms/Python
+  */
 binary_exponentiation(a, n, mod) {
   if (n == 0) {
     return 1;
@@ -25,7 +25,7 @@ void main() {
 
   // using binary exponentiation function, O(log(p)):
   print((a / b) % p == (a * binary_exponentiation(b, p - 2, p) % p));
-  print((a / b) % p == (a * pow(b,(p - 2)) % p));
+  print((a / b) % p == (a * pow(b, (p - 2)) % p));
   test(
     'test 1',
     () {
@@ -37,7 +37,7 @@ void main() {
   test(
     'test 2',
     () {
-      expect((a / b) % p == (a * pow(b,(p - 2)) % p), isFalse);
+      expect((a / b) % p == (a * pow(b, (p - 2)) % p), isFalse);
     },
   );
 }
