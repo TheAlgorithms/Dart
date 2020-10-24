@@ -67,14 +67,40 @@ class CircularQueue<T> {
 }
 
 void main() {
-  CircularQueue<int> Queue = new CircularQueue<int>();
-  Queue.enque(1);
-  Queue.enque(2);
-  Queue.enque(3);
-  Queue.enque(4);
-  Queue.printAll();
-  Queue.deque();
-  Queue.printAll();
-  Queue.deque();
-  print(Queue.size());
+  test("Initial CircularQueue is empty", () {
+    CircularQueue<int> queue = new CircularQueue<int>();
+
+    expect(queue.deque(), isNull);
+  });
+
+  test("deque return first item put to CircularQueue", () {
+    CircularQueue<int> queue = new CircularQueue<int>();
+    queue.enque(1);
+
+    expect(queue.deque(), equals(1));
+  });
+
+  test("CircularQueue act as fifo", () {
+    CircularQueue<int> queue = new CircularQueue<int>();
+    queue.enque(1);
+    queue.enque(2);
+    queue.enque(3);
+
+    expect(queue.deque(), equals(1));
+    expect(queue.deque(), equals(2));
+    expect(queue.deque(), equals(3));
+  });
+
+  test("deque returns null after removing all items", () {
+    CircularQueue<int> queue = new CircularQueue<int>();
+    queue.enque(1);
+    queue.enque(2);
+    queue.enque(3);
+
+    queue.deque();
+    queue.deque();
+    queue.deque();
+
+    expect(queue.deque(), isNull);
+  });
 }
