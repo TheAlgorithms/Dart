@@ -1,4 +1,7 @@
 
+## Array
+  * [Validate Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/array/validate_subsequence.dart)
+
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_hexadecimal.dart)
@@ -26,9 +29,9 @@
       * [Max Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Max_heap.dart)
       * [Min Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Min_Heap.dart)
       * [Min Heap Two](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/min_heap_two.dart)
-  * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list.dart)
   * Linked List
     * [Cycle In Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/cycle_in_linked_list.dart)
+    * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/linked_list.dart)
   * Queue
     * [List Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/List_Queue.dart)
     * [Priority Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/Priority_Queue.dart)
@@ -40,6 +43,7 @@
 ## Dynamic Programming
   * [Coin Change](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/coin_change.dart)
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
+  * [Min Number Of Jumps](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/min_number_of_jumps.dart)
 
 ## Graphs
   * [Breadth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/breadth_first_search.dart)
