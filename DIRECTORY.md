@@ -33,6 +33,7 @@
     * [Cycle In Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/cycle_in_linked_list.dart)
     * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/linked_list.dart)
   * Queue
+    * [Circular Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/Circular_Queue.dart)
     * [List Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/List_Queue.dart)
     * [Priority Queue](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Queue/Priority_Queue.dart)
   * Stack
