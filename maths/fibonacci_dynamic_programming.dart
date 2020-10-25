@@ -18,7 +18,20 @@ void main() {
   dp[0] = 0;
   dp[1] = 1;
 
-  getFib(100);
-  //Printing the first 100 fibonacci numbers
-  print("First 100 Fibonacci numbers: ${dp.sublist(1, 100)}");
+  test("getFib 0 equals 0", () {
+    expect(getFib(0), equals(0));
+  });
+
+  test("getFib 1 equals 1", () {
+    expect(getFib(1), equals(1));
+  });
+
+  test("getFib 5 equals 5", () {
+    expect(getFib(5), equals(5));
+  });
+
+  test("getFib(n) equals getFib(n - 1) + getFib(n - 2)", () {
+    expect(getFib(7), equals(getFib(6) + getFib(5)));
+    expect(getFib(14), equals(getFib(13) + getFib(12)));
+  });
 }
