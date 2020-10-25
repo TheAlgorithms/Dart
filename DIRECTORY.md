@@ -66,6 +66,7 @@
   * [Factorial Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/factorial_recursion.dart)
   * [Factors](https://github.com/TheAlgorithms/Dart/blob/master/maths/factors.dart)
   * [Fermats Little Theorem](https://github.com/TheAlgorithms/Dart/blob/master/maths/fermats_little_theorem.dart)
+  * [Fibonacci Dynamic Programming](https://github.com/TheAlgorithms/Dart/blob/master/maths/fibonacci_dynamic_programming.dart)
   * [Fibonacci Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/fibonacci_recursion.dart)
   * [Find Max](https://github.com/TheAlgorithms/Dart/blob/master/maths/find_max.dart)
   * [Find Max Recursion](https://github.com/TheAlgorithms/Dart/blob/master/maths/find_max_recursion.dart)
