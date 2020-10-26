@@ -1,5 +1,6 @@
 // Author: Jerold Albertson
 // Profile: https://github.com/jerold
+// Algorithm: https://en.wikipedia.org/wiki/Quadtree
 
 import 'dart:math';
 import 'package:test/test.dart';
