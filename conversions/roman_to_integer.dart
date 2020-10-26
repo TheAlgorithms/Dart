@@ -1,3 +1,5 @@
+import 'package:test/test.dart';
+
 int romanToInteger(var s) {
   int ans = 0;
   for (int i = 0; i < s.length; i++) {
@@ -35,18 +37,31 @@ int value(var r) {
 }
 
 void main() {
-  String s = 'XII';
-  print(romanToInteger(s));
-  s = 'LII';
-  print(romanToInteger(s));
-  s = 'DLVII';
-  print(romanToInteger(s));
-  s = 'VI';
-  print(romanToInteger(s));
-  s = 'CLXV';
-  print(romanToInteger(s));
-  s = 'MDCI';
-  print(romanToInteger(s));
-  s = 'LVII';
-  print(romanToInteger(s));
+  test("romanToInteger XII returns 12", () {
+    expect(romanToInteger('XII'), equals(12));
+  });
+
+  test("romanToInteger LII returns 52", () {
+    expect(romanToInteger('LII'), equals(52));
+  });
+
+  test("romanToInteger DLVII returns 557", () {
+    expect(romanToInteger('LII'), equals(52));
+  });
+
+  test("romanToInteger VI returns 6", () {
+    expect(romanToInteger('VI'), equals(6));
+  });
+
+  test("romanToInteger CLXV returns 165", () {
+    expect(romanToInteger('CLXV'), equals(165));
+  });
+
+  test("romanToInteger MDCI returns 1601", () {
+    expect(romanToInteger('MDCI'), equals(1601));
+  });
+
+  test("romanToInteger LVII returns 57", () {
+    expect(romanToInteger('LVII'), equals(57));
+  });
 }
