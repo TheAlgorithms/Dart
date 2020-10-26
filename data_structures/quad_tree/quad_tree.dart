@@ -10,10 +10,10 @@ int default_max_depth = 1000;
 int default_max_items = 100;
 
 // names reflect a coordinate system where values increase as one goes left or down
-int _upperLeftIndex = 0;
-int _upperRightIndex = 1;
-int _lowerLeftIndex = 2;
-int _lowerRightIndex = 3;
+const _upperLeftIndex = 0;
+const _upperRightIndex = 1;
+const _lowerLeftIndex = 2;
+const _lowerRightIndex = 3;
 
 class Node<T> extends Rectangle<num> {
   final int maxDepth;
