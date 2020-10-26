@@ -40,7 +40,7 @@ class Node<T> extends Rectangle<num> {
     if (!containsPoint(atPoint)) return false;
 
     if (_children.isEmpty) {
-      if (_items.length + 1 < maxItems || _depth + 1 > maxDepth) {
+      if (_items.length + 1 <= maxItems || _depth + 1 > maxDepth) {
         _items.add(_ItemAtPoint<T>(item, atPoint));
         return true;
       }
@@ -129,8 +129,17 @@ void main() {
       final tree = Node<String>(0, 0, 100, 100, maxItems: 2, maxDepth: 2);
 
       expect(tree.insert("a", Point(0, 0)), isTrue);
+      expect(tree.toString(), equals("[0]([a]:[])"));
+
       expect(tree.insert("b", Point(100, 0)), isTrue);
+      expect(tree.toString(), equals("[0]([a, b]:[])"));
+
       expect(tree.insert("c", Point(0, 100)), isTrue);
+      expect(
+          tree.toString(),
+          equals(
+              "[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([]:[])])"));
+
       expect(tree.insert("d", Point(100, 100)), isTrue);
       expect(
           tree.toString(),
