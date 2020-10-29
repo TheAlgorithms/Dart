@@ -118,6 +118,8 @@
     * [Sol1](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_1/sol1.dart)
   * Problem 10
     * [Sol10](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_10/sol10.dart)
+  * Problem 12
+    * [Sol12](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_12/sol12.dart)
   * Problem 13
     * [Sol13](https://github.com/TheAlgorithms/Dart/blob/master/project_euler/problem_13/sol13.dart)
   * Problem 17
