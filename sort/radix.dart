@@ -14,7 +14,6 @@ main() {
 }
 
 getDigitNum(int n, int i) {
-
   var cal = (n.round().abs() / Math.pow(10, i)) % 10;
 
   return cal.round();
