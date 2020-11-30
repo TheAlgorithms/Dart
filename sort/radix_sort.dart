@@ -64,7 +64,6 @@ radixSort(List nums) {
   var maxDightCount = mostDigits(nums);
   for (var k = 0; k < maxDightCount; k++) {
     var digitBuckets = List.generate(10, (_) => []);
-    // print(digitBuckets);
     for (var i = 0; i < nums.length; i++) {
       var digit = getDigitNum(nums[i], k);
       digitBuckets[digit].add(nums[i]);
