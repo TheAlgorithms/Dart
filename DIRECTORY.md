@@ -161,6 +161,7 @@
   * [Merge Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/merge_sort.dart)
   * [Pigeonhole Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/pigeonhole_sort.dart)
   * [Quick Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/quick_Sort.dart)
+  * [Radix Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/radix_sort.dart)
   * [Select Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/select_Sort.dart)
   * [Shell Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/shell_Sort.dart)
   * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/tim_Sort.dart)
