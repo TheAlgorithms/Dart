@@ -10,8 +10,6 @@ import 'dart:math' show Random;
 import 'package:test/test.dart';
 
 main() {
-  
-  
   test("Sorting of empty list returns empty list", () {
     expect(radixSort([]), equals([]));
   });
@@ -39,11 +37,9 @@ main() {
   print('----------------------------------------------');
   print('After sorting:');
   print(radixSort(list));
-
 }
 
 getDigitNum(int n, int i) {
-
   var cal = (n.round().abs() / Math.pow(10, i)) % 10;
 
   return cal.round();
