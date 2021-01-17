@@ -2,6 +2,9 @@
 ## Array
   * [Validate Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/array/validate_subsequence.dart)
 
+## Backtracking
+  * [Open Knight Tour](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/open_knight_tour.dart)
+
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_hexadecimal.dart)
