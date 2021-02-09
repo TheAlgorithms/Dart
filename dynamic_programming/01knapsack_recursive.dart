@@ -27,7 +27,7 @@ void main() {
   print(ans);
 
   test('TC: 1', () {
-    expect(knapSackProblem(4, 10, [1, 4, 5, 6], [2, 3, 6, 7]), 10);
+    expect(knapSackProblem(10, [1, 4, 5, 6], [2, 3, 6, 7]), 10);
   });
 
   ans = knapSackProblem(5, 100, [2, 70, 30, 69, 100], [1, 70, 30, 69, 100]);
