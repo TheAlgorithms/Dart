@@ -18,7 +18,7 @@ int knapSackProblem(int capacity, List<int> values, List<int> weights,
                 capacity - currentWeight, values, weights, numberOfItems - 1),
         knapSackProblem(capacity, values, weights, numberOfItems - 1));
   } else {
-    return knapSackProblem(numberOfItems - 1, capacity, values, weights);
+    return knapSackProblem(capacity, values, weights, numberOfItems - 1);
   }
 }
 
