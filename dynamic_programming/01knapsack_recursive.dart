@@ -23,7 +23,7 @@ int knapSackProblem(int capacity, List<int> values, List<int> weights,
 }
 
 void main() {
-  int ans = knapSackProblem(4, 10, [1, 4, 5, 6], [2, 3, 6, 7]);
+  int ans = knapSackProblem(10, [1, 4, 5, 6], [2, 3, 6, 7]);
   print(ans);
 
   test('TC: 1', () {
