@@ -15,8 +15,8 @@ int knapSackProblem(int capacity, List<int> values, List<int> weights,
     return max(
         currentValue +
             knapSackProblem(
-                numberOfItems - 1, capacity - currentWeight, values, weights),
-        knapSackProblem(numberOfItems - 1, capacity, values, weights));
+                capacity - currentWeight, values, weights, numberOfItems - 1),
+        knapSackProblem(capacity, values, weights, numberOfItems - 1));
   } else {
     return knapSackProblem(numberOfItems - 1, capacity, values, weights);
   }
