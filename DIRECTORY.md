@@ -48,6 +48,7 @@
     * [Linked List Stack](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Stack/Linked_List_Stack.dart)
 
 ## Dynamic Programming
+  * [01Knapsack Recursive](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/01knapsack_recursive.dart)
   * [Coin Change](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/coin_change.dart)
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
   * [Min Number Of Jumps](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/min_number_of_jumps.dart)
