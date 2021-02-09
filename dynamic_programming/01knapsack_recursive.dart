@@ -34,7 +34,7 @@ void main() {
   print(ans);
 
   test('TC: 2', () {
-    expect(knapSackProblem(5, 100, [2, 70, 30, 69, 100], [1, 70, 30, 69, 100]),
-        101);
+    expect(
+        knapSackProblem(100, [2, 70, 30, 69, 100], [1, 70, 30, 69, 100]), 101);
   });
 }
