@@ -2,7 +2,9 @@ import 'dart:math';
 import 'package:test/test.dart';
 
 int knapSackProblem(
-    int numberOfItems, int capacity, List<int> values, List<int> weights) {
+int knapSackProblem(int capacity, List<int> values, List<int> weights,
+    [int numberOfItems]) {
+  numberOfItems ??= values.length;
   if (numberOfItems == 0 || capacity == 0) {
     return 0;
   }
