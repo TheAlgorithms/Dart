@@ -17,7 +17,7 @@ class ListQueue<T> {
   }
 
   //Add an element to the queue
-  void enqueue(T element) {
+  void enque(T element) {
     if (count == MAX_SIZE) {
       print("The queue is full!!!");
     } else {
@@ -43,9 +43,9 @@ class ListQueue<T> {
 
 void main() {
   ListQueue<int> Queue = new ListQueue<int>();
-  Queue.enqueue(12);
-  Queue.enqueue(2);
-  Queue.enqueue(7);
+  Queue.enque(12);
+  Queue.enque(2);
+  Queue.enque(7);
   print(Queue.queue);
   print("Enqueue:");
   var returnData = Queue.deque();
