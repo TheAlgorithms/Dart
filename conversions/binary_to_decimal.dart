@@ -20,7 +20,7 @@ int binary_to_decimal(String bin_string) {
   int decimal_val = 0;
   for (int i = 0; i < bin_string.length; i++) {
     if ("01".contains(bin_string[i]) == false) {
-      throw Exception("Non-binary value wass passed to the function");
+      throw Exception("Non-binary value was passed to the function");
     } else {
       decimal_val +=
           pow(2, bin_string.length - i - 1) * int.parse((bin_string[i]));

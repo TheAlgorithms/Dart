@@ -15,7 +15,7 @@
 int interpolationSearch(List arr, int n, int key) {
   int low = 0, high = n - 1;
   while (low <= high && key >= arr[low] && key <= arr[high]) {
-    /* Calculate the nearest posible position of key */
+    /* Calculate the nearest possible position of key */
     int pos = low +
         (((key - arr[low]) * (high - low)) / (arr[high] - arr[low])).round();
     if (key > arr[pos])

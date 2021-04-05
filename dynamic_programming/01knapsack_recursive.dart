@@ -1,7 +1,6 @@
 import 'dart:math';
 import 'package:test/test.dart';
 
-int knapSackProblem(
 int knapSackProblem(int capacity, List<int> values, List<int> weights,
     [int numberOfItems]) {
   numberOfItems ??= values.length;
