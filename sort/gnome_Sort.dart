@@ -32,7 +32,7 @@ void main() {
   //Get size of the array
   int n = arr.length;
 
-  //print the arrary
+  //print the array
   print(arr);
 
   //Sorting of array using gnome sort

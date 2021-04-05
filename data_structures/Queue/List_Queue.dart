@@ -16,12 +16,12 @@ class ListQueue<T> {
     }
   }
 
-  //Add an elment to the queue
-  void enque(T elment) {
+  //Add an element to the queue
+  void enqueue(T element) {
     if (count == MAX_SIZE) {
       print("The queue is full!!!");
     } else {
-      queue[count] = elment;
+      queue[count] = element;
       count++;
     }
   }
@@ -43,17 +43,17 @@ class ListQueue<T> {
 
 void main() {
   ListQueue<int> Queue = new ListQueue<int>();
-  Queue.enque(12);
-  Queue.enque(2);
-  Queue.enque(7);
+  Queue.enqueue(12);
+  Queue.enqueue(2);
+  Queue.enqueue(7);
   print(Queue.queue);
-  print("Enque:");
+  print("Enqueue:");
   var returnData = Queue.deque();
   print("$returnData\n");
-  print("Enque:");
+  print("Enqueue:");
   returnData = Queue.deque();
   print("$returnData\n");
-  print("Enque:");
+  print("Enqueue:");
   returnData = Queue.deque();
   print("$returnData\n");
   print("Now the queue is: " + (Queue.queue).toString());
