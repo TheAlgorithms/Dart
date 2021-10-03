@@ -9,6 +9,8 @@
 
 ## Chinese Remainder Theorem
   * [Chinese Remainder Theorem](https://github.com/TheAlgorithms/Dart/blob/master/chinese_remainder_theorem/chinese_remainder_theorem.dart)
+## Ciphers
+  * [ROT13](https://github.com/TheAlgorithms/Dart/blob/master/ciphers/rot13.dart)
 
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
