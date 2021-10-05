@@ -8,7 +8,7 @@ void main() {
     57944311, // false
     140104061, // false
     615665551, // true
-    1389534221 //
+    1389534221 // true
   ];
 
   for (int num in nums) {
