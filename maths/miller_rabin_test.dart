@@ -1,23 +1,33 @@
-void main() {
-  List<int> nums = [
-    1, // false
-    2, // true
-    351613, // false
-    839161, // true
-    31718227, // true
-    57944311, // false
-    140104061, // false
-    615665551, // true
-    1389534221 // true
-  ];
+import 'package:test/test.dart';
 
-  for (int num in nums) {
-    if (miller_rabin(num)) {
-      print("${num} is prime");
-    } else {
-      print("${num} is not prime");
-    }
-  }
+void main() {
+  test('check for 1', () {
+    expect(miller_rabin(1), equals(false));
+  });
+  test('check for 2', () {
+    expect(miller_rabin(2), equals(true));
+  });
+  test('check for 351613', () {
+    expect(miller_rabin(351613), equals(false));
+  });
+  test('check for 839161', () {
+    expect(miller_rabin(839161), equals(true));
+  });
+  test('check for 31718227', () {
+    expect(miller_rabin(31718227), equals(true));
+  });
+  test('check for 57944311', () {
+    expect(miller_rabin(57944311), equals(false));
+  });
+  test('check for 140104061', () {
+    expect(miller_rabin(140104061), equals(false));
+  });
+  test('check for 615665551', () {
+    expect(miller_rabin(615665551), equals(true));
+  });
+  test('check for 1389534221', () {
+    expect(miller_rabin(1389534221), equals(true));
+  });
 }
 
 /*
