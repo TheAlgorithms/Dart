@@ -10,6 +10,7 @@ jobs:
       - run: apt-get update
       - run: apt-get install --no-install-recommends -y -q lcov
       - run: dart pub get
+      - run: dart pub add --dev test
       - run: dart test --coverage .
       - run: dart pub run coverage:format_coverage -i . -l > coverage.lcov
       - run: lcov -l coverage.lcov
