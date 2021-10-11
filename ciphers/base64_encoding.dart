@@ -34,9 +34,11 @@ String base64Encode(Uint8List data) {
 Uint8List base64Decode(String data) {
   List<String> splittedData = data.split('');
   int padding = splittedData.where((c) => c == '=').length;
-  
+
   // Check if the encoded string contains non base64 characters
-  if (splittedData.sublist(0, splittedData.length - padding).any((c) => !B64_CHARSET.contains(c)) ) {
+  if (splittedData
+      .sublist(0, splittedData.length - padding)
+      .any((c) => !B64_CHARSET.contains(c))) {
     throw Exception('Invalid base64 character(s) found.');
   }
 
@@ -49,13 +51,13 @@ Uint8List base64Decode(String data) {
   splittedData = splittedData.sublist(0, splittedData.length - padding);
 
   String binaryStream = '';
-  splittedData.forEach((c) { 
+  splittedData.forEach((c) {
     binaryStream += B64_CHARSET.indexOf(c).toRadixString(2).padLeft(6, '0');
   });
 
   if (padding > 0) {
     binaryStream = binaryStream.substring(0, binaryStream.length - padding * 2);
-  } 
+  }
 
   List<int> base64DecodedData = [];
   for (int i = 0; i < binaryStream.length; i = i + 8) {
@@ -77,7 +79,8 @@ void main() {
   });
 
   test(('base64Decode: SGVsbG8gV29ybGQ= (aka Hello World)'), () {
-    expect(base64Decode('SGVsbG8gV29ybGQ='), convertStringToUint8List('Hello World'));
+    expect(base64Decode('SGVsbG8gV29ybGQ='),
+        convertStringToUint8List('Hello World'));
   });
 
   test(('base64Encode and base64Decode'), () {
