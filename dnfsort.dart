@@ -54,4 +54,9 @@ List dnf_Sort(List<int> a, int arrsize) {
       arrSize = arr.length;
       expect(dnf_Sort(arr,arrSize), [0,0,0,1,1,2]);
     });
+    test('test 4', () {
+    arr= [];
+    arrSize = arr.length;
+    expect(sort012(arr,arrSize), []);
+  });
   }
