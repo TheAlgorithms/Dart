@@ -1,3 +1,5 @@
+//for reference: https://www.geeksforgeeks.org/keith-number/
+//https://mathworld.wolfram.com/KeithNumber.html
 import 'package:test/test.dart';
 bool isKeith(int x)
   {
