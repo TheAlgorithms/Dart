@@ -4,7 +4,7 @@
 
 import 'package:test/test.dart';
 import 'dart:core';
-List sort012(List<int> a, int arrsize) {
+List dnf_Sort(List<int> a, int arrsize) {
     int low = 0;
     int high = (arrsize - 1);
     int mid = 0;
@@ -36,22 +36,22 @@ List sort012(List<int> a, int arrsize) {
   {
     List<int> arr = [2,2,1,0,0,1];
     int arrSize = arr.length;
-    sort012(arr, arrSize);
+    dnf_Sort(arr, arrSize);
     print("Array after seggregation ");
     print("$arr");
     test('test 1', () {
       arr= [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1];
       arrSize = arr.length;
-      expect(sort012(arr,arrSize), [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2]);
+      expect(dnf_Sort(arr,arrSize), [0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 2, 2]);
     });
     test('test 2', () {
       arr = [1];
       arrSize = arr.length;
-      expect(sort012(arr,arrSize), [1]);
+      expect(dnf_Sort(arr,arrSize), [1]);
     });
     test('test 3', () {
       arr = [2,0,1,0,0,1];
       arrSize = arr.length;
-      expect(sort012(arr,arrSize), [0,0,0,1,1,2]);
+      expect(dnf_Sort(arr,arrSize), [0,0,0,1,1,2]);
     });
   }
