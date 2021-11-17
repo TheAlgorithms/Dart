@@ -173,3 +173,4 @@
   * [Remove Duplicates](https://github.com/TheAlgorithms/Dart/blob/master/strings/remove%20duplicates.dart)
   * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
   * [Reverse Words Of String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_words_of_string.dart)
+  * [Runlengthencoding](https://github.com/TheAlgorithms/Dart/blob/master/strings/RunLengthEncoding.dart)
