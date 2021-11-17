@@ -1,7 +1,7 @@
 // dart program to implement run length encoding
 //reference : https://www.geeksforgeeks.org/run-length-encoding/
 
-import 'package:test/test.dart';
+
 String RunLengthEncoding(String str)
 {
   int n = str.length;
