@@ -38,14 +38,14 @@ void main() {
 
   var input = stdin.readLineSync();
   var lis = input.split(' ');
-  List numbers = lis.map(int.parse).toList();
+  List numbers = [9, 8, 5, 7, 1];
 
   // Taking input of remainder array (rem[i]).
   print("Enter remainders:");
 
   input = stdin.readLineSync();
   lis = input.split(' ');
-  List remainders = lis.map(int.parse).toList();
+  List remainders = [1, 2, 3, 4, 5];
 
   int product = 1;
 
