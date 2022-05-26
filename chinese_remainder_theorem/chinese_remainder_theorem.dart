@@ -1,6 +1,3 @@
-// Importing required libraries.
-import 'dart:io';
-
 // Function to calculate modulo inverse.
 int modular_inverse(int a, int m) {
   // Temporary variable to store m to use later.
@@ -36,18 +33,14 @@ void main() {
   // Taking input of the number array (num[i]).
   print("Enter array of pairwise co-prime numbers:");
 
-  var input = stdin.readLineSync();
-  var lis = input.split(' ');
   List numbers = [9, 8, 5, 7, 1];
 
   // Taking input of remainder array (rem[i]).
   print("Enter remainders:");
 
-  input = stdin.readLineSync();
-  lis = input.split(' ');
   List remainders = [1, 2, 3, 4, 5];
 
-  int product = 1;
+  num product = 1;
 
   // Length of the 'numbers' list.
   int length = numbers.length;
@@ -57,7 +50,8 @@ void main() {
     product *= numbers[i];
   }
 
-  int temp, result = 0;
+  int temp;
+  num result = 0;
 
   // Summing the required values for all i according to the formula.
   for (int i = 0; i < length; i++) {
