@@ -84,8 +84,36 @@ void main() {
   });
 
   test(('base64Encode and base64Decode'), () {
-    String sut = 'Foo Bar';
-    Uint8List sutAsUint8List = convertStringToUint8List(sut);
-    expect(base64Decode(base64Encode(sutAsUint8List)), sutAsUint8List);
+    const LOREM_IPSUM = [
+      'lorem',
+      'ipsum',
+      'dolor',
+      'sit',
+      'amet',
+      'consectetur',
+      'adipiscing',
+      'elit',
+      'curabitur',
+      'vel',
+      'hendrerit',
+      'libero',
+      'eleifend',
+      'blandit',
+      'nunc',
+      'ornare',
+      'odio',
+      'ut',
+      'orci',
+      'gravida',
+      'imperdiet',
+      'nullam',
+      'purus',
+      'lacinia',
+    ];
+
+    for (var word in LOREM_IPSUM) {
+      Uint8List sutAsUint8List = convertStringToUint8List(word);
+      expect(base64Decode(base64Encode(sutAsUint8List)), sutAsUint8List);
+    }
   });
 }
