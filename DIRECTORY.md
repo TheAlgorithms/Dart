@@ -5,6 +5,9 @@
 ## Backtracking
   * [Open Knight Tour](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/open_knight_tour.dart)
 
+## Chinese Remainder Theorem
+  * [Chinese Remainder Theorem](https://github.com/TheAlgorithms/Dart/blob/master/chinese_remainder_theorem/chinese_remainder_theorem.dart)
+
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_hexadecimal.dart)
