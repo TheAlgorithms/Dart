@@ -52,6 +52,7 @@ class BinarySearchTree {
   void deleteNode(int nodeValueToBeDeleted, {BinarySearchTree? parentNode}) {
     BinarySearchTree? currentNode = this;
     while (currentNode != null) {
+      // Start with searching the element in the tree.
       if (nodeValueToBeDeleted < currentNode.value) {
         parentNode = currentNode;
         currentNode = currentNode.left;
@@ -68,7 +69,7 @@ class BinarySearchTree {
           currentNode.value = currentNode.right!.getMinValueInSubTree();
           currentNode.right!.deleteNode(currentNode.value, parentNode: currentNode);
         } else if (parentNode == null) {
-          // Root node with one child.
+          // Node with one child. also is Root Node as Parent node is null.
           if (currentNode.left != null) {
             currentNode.value = currentNode.left!.value;
             currentNode.right = currentNode.left!.right;
