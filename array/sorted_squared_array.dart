@@ -30,10 +30,12 @@ void main() {
   });
 
   test('test case 2', () {
-    expect(sortedSquaredArray([-7, -6, -5, -4, -3, -2, -1]), [1, 4, 9, 16, 25, 36, 49]);
+    expect(sortedSquaredArray([-7, -6, -5, -4, -3, -2, -1]),
+        [1, 4, 9, 16, 25, 36, 49]);
   });
 
   test('test case 4', () {
-    expect(sortedSquaredArray([1, 2, 3, 4, 5, 6, 7]), [1, 4, 9, 16, 25, 36, 49]);
+    expect(
+        sortedSquaredArray([1, 2, 3, 4, 5, 6, 7]), [1, 4, 9, 16, 25, 36, 49]);
   });
 }
