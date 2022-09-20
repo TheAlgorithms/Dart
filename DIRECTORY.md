@@ -1,5 +1,6 @@
 
 ## Array
+  * [Sorted Squared Array](https://github.com/TheAlgorithms/Dart/blob/master/array/sorted_squared_array.dart)
   * [Validate Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/array/validate_subsequence.dart)
 
 ## Backtracking
