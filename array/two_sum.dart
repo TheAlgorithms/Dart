@@ -17,13 +17,10 @@ bool twoSum(List<int> nums, int target) {
 
 void main() {
   test('test 1', () {
-
-    expect(twoSum([1,2,3,4], 7), isTrue);
+    expect(twoSum([1, 2, 3, 4], 7), isTrue);
   });
-  
+
   test('test 2', () {
-
-    expect(twoSum([1,2,3,4], 12), isFalse);
+    expect(twoSum([1, 2, 3, 4], 12), isFalse);
   });
-
 }
