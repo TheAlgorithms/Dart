@@ -31,12 +31,12 @@ int modular_inverse(int a, int m) {
 // Driver function of the program
 void main() {
   // Taking input of the number array (num[i]).
-  print("Enter array of pairwise co-prime numbers:");
+  print('Enter array of pairwise co-prime numbers:');
 
   List numbers = [9, 8, 5, 7, 1];
 
   // Taking input of remainder array (rem[i]).
-  print("Enter remainders:");
+  print('Enter remainders:');
 
   List remainders = [1, 2, 3, 4, 5];
 

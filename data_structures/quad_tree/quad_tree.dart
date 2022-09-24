@@ -25,10 +25,10 @@ class Node<T> extends Rectangle<num> {
   final List<Node<T>> _children = <Node<T>>[];
 
   factory Node(num left, num top, num width, num height,
-          {int maxDepth, int maxItems}) =>
+          {int? maxDepth, int? maxItems}) =>
       Node._(left, top, width, height, maxDepth, maxItems, 0);
 
-  Node._(num left, num top, num width, num height, int maxDepth, int maxItems,
+  Node._(num left, num top, num width, num height, int? maxDepth, int? maxItems,
       int depth)
       : maxDepth = maxDepth ?? default_max_depth,
         maxItems = maxItems ?? default_max_items,
@@ -62,6 +62,7 @@ class Node<T> extends Rectangle<num> {
         .toList();
   }
 
+  @override
   String toString() {
     return '[$_depth](${_items.map((item) => item.item).toList()}:$_children)';
   }
@@ -118,42 +119,42 @@ void main() {
   group('QuadTree', () {
     test('items will not insert at points outside the tree\'s bounds', () {
       final tree = Node<String>(-50, -50, 100, 100);
-      expect(tree.insert("a", Point(-75, 0)), isFalse);
-      expect(tree.insert("b", Point(75, 0)), isFalse);
-      expect(tree.insert("c", Point(0, -75)), isFalse);
-      expect(tree.insert("d", Point(0, 75)), isFalse);
-      expect(tree.toString(), equals("[0]([]:[])"));
+      expect(tree.insert('a', Point(-75, 0)), isFalse);
+      expect(tree.insert('b', Point(75, 0)), isFalse);
+      expect(tree.insert('c', Point(0, -75)), isFalse);
+      expect(tree.insert('d', Point(0, 75)), isFalse);
+      expect(tree.toString(), equals('[0]([]:[])'));
     });
 
     test('maxItems is honored until maxDepth is hit', () {
       final tree = Node<String>(0, 0, 100, 100, maxItems: 2, maxDepth: 2);
 
-      expect(tree.insert("a", Point(0, 0)), isTrue);
-      expect(tree.toString(), equals("[0]([a]:[])"));
+      expect(tree.insert('a', Point(0, 0)), isTrue);
+      expect(tree.toString(), equals('[0]([a]:[])'));
 
-      expect(tree.insert("b", Point(100, 0)), isTrue);
-      expect(tree.toString(), equals("[0]([a, b]:[])"));
+      expect(tree.insert('b', Point(100, 0)), isTrue);
+      expect(tree.toString(), equals('[0]([a, b]:[])'));
 
-      expect(tree.insert("c", Point(0, 100)), isTrue);
+      expect(tree.insert('c', Point(0, 100)), isTrue);
       expect(
           tree.toString(),
           equals(
-              "[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([]:[])])"));
+              '[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([]:[])])'));
 
-      expect(tree.insert("d", Point(100, 100)), isTrue);
+      expect(tree.insert('d', Point(100, 100)), isTrue);
       expect(
           tree.toString(),
           equals(
-              "[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([d]:[])])"));
+              '[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([d]:[])])'));
 
-      expect(tree.insert("e", Point(99, 99)), isTrue);
-      expect(tree.insert("f", Point(99, 99)), isTrue);
-      expect(tree.insert("g", Point(99, 99)), isTrue);
-      expect(tree.insert("h", Point(99, 99)), isTrue);
+      expect(tree.insert('e', Point(99, 99)), isTrue);
+      expect(tree.insert('f', Point(99, 99)), isTrue);
+      expect(tree.insert('g', Point(99, 99)), isTrue);
+      expect(tree.insert('h', Point(99, 99)), isTrue);
       expect(
           tree.toString(),
           equals(
-              "[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([]:[[2]([]:[]), [2]([]:[]), [2]([]:[]), [2]([d, e, f, g, h]:[])])])"));
+              '[0]([]:[[1]([a]:[]), [1]([b]:[]), [1]([c]:[]), [1]([]:[[2]([]:[]), [2]([]:[]), [2]([]:[]), [2]([d, e, f, g, h]:[])])])'));
     });
 
     test(
@@ -177,7 +178,7 @@ void main() {
         for (int i = 0; i < numberOfItems; i++) {
           items[i] =
               Point(rand.nextDouble() * width, rand.nextDouble() * height);
-          expect(tree.insert(i, items[i]), isTrue);
+          expect(tree.insert(i, items[i]!), isTrue);
         }
 
         // set up a box that is 1/10th the size of the total space
@@ -191,8 +192,9 @@ void main() {
 
         // simple iteration over all items, comparing each to the given range
         var startTime = DateTime.now();
-        final foundA =
-            items.keys.where((key) => range.containsPoint(items[key])).toList();
+        final foundA = items.keys
+            .where((key) => range.containsPoint(items[key]!))
+            .toList();
         var iterationTime = DateTime.now().difference(startTime);
 
         // quad tree query rules out whole quadrants full of points when possible
@@ -206,14 +208,14 @@ void main() {
 
         // every time, quad tree query results should equal brute force results
         expect(foundA.toSet().containsAll(foundB), isTrue,
-            reason: "not all items were found");
+            reason: 'not all items were found');
         expect(foundB.toSet().containsAll(foundA), isTrue,
-            reason: "not all items were found");
+            reason: 'not all items were found');
       }
 
       expect(timesBetter / numberOfRuns > 0.5, isTrue,
           reason:
-              "tree query was only better ${timesBetter / numberOfRuns * 100}% of the time");
+              'tree query was only better ${timesBetter / numberOfRuns * 100}% of the time');
     });
   });
 }

@@ -4,20 +4,20 @@ void main() {
   print(decimal_to_octal(404));
 }
 
-String decimal_to_octal(int decimal_val) {
-  if (decimal_val == 0) {
-    return "0";
+String decimal_to_octal(int decimalVal) {
+  if (decimalVal == 0) {
+    return '0';
   }
   bool negative = false;
-  if (decimal_val < 0) {
+  if (decimalVal < 0) {
     negative = true;
-    decimal_val *= -1;
+    decimalVal *= -1;
   }
-  String oct_string = "";
-  while (decimal_val > 0) {
-    int remainder = decimal_val % 8;
-    decimal_val = decimal_val ~/ 8;
-    oct_string = remainder.toString() + oct_string;
+  String octString = '';
+  while (decimalVal > 0) {
+    int remainder = decimalVal % 8;
+    decimalVal = decimalVal ~/ 8;
+    octString = remainder.toString() + octString;
   }
-  return negative ? "-" + oct_string : oct_string;
+  return negative ? '-$octString' : octString;
 }

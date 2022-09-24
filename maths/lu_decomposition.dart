@@ -20,53 +20,53 @@ class LUPDecomposition {
 }
 
 class Matrix {
-  List<List<double>> _values;
+  List<List<double>>? _values;
 
   @override
-  String toString() => this._values.toString();
+  String toString() => _values.toString();
 
-  int get nRows => this._values.length;
-  int get nColumns => this.nRows == 0 ? 0 : this._values[0].length;
+  int get nRows => _values!.length;
+  int get nColumns => nRows == 0 ? 0 : _values![0].length;
 
-  bool get isSquare => this.nRows == this.nColumns;
+  bool get isSquare => nRows == nColumns;
 
-  List<List<double>> get rows => this._values;
+  List<List<double>>? get rows => _values;
 
-  List<double> operator [](int n) => this._values[n];
+  List<double> operator [](int n) => _values![n];
 
   Matrix operator +(Matrix other) {
-    if (this.nRows != other.nRows || this.nColumns != other.nColumns) {
-      throw new MatrixDimensionError();
+    if (nRows != other.nRows || nColumns != other.nColumns) {
+      throw MatrixDimensionError();
     }
 
     List<List<double>> values = [];
-    for (int i = 0; i < this.nRows; i++) {
+    for (int i = 0; i < nRows; i++) {
       List<double> newRow = [];
-      for (int j = 0; j < this.nColumns; j++) {
+      for (int j = 0; j < nColumns; j++) {
         newRow.add(this[i][j] + other[i][j]);
       }
       values.add(newRow);
     }
 
-    return new Matrix(values);
+    return Matrix(values);
   }
 
   Matrix operator -(Matrix other) {
-    if (this.nRows != other.nRows || this.nColumns != other.nColumns) {
-      throw new MatrixDimensionError();
+    if (nRows != other.nRows || nColumns != other.nColumns) {
+      throw MatrixDimensionError();
     }
 
     List<List<double>> values = [];
-    for (int i = 0; i < this.nRows; i++) {
+    for (int i = 0; i < nRows; i++) {
       List<double> newRow = [];
-      for (int j = 0; j < this.nColumns; j++) {
+      for (int j = 0; j < nColumns; j++) {
         newRow.add(this[i][j] - other[i][j]);
       }
 
       values.add(newRow);
     }
 
-    return new Matrix(values);
+    return Matrix(values);
   }
 
   Matrix times(double n) {
@@ -82,16 +82,16 @@ class Matrix {
   }
 
   Matrix operator *(Matrix other) {
-    if (this.nColumns != other.nRows) {
-      throw new MatrixDimensionError();
+    if (nColumns != other.nRows) {
+      throw MatrixDimensionError();
     }
 
     List<List<double>> values = [];
-    for (int i = 0; i < this.nRows; i++) {
+    for (int i = 0; i < nRows; i++) {
       List<double> newRow = [];
       for (int j = 0; j < other.nColumns; j++) {
         double sum = 0;
-        for (int k = 0; k < this.nColumns; k++) {
+        for (int k = 0; k < nColumns; k++) {
           sum += this[i][k] * other[k][j];
         }
         newRow.add(sum);
@@ -99,15 +99,15 @@ class Matrix {
       values.add(newRow);
     }
 
-    return new Matrix(values);
+    return Matrix(values);
   }
 
   LUPDecomposition decompose() {
-    if (!this.isSquare) {
-      throw new MatrixDimensionError();
+    if (!isSquare) {
+      throw MatrixDimensionError();
     }
 
-    int matrixSize = this.nRows;
+    int matrixSize = nRows;
     List<int> pivot = List.generate(matrixSize + 1, (x) => x);
     Matrix output = Matrix.from(this);
 
@@ -124,7 +124,7 @@ class Matrix {
 
       if (maxIndex != i) {
         swap(pivot, i, maxIndex);
-        swap(output.rows, i, maxIndex);
+        swap(output.rows!, i, maxIndex);
 
         pivot[matrixSize]++;
       }
@@ -154,11 +154,11 @@ class Matrix {
   }
 
   Matrix inversion() {
-    if (!this.isSquare) {
-      throw new MatrixDimensionError();
+    if (!isSquare) {
+      throw MatrixDimensionError();
     }
 
-    LUPDecomposition decomposition = this.decompose();
+    LUPDecomposition decomposition = decompose();
     Matrix output = Matrix.from(decomposition.lu);
 
     int matrixSize = decomposition.lu.nRows;
@@ -184,7 +184,7 @@ class Matrix {
   }
 
   double determinant() {
-    if (this.nRows == 0 || this.nColumns == 0) {
+    if (nRows == 0 || nColumns == 0) {
       throw MatrixDimensionError();
     }
 
@@ -204,46 +204,46 @@ class Matrix {
   }
 
   Matrix.eye(int size) {
-    this._values = [];
+    _values = [];
 
     for (int i = 0; i < size; i++) {
       List<double> row = List.generate(size, (x) => 0);
       row[i] = 0;
-      this._values.add(row);
+      _values!.add(row);
     }
   }
 
   Matrix.from(Matrix matrix) {
-    this._values = matrix.rows.map((row) => List<double>.from(row)).toList();
+    _values = matrix.rows!.map((row) => List<double>.from(row)).toList();
   }
 
   Matrix.zeros(int nRows, int nColumns) {
-    this._values = [];
+    _values = [];
 
     for (int i = 0; i < nRows; i++) {
       List<double> row = [];
       for (int j = 0; j < nColumns; j++) {
         row.add(0);
       }
-      this._values.add(row);
+      _values!.add(row);
     }
   }
 
   Matrix(List<List<double>> values) {
-    if (values.length != 0) {
+    if (values.isNotEmpty) {
       int rowLength = values[0].length;
       if (values.any((row) => row.length != rowLength)) {
-        throw new MatrixDimensionError();
+        throw MatrixDimensionError();
       }
     }
 
-    this._values = values;
+    _values = values;
   }
 }
 
 List<double> solve(Matrix x, List<double> y) {
   if (x.nColumns != y.length) {
-    throw new MatrixDimensionError();
+    throw MatrixDimensionError();
   }
   LUPDecomposition decomposition = x.decompose();
 
@@ -272,7 +272,7 @@ List<double> solve(Matrix x, List<double> y) {
 List<double> ordinaryLeastSquare(Matrix x, Matrix y) {
   return ((x.transposition() * x).inversion() * x.transposition() * y)
       .transposition()
-      .rows[0];
+      .rows![0];
 }
 
 double f(double x, double y) {
@@ -280,7 +280,7 @@ double f(double x, double y) {
 }
 
 void main() {
-  Matrix a = new Matrix([
+  Matrix a = Matrix([
     [3, 2, -1],
     [2, -2, 4],
     [-1, 0.5, -1]
@@ -288,12 +288,12 @@ void main() {
   List<double> b = [1, -2, 0];
 
   List<double> solution = solve(a, b);
-  print("x=${solution[0]}, y=${solution[1]}, z=${solution[2]}");
+  print('x=${solution[0]}, y=${solution[1]}, z=${solution[2]}');
 
   Matrix input = Matrix.zeros(10, 3);
   Matrix output = Matrix.zeros(10, 1);
 
-  Random rng = new Random();
+  Random rng = Random();
   for (int i = 0; i < 10; i++) {
     double x = rng.nextInt(100).toDouble() + rng.nextDouble();
     double y = rng.nextInt(100).toDouble() + rng.nextDouble();
@@ -305,5 +305,5 @@ void main() {
     output[i][0] = f(x, y);
   }
   List<double> coeffs = ordinaryLeastSquare(input, output);
-  print("f(x, y) = x * ${coeffs[0]} + y * ${coeffs[1]} + ${coeffs[2]}");
+  print('f(x, y) = x * ${coeffs[0]} + y * ${coeffs[1]} + ${coeffs[2]}');
 }

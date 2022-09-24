@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
 class Node<T> {
-  Node<T> next;
+  Node<T>? next;
   T value;
 
   Node(this.value);
@@ -9,16 +9,16 @@ class Node<T> {
 }
 
 class LinkedListIterator<T> extends Iterator<T> {
-  Node<T> _current;
+  Node<T>? _current;
 
   @override
   bool moveNext() => _current != null;
 
   @override
   T get current {
-    T currentValue = this._current.value;
+    T currentValue = _current!.value;
 
-    this._current = this._current.next;
+    _current = _current!.next;
 
     return currentValue;
   }
@@ -28,25 +28,26 @@ class LinkedListIterator<T> extends Iterator<T> {
 
 class LinkedList<T> extends Iterable<T> {
   int _length = 0;
-  int get length => this._length;
+  @override
+  int get length => _length;
 
-  Node<T> _head;
+  Node<T>? _head;
 
   @override
-  Iterator<T> get iterator => new LinkedListIterator<T>(this._head);
+  Iterator<T> get iterator => LinkedListIterator<T>(_head);
 
   void remove(T item) {
-    if (this._head?.value == item) {
-      this._head = this._head?.next;
-      this._length--;
+    if (_head?.value == item) {
+      _head = _head?.next;
+      _length--;
     }
 
-    if (this._head != null) {
-      Node<T> current = this._head;
+    if (_head != null) {
+      Node<T>? current = _head;
       while (current?.next != null) {
-        if (current.next.value == item) {
-          current.next = current.next.next;
-          this._length--;
+        if (current!.next!.value == item) {
+          current.next = current.next!.next;
+          _length--;
         }
 
         current = current.next;
@@ -54,11 +55,11 @@ class LinkedList<T> extends Iterable<T> {
     }
   }
 
-  T pop() {
-    if (this._head != null) {
-      T value = this._head.value;
-      this._head = this._head.next;
-      this._length--;
+  T? pop() {
+    if (_head != null) {
+      T value = _head!.value;
+      _head = _head!.next;
+      _length--;
 
       return value;
     }
@@ -67,28 +68,28 @@ class LinkedList<T> extends Iterable<T> {
   }
 
   void push(T item) {
-    this._head = new Node.before(this._head, item);
-    this._length++;
+    _head = Node.before(_head, item);
+    _length++;
   }
 
   void add(T item) {
-    if (this._head == null) {
-      this._head = new Node(item);
+    if (_head == null) {
+      _head = Node(item);
     } else {
-      Node<T> current = this._head;
+      Node<T>? current = _head;
       while (current?.next != null) {
-        current = current.next;
+        current = current!.next;
       }
 
-      current.next = Node(item);
+      current!.next = Node(item);
     }
-    this._length++;
+    _length++;
   }
 }
 
 main() {
-  test(".add is adding elements in order", () {
-    LinkedList<double> linkedList = new LinkedList();
+  test('.add is adding elements in order', () {
+    LinkedList<double> linkedList = LinkedList();
     linkedList.add(1);
     linkedList.add(2);
     linkedList.add(3);
@@ -96,8 +97,8 @@ main() {
     expect(linkedList, equals([1, 2, 3]));
   });
 
-  test(".remove is removing all elements with given value", () {
-    LinkedList<double> linkedList = new LinkedList();
+  test('.remove is removing all elements with given value', () {
+    LinkedList<double> linkedList = LinkedList();
     linkedList.add(1);
     linkedList.add(2);
     linkedList.add(3);
@@ -108,16 +109,16 @@ main() {
     expect(linkedList, equals([1, 3]));
   });
 
-  test(".remove on empty list do nothing", () {
-    LinkedList<double> linkedList = new LinkedList();
+  test('.remove on empty list do nothing', () {
+    LinkedList<double> linkedList = LinkedList();
 
     linkedList.remove(2);
 
     expect(linkedList, isEmpty);
   });
 
-  test(".push is appending first element", () {
-    LinkedList<double> linkedList = new LinkedList();
+  test('.push is appending first element', () {
+    LinkedList<double> linkedList = LinkedList();
 
     linkedList.push(1);
     expect(linkedList, equals([1]));
@@ -129,8 +130,8 @@ main() {
     expect(linkedList, equals([3, 2, 1]));
   });
 
-  test(".pop is returning and removing first element", () {
-    LinkedList<double> linkedList = new LinkedList();
+  test('.pop is returning and removing first element', () {
+    LinkedList<double> linkedList = LinkedList();
 
     linkedList.add(1);
     linkedList.add(2);
@@ -146,8 +147,8 @@ main() {
     expect(linkedList, equals([]));
   });
 
-  test(".pop is returning null when list is empty", () {
-    LinkedList<double> linkedList = new LinkedList();
+  test('.pop is returning null when list is empty', () {
+    LinkedList<double> linkedList = LinkedList();
 
     expect(linkedList.pop(), isNull);
   });

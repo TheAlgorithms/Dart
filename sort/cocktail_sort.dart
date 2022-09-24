@@ -1,27 +1,27 @@
 void cocktailSort(List lst) //function to sort a list
 {
-  bool swap_done = true;
+  bool swapDone = true;
   do {
-    swap_done = false;
+    swapDone = false;
     for (int i = 0; i < lst.length - 2; i++) {
-      swap_done = swapItemCocktail(lst, i, swap_done);
+      swapDone = swapItemCocktail(lst, i, swapDone);
     }
 
-    if (swap_done) {
-      swap_done = false;
+    if (swapDone) {
+      swapDone = false;
       for (int i = lst.length - 2; i >= 0; i--) {
-        swap_done = swapItemCocktail(lst, i, swap_done);
+        swapDone = swapItemCocktail(lst, i, swapDone);
       }
     }
-  } while (swap_done);
+  } while (swapDone);
 }
 
-bool swapItemCocktail(List lst, int i, bool swap_done) {
+bool swapItemCocktail(List lst, int i, bool swapDone) {
   if (lst[i] > lst[i + 1]) {
     swap(lst, i);
-    swap_done = true;
+    swapDone = true;
   }
-  return swap_done;
+  return swapDone;
 }
 
 void swap(List lst, int i) {

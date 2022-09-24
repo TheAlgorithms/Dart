@@ -10,9 +10,7 @@ void main() {
   assert(binarySearch(list, low, high, 66) == -1);
 }
 
-/**
- * Return the index of [key] value in [list]
- */
+/// Return the index of [key] value in [list]
 int binarySearch(List<int> list, int low, int high, int key) {
   if (low > high) {
     return -1; /* not found */

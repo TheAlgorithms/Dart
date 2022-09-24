@@ -3,61 +3,59 @@
 
 class ArrayStack<T> {
   //stack
-  List<T> stack;
+  List<T?> stack;
   //element of the stack
   int count;
   //size of stack
   int n;
 
   //Init the array stack
-  ArrayStack(var n) {
-    this.n = n;
-    this.stack = new List<T>(n);
-    this.count = 0;
-  }
+  ArrayStack(this.n)
+      : stack = List<T?>.filled(n, null),
+        count = 0;
 
   //Push a item to the stack
   void push(T item) {
     if (count == n) {
-      print("The stack is full\n");
+      print('The stack is full\n');
     }
     stack[count] = item;
     count++;
   }
 
   //Pop a item from the stack
-  T pop() {
+  T? pop() {
     if (count == 0) {
-      print("No data in the stack!\n");
+      print('No data in the stack!\n');
     }
-    T pop_data = stack[count - 1];
+    T? popData = stack[count - 1];
     stack[count - 1] = null;
     count--;
-    return pop_data;
+    return popData;
   }
 
   void Display() {
-    print("ArrayStack: $stack\n");
+    print('ArrayStack: $stack\n');
   }
 }
 
 void main() {
-  ArrayStack<String> array_stack = new ArrayStack<String>(6);
+  ArrayStack<String> arrayStack = ArrayStack<String>(6);
 
-  array_stack.push('1');
-  array_stack.push("2");
-  array_stack.push('3');
-  array_stack.push("4");
-  array_stack.push('5');
-  array_stack.push("6");
+  arrayStack.push('1');
+  arrayStack.push('2');
+  arrayStack.push('3');
+  arrayStack.push('4');
+  arrayStack.push('5');
+  arrayStack.push('6');
 
-  array_stack.Display();
+  arrayStack.Display();
 
-  var pop_data;
-  pop_data = array_stack.pop();
-  print("Pop $pop_data from stack\n");
-  pop_data = array_stack.pop();
-  print("Pop $pop_data from stack\n");
-  print("Now the stock:");
-  array_stack.Display();
+  String? popData;
+  popData = arrayStack.pop();
+  print('Pop $popData from stack\n');
+  popData = arrayStack.pop();
+  print('Pop $popData from stack\n');
+  print('Now the stock:');
+  arrayStack.Display();
 }

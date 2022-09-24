@@ -9,8 +9,8 @@ euclidean_gcd(var a, var b) {
 }
 
 void main() {
-  print('GCD(1, 4) = ' + euclidean_gcd(1, 4).toString());
-  print('GCD(5, 3) = ' + euclidean_gcd(5, 3).toString());
-  print('GCD(3, 6) = ' + euclidean_gcd(3, 6).toString());
-  print('GCD(8, 4) = ' + euclidean_gcd(8, 4).toString());
+  print('GCD(1, 4) = ${euclidean_gcd(1, 4)}');
+  print('GCD(5, 3) = ${euclidean_gcd(5, 3)}');
+  print('GCD(3, 6) = ${euclidean_gcd(3, 6)}');
+  print('GCD(8, 4) = ${euclidean_gcd(8, 4)}');
 }

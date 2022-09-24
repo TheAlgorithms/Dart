@@ -24,8 +24,8 @@ int sol(int t) {
 
 int main() {
   int value = sol(4);
-  print("solution(4): $value");
+  print('solution(4): $value');
   value = sol(3);
-  print("solution(3): $value");
+  print('solution(3): $value');
   return 0;
 }

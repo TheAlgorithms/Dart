@@ -9,7 +9,7 @@ import 'package:test/test.dart';
 ///  space complexity O(targetAmount)
 int minNumberOfCoins(int targetAmount, List<int> coinDenoms) {
   List<int> amounts =
-      new List<int>.generate(targetAmount + 1, (int index) => 1000000000000);
+      List<int>.generate(targetAmount + 1, (int index) => 1000000000000);
 
   amounts[0] = 0;
 

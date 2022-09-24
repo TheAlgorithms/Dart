@@ -7,35 +7,35 @@ bool power_of_two(int n) {
 }
 
 void main() {
-  test("Test power_of_two 0 returns false", () {
+  test('Test power_of_two 0 returns false', () {
     expect(power_of_two(0), isFalse);
   });
 
-  test("Test power_of_two 1 returns true", () {
+  test('Test power_of_two 1 returns true', () {
     expect(power_of_two(1), isTrue);
   });
 
-  test("Test power_of_two 10 returns false", () {
+  test('Test power_of_two 10 returns false', () {
     expect(power_of_two(10), isFalse);
   });
 
-  test("Test power_of_two 10 returns false", () {
+  test('Test power_of_two 10 returns false', () {
     expect(power_of_two(10), isFalse);
   });
 
-  test("Test power_of_two 23 returns false", () {
+  test('Test power_of_two 23 returns false', () {
     expect(power_of_two(23), isFalse);
   });
 
-  test("Test power_of_two 32 returns true", () {
+  test('Test power_of_two 32 returns true', () {
     expect(power_of_two(32), isTrue);
   });
 
-  test("Test power_of_two 2234 returns false", () {
+  test('Test power_of_two 2234 returns false', () {
     expect(power_of_two(2234), isFalse);
   });
 
-  test("Test power_of_two 2048 returns true", () {
+  test('Test power_of_two 2048 returns true', () {
     expect(power_of_two(2048), isTrue);
   });
 }

@@ -71,7 +71,7 @@ void main() {
   //Get the array
   var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  var result;
+  int result;
 
   //Print the array
   print(arr);
@@ -86,5 +86,5 @@ void main() {
   result = fibMaonaccianSearch(arr, key, n);
 
   //Print the result
-  print("Index of " + key.toString() + " is " + result.toString());
+  print('Index of $key is $result');
 }

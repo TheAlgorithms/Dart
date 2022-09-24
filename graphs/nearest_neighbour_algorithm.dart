@@ -15,14 +15,14 @@ List<String> nearestNeighbourSearch(Graph graph) {
   List<String> path = [];
   Set<int> unvisitedNodes = Set.from(Iterable.generate(graph.nodes.length));
 
-  int currentNode = 0;
+  int? currentNode = 0;
   while (unvisitedNodes.isNotEmpty) {
     unvisitedNodes.remove(currentNode);
-    int nearestNeighbour;
-    double nearestNeighbourDistance;
+    int? nearestNeighbour;
+    late double nearestNeighbourDistance;
 
     for (int neighbour in unvisitedNodes) {
-      double neighbourDistance = graph.adjacencyMatrix[currentNode][neighbour];
+      double neighbourDistance = graph.adjacencyMatrix[currentNode!][neighbour];
       if (nearestNeighbour == null ||
           neighbourDistance < nearestNeighbourDistance) {
         nearestNeighbour = neighbour;
@@ -30,7 +30,7 @@ List<String> nearestNeighbourSearch(Graph graph) {
       }
     }
 
-    path.add(graph.nodes[currentNode]);
+    path.add(graph.nodes[currentNode!]);
     currentNode = nearestNeighbour;
   }
 
@@ -42,7 +42,7 @@ class Point {
   double y;
 
   @override
-  String toString() => "P($x, $y)";
+  String toString() => 'P($x, $y)';
 
   Point(this.x, this.y);
 }
@@ -72,11 +72,11 @@ Graph fromPoints(List<Point> points) {
 
 void main() {
   Graph graph = Graph([
-    "A",
-    "B",
-    "C",
-    "D",
-    "E"
+    'A',
+    'B',
+    'C',
+    'D',
+    'E'
   ], [
     [0, 12, 4, 54, 100],
     [3, 0, 5, 1, 1],
@@ -88,13 +88,13 @@ void main() {
   print(nearestNeighbourSearch(graph));
 
   List<Point> points = [
-    new Point(0, 0),
-    new Point(0, 10),
-    new Point(-10, 10),
-    new Point(3.33, 8.11),
-    new Point(12, 11),
-    new Point(-1, 1),
-    new Point(-2, 2)
+    Point(0, 0),
+    Point(0, 10),
+    Point(-10, 10),
+    Point(3.33, 8.11),
+    Point(12, 11),
+    Point(-1, 1),
+    Point(-2, 2)
   ];
 
   print(nearestNeighbourSearch(fromPoints(points)));

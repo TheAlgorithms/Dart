@@ -9,7 +9,11 @@
 void main() {
   double i, n = 600851475143;
 
-  for (i = 3; n > 1; i += 2) while (n % i == 0) n /= i;
+  for (i = 3; n > 1; i += 2) {
+    while (n % i == 0) {
+      n /= i;
+    }
+  }
 
   print(i - 2);
 }

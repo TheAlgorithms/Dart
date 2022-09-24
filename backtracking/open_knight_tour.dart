@@ -86,9 +86,9 @@ void printBoard(List<List<int>> board) {
     for (final elem in row) {
       stdout.write(elem);
     }
-    stdout.write("\n");
+    stdout.write('\n');
   }
-  stdout.write("\n");
+  stdout.write('\n');
 }
 
 void main() {

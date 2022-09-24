@@ -2,53 +2,53 @@ import 'package:test/test.dart';
 
 //Binary number to octal number conversion
 void main() {
-  test("binary_to_octal -1111", () {
-    expect(binary_to_octal("-1111"), equals("-17"));
+  test('binary_to_octal -1111', () {
+    expect(binary_to_octal('-1111'), equals('-17'));
   });
 
-  test("binary_to_octal 101011", () {
-    expect(binary_to_octal("101011"), equals("53"));
+  test('binary_to_octal 101011', () {
+    expect(binary_to_octal('101011'), equals('53'));
   });
 
-  test("binary_to_octal rasies error when number is invalid", () {
-    expect(() => binary_to_octal("-1011a01"), throwsFormatException);
+  test('binary_to_octal rasies error when number is invalid', () {
+    expect(() => binary_to_octal('-1011a01'), throwsFormatException);
   });
 
-  test("binary_to_octal of empty string raises error", () {
-    expect(() => binary_to_octal(""), throwsFormatException);
+  test('binary_to_octal of empty string raises error', () {
+    expect(() => binary_to_octal(''), throwsFormatException);
   });
 }
 
-String binary_to_octal(String bin_string) {
-  bin_string = bin_string.trim();
-  if (bin_string == null || bin_string == "") {
-    throw new FormatException("An empty value was passed to the function");
+String binary_to_octal(String binString) {
+  binString = binString.trim();
+  if (binString == '') {
+    throw FormatException('An empty value was passed to the function');
   }
-  bool is_negative = bin_string[0] == "-";
-  if (is_negative) bin_string = bin_string.substring(1);
+  bool isNegative = binString[0] == '-';
+  if (isNegative) binString = binString.substring(1);
 
-  String octal_val = "";
+  String octalVal = '';
   int binary;
   try {
-    binary = int.parse(bin_string);
+    binary = int.parse(binString);
   } catch (e) {
-    throw new FormatException("An invalid value was passed to the function");
+    throw FormatException('An invalid value was passed to the function');
   }
-  int curr_bit;
+  int currBit;
   int j = 1;
   while (binary > 0) {
     int code_3 = 0;
     for (int i = 0; i < 3; i++) {
-      curr_bit = binary % 10;
+      currBit = binary % 10;
       binary = binary ~/ 10;
-      code_3 += curr_bit * j;
+      code_3 += currBit * j;
       j *= 2;
     }
-    octal_val = code_3.toString() + octal_val;
+    octalVal = code_3.toString() + octalVal;
     j = 1;
   }
-  if (is_negative) {
-    return "-" + octal_val;
+  if (isNegative) {
+    return '-$octalVal';
   }
-  return octal_val;
+  return octalVal;
 }

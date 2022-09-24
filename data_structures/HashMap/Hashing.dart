@@ -3,17 +3,14 @@
 
 class Node {
   int data;
-  Node next;
+  Node? next;
 
-  Node(int data) {
-    this.data = data;
-    this.next = null;
-  }
+  Node(this.data) : next = null;
 }
 
 class LinkedList {
-  Node head;
-  int size;
+  Node? head;
+  int? size;
 
   LinkedList() {
     head = null;
@@ -21,9 +18,9 @@ class LinkedList {
   }
 
   void insert(int data) {
-    Node newnode = new Node(data);
+    Node newnode = Node(data);
 
-    size++;
+    size = size! + 1;
 
     if (head == null) {
       head = newnode;
@@ -35,46 +32,45 @@ class LinkedList {
 
   void delete(int data) {
     if (size == 0) {
-      print("underFlow!");
+      print('underFlow!');
       return;
     } else {
-      Node curr = head;
+      Node curr = head!;
       if (curr.data == data) {
         head = curr.next;
-        size--;
+        size = size! - 1;
         return;
       } else {
-        while (curr.next.next != null) {
-          if (curr.next.data == data) {
-            curr.next = curr.next.next;
+        while (curr.next!.next != null) {
+          if (curr.next!.data == data) {
+            curr.next = curr.next!.next;
             return;
           }
         }
-        print("Key not found");
+        print('Key not found');
       }
     }
   }
 
   void display() {
-    Node temp = head;
+    Node? temp = head;
     while (temp != null) {
       print(temp.data.toString());
       temp = temp.next;
     }
-    print("\n");
+    print('\n');
   }
 }
 
 class HashMap {
   int hsize;
-  List<LinkedList> buckets;
+  late List<LinkedList?> buckets;
 
-  HashMap(int hsize) {
-    buckets = new List<LinkedList>(hsize);
+  HashMap(this.hsize) {
+    buckets = List<LinkedList?>.filled(hsize, null);
     for (int i = 0; i < hsize; i++) {
-      buckets[i] = new LinkedList();
+      buckets[i] = LinkedList();
     }
-    this.hsize = hsize;
   }
 
   int hashing(int key) {
@@ -87,43 +83,43 @@ class HashMap {
 
   void insertHash(int key) {
     int hash = hashing(key);
-    buckets[hash].insert(key);
+    buckets[hash]!.insert(key);
   }
 
   void deleteHash(int key) {
     int hash = hashing(key);
-    buckets[hash].delete(key);
+    buckets[hash]!.delete(key);
   }
 
   void displayHashtable() {
     for (int i = 0; i < hsize; i++) {
-      print("Bucket $i:");
-      buckets[i].display();
+      print('Bucket $i:');
+      buckets[i]!.display();
     }
   }
 }
 
 void main() {
-  HashMap h = new HashMap(7);
+  HashMap h = HashMap(7);
 
-  print("Add key 5");
+  print('Add key 5');
   h.insertHash(5);
 
-  print("Add key 28");
+  print('Add key 28');
   h.insertHash(28);
 
-  print("Add key 1");
+  print('Add key 1');
   h.insertHash(1);
 
-  print("Delete Key 28");
+  print('Delete Key 28');
   h.deleteHash(28);
 
-  print("Print Table:\n");
+  print('Print Table:\n');
   h.displayHashtable();
 
-  print("Delete Key 1");
+  print('Delete Key 1');
   h.deleteHash(1);
 
-  print("Print Table:\n");
+  print('Print Table:\n');
   h.displayHashtable();
 }

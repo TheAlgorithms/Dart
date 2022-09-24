@@ -1,10 +1,10 @@
 import 'package:test/test.dart';
 
 class MinHeap {
-  List<int> heap;
+  List<int>? heap;
 
   void buildHeap(List<int> array) {
-    this.heap = _heapify(array);
+    heap = _heapify(array);
   }
 
   List<int> _heapify(List<int> array) {
@@ -15,28 +15,27 @@ class MinHeap {
     return array;
   }
 
-  int peek() {
+  int? peek() {
     if (!isEmpty()) {
-      return this.heap[0];
+      return heap![0];
     }
     return null;
   }
 
   bool isEmpty() {
-    return this.heap.length == 0;
+    return heap!.isEmpty;
   }
 
   void _siftUp(int currentIndex) {
     int parentIndex = (currentIndex - 1) ~/ 2;
-    while (
-        parentIndex >= 0 && this.heap[parentIndex] > this.heap[currentIndex]) {
-      _swap(parentIndex, currentIndex, this.heap);
+    while (parentIndex >= 0 && heap![parentIndex] > heap![currentIndex]) {
+      _swap(parentIndex, currentIndex, heap!);
       currentIndex = parentIndex;
       parentIndex = (currentIndex - 1) ~/ 2;
     }
   }
 
-  void _siftDown(int currentIndex, int endIndex, List<int> heap) {
+  void _siftDown(int currentIndex, int endIndex, List<int>? heap) {
     int childOneIndex = (2 * currentIndex) + 1;
     int childTwoIndex;
 
@@ -44,13 +43,13 @@ class MinHeap {
       childTwoIndex =
           2 * currentIndex + 2 <= endIndex ? 2 * currentIndex + 2 : -1;
       int indexToSwap;
-      if (childTwoIndex != -1 && heap[childTwoIndex] < heap[childOneIndex]) {
+      if (childTwoIndex != -1 && heap![childTwoIndex] < heap[childOneIndex]) {
         indexToSwap = childTwoIndex;
       } else {
         indexToSwap = childOneIndex;
       }
 
-      if (heap[currentIndex] > heap[indexToSwap]) {
+      if (heap![currentIndex] > heap[indexToSwap]) {
         _swap(currentIndex, indexToSwap, heap);
         currentIndex = indexToSwap;
         childOneIndex = (2 * currentIndex) + 1;
@@ -61,15 +60,15 @@ class MinHeap {
   }
 
   void insert(int value) {
-    this.heap.add(value);
-    _siftUp(this.heap.length - 1);
+    heap!.add(value);
+    _siftUp(heap!.length - 1);
   }
 
-  int remove() {
+  int? remove() {
     if (!isEmpty()) {
-      _swap(0, this.heap.length - 1, this.heap);
-      int minElement = this.heap.removeLast();
-      _siftDown(0, this.heap.length - 1, this.heap);
+      _swap(0, heap!.length - 1, heap!);
+      int minElement = heap!.removeLast();
+      _siftDown(0, heap!.length - 1, heap);
       return minElement;
     }
     return null;
@@ -84,7 +83,7 @@ class MinHeap {
 }
 
 void main() {
-  MinHeap minheap = new MinHeap();
+  MinHeap minheap = MinHeap();
   List<int> array = [48, 12, 24, 7, 8, -5, 24, 391, 24, 56, 2, 6, 8, 41];
   minheap.buildHeap(array);
   test(('Test case 1'), () {
@@ -99,7 +98,7 @@ void main() {
 
   test(('Test case 2'), () {
     array = [-7, 2, 3, 8, -10, 4, -6, -10, -2, -7, 10, 5, 2, 9, -9, -5, 3, 8];
-    minheap = new MinHeap();
+    minheap = MinHeap();
     minheap.buildHeap(array);
     expect(minheap.remove(), equals(-10));
     expect(minheap.peek(), equals(-10));

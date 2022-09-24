@@ -1,12 +1,10 @@
 void main() {
   List numbers = [1, 3, 5, 7, 9, 2, 4, 6, 8, 10];
   int min = find_min_recursion(numbers, 0, numbers.length - 1);
-  print("min = $min");
+  print('min = $min');
 }
 
-/**
- * find max using divide-and-conquer algorithm
- */
+/// find max using divide-and-conquer algorithm
 int find_min_recursion(List numbers, int low, int high) {
   if (low == high) {
     return numbers[low]; // or numbers[high]

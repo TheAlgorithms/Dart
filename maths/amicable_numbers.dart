@@ -6,19 +6,18 @@
  * */
 
 //this function returns true if numbers are amicable and false otherwise
-bool amicable_number(int first_number, int second_number) {
-  if (first_number <= 1 || second_number <= 1) return false;
-  List<int> first_number_proper_divisors = [];
-  List<int> second_number_proper_divisors = [];
-  for (int i = 1; i < first_number; i++) {
-    if (first_number % i == 0) first_number_proper_divisors.add(i);
+bool amicable_number(int firstNumber, int secondNumber) {
+  if (firstNumber <= 1 || secondNumber <= 1) return false;
+  List<int> firstNumberProperDivisors = [];
+  List<int> secondNumberProperDivisors = [];
+  for (int i = 1; i < firstNumber; i++) {
+    if (firstNumber % i == 0) firstNumberProperDivisors.add(i);
   }
-  for (int i = 1; i < second_number; i++) {
-    if (second_number % i == 0) second_number_proper_divisors.add(i);
+  for (int i = 1; i < secondNumber; i++) {
+    if (secondNumber % i == 0) secondNumberProperDivisors.add(i);
   }
-  return first_number ==
-          second_number_proper_divisors.reduce((a, b) => a + b) &&
-      second_number == first_number_proper_divisors.reduce((a, b) => a + b);
+  return firstNumber == secondNumberProperDivisors.reduce((a, b) => a + b) &&
+      secondNumber == firstNumberProperDivisors.reduce((a, b) => a + b);
 }
 
 void main() {

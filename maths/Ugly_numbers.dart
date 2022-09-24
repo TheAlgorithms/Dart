@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
 int maxDivide(int a, int b) {
-  var n;
+  double n;
   while (a % b == 0) {
     n = a / b;
     a = n.toInt();
@@ -34,19 +34,19 @@ int getNthUglyNo(int n) {
 
 /* Driver program to test above functions */
 void main() {
-  test("getNthUglyNo(150) returns 5832", () {
+  test('getNthUglyNo(150) returns 5832', () {
     expect(getNthUglyNo(150), equals(5832));
   });
 
-  test("isUgly returns true for 6", () {
+  test('isUgly returns true for 6', () {
     expect(isUgly(6), isTrue);
   });
 
-  test("isUgly returns true for 5832", () {
+  test('isUgly returns true for 5832', () {
     expect(isUgly(5832), isTrue);
   });
 
-  test("isUgly returns false for 5833", () {
+  test('isUgly returns false for 5833', () {
     expect(isUgly(5833), isFalse);
   });
 }

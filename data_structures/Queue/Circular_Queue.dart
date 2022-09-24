@@ -6,7 +6,7 @@ const int MAX_SIZE = 10;
 
 class CircularQueue<T> {
   int start = -1, end = -1;
-  List<T> queue = new List<T>(MAX_SIZE);
+  List<T?> queue = List<T?>.filled(MAX_SIZE, null);
 
   // insert elements into the queue
   void enque(T element) {
@@ -17,11 +17,11 @@ class CircularQueue<T> {
       return;
     }
     if (end == MAX_SIZE - 1 && start == 0) {
-      print("The queue is full!!!");
+      print('The queue is full!!!');
       return;
     }
     if (end == start - 1) {
-      print("The queue is full!!!");
+      print('The queue is full!!!');
       return;
     }
     end++;
@@ -30,12 +30,12 @@ class CircularQueue<T> {
   }
 
   // remove elements from the queue
-  T deque() {
+  T? deque() {
     if (start == -1) {
-      print("The queue is empty!!!");
+      print('The queue is empty!!!');
       return null;
     }
-    T here = queue[start];
+    T? here = queue[start];
     if (start == end) {
       start = -1;
       end = -1;
@@ -56,7 +56,7 @@ class CircularQueue<T> {
   // print all the elements of the queue
   void printAll() {
     if (start == -1) {
-      print("The queue is empty!!!");
+      print('The queue is empty!!!');
       return;
     }
     int i = start;
@@ -69,21 +69,21 @@ class CircularQueue<T> {
 }
 
 void main() {
-  test("Initial CircularQueue is empty", () {
-    CircularQueue<int> queue = new CircularQueue<int>();
+  test('Initial CircularQueue is empty', () {
+    CircularQueue<int> queue = CircularQueue<int>();
 
     expect(queue.deque(), isNull);
   });
 
-  test("deque return first item put to CircularQueue", () {
-    CircularQueue<int> queue = new CircularQueue<int>();
+  test('deque return first item put to CircularQueue', () {
+    CircularQueue<int> queue = CircularQueue<int>();
     queue.enque(1);
 
     expect(queue.deque(), equals(1));
   });
 
-  test("CircularQueue act as fifo", () {
-    CircularQueue<int> queue = new CircularQueue<int>();
+  test('CircularQueue act as fifo', () {
+    CircularQueue<int> queue = CircularQueue<int>();
     queue.enque(1);
     queue.enque(2);
     queue.enque(3);
@@ -93,8 +93,8 @@ void main() {
     expect(queue.deque(), equals(3));
   });
 
-  test("deque returns null after removing all items", () {
-    CircularQueue<int> queue = new CircularQueue<int>();
+  test('deque returns null after removing all items', () {
+    CircularQueue<int> queue = CircularQueue<int>();
     queue.enque(1);
     queue.enque(2);
     queue.enque(3);

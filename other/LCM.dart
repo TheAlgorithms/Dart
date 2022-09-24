@@ -25,25 +25,15 @@ double lcm(int a, int b) {
 
 //Driver program
 void main() {
-  var a, b;
+  int a, b;
   //Test case1:
   a = 15;
   b = 20;
   //print the result
-  print("LCM of " +
-      a.toString() +
-      " and " +
-      b.toString() +
-      " is " +
-      lcm(a, b).toString());
+  print('LCM of $a and $b is ${lcm(a, b)}');
   //Test case2:
   a = 12;
   b = 18;
   //print the result
-  print("LCM of " +
-      a.toString() +
-      " and " +
-      b.toString() +
-      " is " +
-      lcm(a, b).toString());
+  print('LCM of $a and $b is ${lcm(a, b)}');
 }

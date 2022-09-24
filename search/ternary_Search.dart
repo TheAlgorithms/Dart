@@ -2,7 +2,7 @@
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
-int ternarySearch(var l, var r, var key, var arr) {
+int? ternarySearch(var l, var r, var key, var arr) {
   if (r >= 1) {
     //Find the mid1 and mid2
     var mid1 = (l + (r - l) / 3).toInt();
@@ -37,7 +37,7 @@ int ternarySearch(var l, var r, var key, var arr) {
 
 //Driver code
 void main() {
-  var l, r, p, key;
+  int? l, r, p, key;
 
   //Get the array
   var arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -59,5 +59,5 @@ void main() {
   p = ternarySearch(l, r, key, arr);
 
   //Print the result
-  print("Index of " + key.toString() + " is " + p.toString());
+  print('Index of $key is $p');
 }

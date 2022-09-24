@@ -14,15 +14,15 @@ bool Isposs(int a, int b, int c) {
 int main() {
   int a = 3, b = 6, c = 9;
   if (Isposs(a, b, c) == true) {
-    print("Possible");
+    print('Possible');
   } else {
-    print("Not Possible");
+    print('Not Possible');
   }
   int x = 3, y = 6, z = 8;
   if (Isposs(x, y, z) == true) {
-    print("Possible");
+    print('Possible');
   } else {
-    print("Not Possible");
+    print('Not Possible');
   }
 
   return 0;

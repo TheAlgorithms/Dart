@@ -9,6 +9,6 @@ double factorial(double x) {
 
 main() {
   for (int i = 0; i < 10; i++) {
-    print("$i! ~= ${factorial(i.toDouble())}");
+    print('$i! ~= ${factorial(i.toDouble())}');
   }
 }

@@ -12,18 +12,18 @@
 List<bool> sieve_of_eratosthenes(int n) {
   // Input: n: int
   // Output: is_prime: List<bool> denoting whether ith element is prime or not
-  List<bool> is_prime = new List.filled(n + 1, true);
-  is_prime[0] = false;
-  is_prime[1] = false;
+  List<bool> isPrime = List.filled(n + 1, true);
+  isPrime[0] = false;
+  isPrime[1] = false;
   for (int i = 2; i * i <= n; i++) {
-    if (is_prime[i]) {
+    if (isPrime[i]) {
       for (int j = i * i; j <= n; j += i) {
         // mark all multiples of i as false
-        is_prime[j] = false;
+        isPrime[j] = false;
       }
     }
   }
-  return is_prime;
+  return isPrime;
 }
 
 main() {

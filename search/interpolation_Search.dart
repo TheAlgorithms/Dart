@@ -18,12 +18,13 @@ int interpolationSearch(List arr, int n, int key) {
     /* Calculate the nearest possible position of key */
     int pos = low +
         (((key - arr[low]) * (high - low)) / (arr[high] - arr[low])).round();
-    if (key > arr[pos])
+    if (key > arr[pos]) {
       low = pos + 1;
-    else if (key < arr[pos])
+    } else if (key < arr[pos]) {
       high = pos - 1;
-    else /* Found */
+    } else {
       return pos;
+    }
   }
   /* Not found */
   return -1;
@@ -36,10 +37,10 @@ int main() {
   var n = arr.length;
   //The Key
   var key = 5;
-  print("I want to found $key at $arr");
+  print('I want to found $key at $arr');
   //Get the index
   var index = interpolationSearch(arr, n, key);
   //print the result
-  print("Element found at position: $index");
+  print('Element found at position: $index');
   return 0;
 }

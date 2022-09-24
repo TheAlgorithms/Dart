@@ -1,6 +1,6 @@
 import 'dart:math';
 
-Random rng = new Random();
+Random rng = Random();
 
 /// Swap given [index1] and [index2] in given [collection]
 void swap<T>(List<T> collection, int index1, int index2) {

@@ -5,11 +5,11 @@ const int MAX_SIZE = 10;
 
 class ListQueue<T> {
   int count = 0;
-  List<T> queue = new List<T>(MAX_SIZE);
+  List<T?> queue = List<T?>.filled(MAX_SIZE, null);
 
   //Checks if the queue has elements (not empty)
   bool hasElements() {
-    if (queue.length == 0) {
+    if (queue.isEmpty) {
       return false;
     } else {
       return true;
@@ -19,7 +19,7 @@ class ListQueue<T> {
   //Add an element to the queue
   void enque(T element) {
     if (count == MAX_SIZE) {
-      print("The queue is full!!!");
+      print('The queue is full!!!');
     } else {
       queue[count] = element;
       count++;
@@ -27,10 +27,10 @@ class ListQueue<T> {
   }
 
   //Takes the next element from the queue
-  T deque() {
-    T result = null;
+  T? deque() {
+    T? result;
     if (count == 0) {
-      print("The queue is empty!!!");
+      print('The queue is empty!!!');
     } else {
       result = queue[0];
       for (int i = 0; i < queue.length - 1; i++) {
@@ -42,19 +42,19 @@ class ListQueue<T> {
 }
 
 void main() {
-  ListQueue<int> Queue = new ListQueue<int>();
+  ListQueue<int> Queue = ListQueue<int>();
   Queue.enque(12);
   Queue.enque(2);
   Queue.enque(7);
   print(Queue.queue);
-  print("Enqueue:");
+  print('Enqueue:');
   var returnData = Queue.deque();
-  print("$returnData\n");
-  print("Enqueue:");
+  print('$returnData\n');
+  print('Enqueue:');
   returnData = Queue.deque();
-  print("$returnData\n");
-  print("Enqueue:");
+  print('$returnData\n');
+  print('Enqueue:');
   returnData = Queue.deque();
-  print("$returnData\n");
-  print("Now the queue is: " + (Queue.queue).toString());
+  print('$returnData\n');
+  print('Now the queue is: ${Queue.queue}');
 }

@@ -1,6 +1,6 @@
 //Find mean of a list of numbers.
 
-average(List numbers) {
+average(List<int> numbers) {
   var sum = 0;
   for (var x in numbers) {
     sum += x;

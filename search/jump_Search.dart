@@ -37,5 +37,5 @@ void main() {
   var index = jump_search(list, x);
   print('list:');
   print(list);
-  print('Number ' + x.toString() + ' is at index ' + index.toString());
+  print('Number $x is at index $index');
 }

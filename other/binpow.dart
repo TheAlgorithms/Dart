@@ -15,6 +15,6 @@ int binPow(int a, int b, int m) {
 }
 
 void main() {
-  print('binary power of (2,5,13) = ' + binPow(2, 5, 13).toString());
-  print('binary power of (5, 3,13) = ' + binPow(5, 3, 13).toString());
+  print('binary power of (2,5,13) = ${binPow(2, 5, 13)}');
+  print('binary power of (5, 3,13) = ${binPow(5, 3, 13)}');
 }

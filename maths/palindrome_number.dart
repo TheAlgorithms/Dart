@@ -6,13 +6,11 @@ void main() {
   assert(isPalindrome(123322) == false);
 }
 
-/**
- * Return true if [n] is palindrome number, otherwise false
- * Throws [ArgumentError] if [n] is negative
- */
+/// Return true if [n] is palindrome number, otherwise false
+/// Throws [ArgumentError] if [n] is negative
 bool isPalindrome(int n) {
   if (n < 0) {
-    throw new ArgumentError("$n is negative");
+    throw ArgumentError('$n is negative');
   }
   var copy = n;
   var reverseNumber = 0;

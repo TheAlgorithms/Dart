@@ -1,18 +1,22 @@
 import 'dart:math';
 
 List<int> prime_sieve(int limit) {
-  int sieve_bound = (limit - 1) ~/ 2;
-  int upper_sqrt = (sqrt(limit).toInt() - 1) ~/ 2;
-  List<bool> prime_bits = List.generate(sieve_bound + 1, (_) => true);
+  int sieveBound = (limit - 1) ~/ 2;
+  int upperSqrt = (sqrt(limit).toInt() - 1) ~/ 2;
+  List<bool> primeBits = List.generate(sieveBound + 1, (_) => true);
 
-  for (int i = 1; i <= upper_sqrt; ++i)
-    if (prime_bits[i])
-      for (int j = i * (i + 1) * 2; j <= sieve_bound; j += 2 * i + 1)
-        prime_bits[j] = false;
+  for (int i = 1; i <= upperSqrt; ++i) {
+    if (primeBits[i]) {
+      for (int j = i * (i + 1) * 2; j <= sieveBound; j += 2 * i + 1) {
+        primeBits[j] = false;
+      }
+    }
+  }
 
   List<int> primes = [2];
-  for (int i = 1; i <= sieve_bound; ++i)
-    if (prime_bits[i]) primes.add(2 * i + 1);
+  for (int i = 1; i <= sieveBound; ++i) {
+    if (primeBits[i]) primes.add(2 * i + 1);
+  }
 
   return primes;
 }
@@ -50,5 +54,5 @@ void main() {
     ++i;
   }
   int ans = (i * (i - 1) * 0.5).toInt();
-  print("First Triangle Number with more than 500 divisors: $ans");
+  print('First Triangle Number with more than 500 divisors: $ans');
 }

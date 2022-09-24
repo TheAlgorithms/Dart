@@ -3,10 +3,11 @@
 
 int relu_func(var x) {
   // here x passed is value passed in the function relu
-  if (x > 0)
+  if (x > 0) {
     return x;
-  else
+  } else {
     return 0;
+  }
 }
 
 //Driver function for RELU function

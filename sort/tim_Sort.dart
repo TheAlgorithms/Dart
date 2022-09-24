@@ -15,7 +15,8 @@ void insertionSort(List list, int left, int right) {
 
 void merge(List list, int left, int middle, int right) {
   int length1 = middle - left + 1, length2 = right - middle;
-  List leftList = new List(length1), rightList = new List(length2);
+  final leftList = List<int>.filled(length1, 0);
+  final rightList = List<int>.filled(length2, 0);
 
   for (int i = 0; i < length1; i++) {
     leftList[i] = list[left + i];
@@ -67,7 +68,7 @@ void timSort(List list, int n) {
 void main() {
   //Get the array
   List arr = [12, 213, 45, 9, 107];
-  print("Before sorting: $arr\n");
+  print('Before sorting: $arr\n');
   timSort(arr, arr.length);
-  print("After sorting: $arr");
+  print('After sorting: $arr');
 }

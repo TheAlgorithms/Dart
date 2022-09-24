@@ -1,3 +1,13 @@
+include: package:lints/recommended.yaml
+
+linter:
+  rules:
+    avoid_print: false
+    constant_identifier_names: false
+    file_names: false
+    non_constant_identifier_names: false
+    prefer_single_quotes: true
+
 analyzer:
   exclude:
     - maths/fermats_little_theorem.dart

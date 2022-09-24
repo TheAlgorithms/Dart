@@ -13,8 +13,7 @@ bool stringCompare(String string, String subString) {
     return false;
   }
 
-  List<int> pattern =
-      new List<int>.generate(subString.length, (int index) => -1);
+  List<int> pattern = List<int>.generate(subString.length, (int index) => -1);
 
   int i = 1;
   int j = 0;

@@ -29,7 +29,7 @@ main() {
   double gRoot = findRoot(g);
   double sinRoot = findRoot(sin, 10);
 
-  print("f(x) = 2x + 4, f($fRoot) = ${f(fRoot)}");
-  print("g(x) = 2x^2 + 7x + 1, g($gRoot) = ${g(gRoot)}");
-  print("sin(${sinRoot / pi} * pi) = ${sin(sinRoot)}");
+  print('f(x) = 2x + 4, f($fRoot) = ${f(fRoot)}');
+  print('g(x) = 2x^2 + 7x + 1, g($gRoot) = ${g(gRoot)}');
+  print('sin(${sinRoot / pi} * pi) = ${sin(sinRoot)}');
 }

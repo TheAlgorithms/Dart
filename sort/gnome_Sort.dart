@@ -4,7 +4,7 @@
 
 //Function sort the array using gnome sort
 void gnomeSort(List arr, var n) {
-  if (arr == null || n == 0) return;
+  if (n == 0) return;
   int first = 1;
   int second = 2;
 
@@ -39,5 +39,5 @@ void main() {
   gnomeSort(arr, n);
 
   //print the result
-  print("Sorted:\n" + arr.toString());
+  print('Sorted:\n$arr');
 }

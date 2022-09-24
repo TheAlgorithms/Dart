@@ -21,10 +21,7 @@ void pigeonholeSort(List arr) {
   int range = max - min;
   range++;
 
-  List phole = new List(range);
-  for (int i = 0; i < range; i++) {
-    phole[i] = 0;
-  }
+  final phole = List<int>.filled(range, 0);
 
   //Populate the pigeonholes.
   for (int i = 0; i < n; i++) {
@@ -35,29 +32,33 @@ void pigeonholeSort(List arr) {
   //Put the elements back into the array in order
   int index = 0;
 
-  for (int j = 0; j < range; j++) while (phole[j]-- > 0) arr[index++] = j + min;
+  for (int j = 0; j < range; j++) {
+    while (phole[j]-- > 0) {
+      arr[index++] = j + min;
+    }
+  }
 }
 
 void main() {
-  test("Sort empty list returns empty list", () {
+  test('Sort empty list returns empty list', () {
     List list = [];
     pigeonholeSort(list);
     expect(list, isEmpty);
   });
 
-  test("Already sorted list remain sorted", () {
+  test('Already sorted list remain sorted', () {
     List list = [1, 2, 3, 4, 5];
     pigeonholeSort(list);
     expect(list, equals([1, 2, 3, 4, 5]));
   });
 
-  test("Sort", () {
+  test('Sort', () {
     List list = [87, 48, 5, 7, 135, 85];
     pigeonholeSort(list);
     expect(list, equals([5, 7, 48, 85, 87, 135]));
   });
 
-  test("Sorted list size doesnt change", () {
+  test('Sorted list size doesnt change', () {
     List list = [1, 1, 4, 1, -12, -12, 77];
     pigeonholeSort(list);
     expect(list.length, equals(7));

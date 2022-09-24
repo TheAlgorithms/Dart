@@ -29,6 +29,8 @@ void shellSort<E extends Comparable>(List<E> a) {
 
 int _initInterval<E>(List<E> a) {
   var interval = 1;
-  while (interval < a.length ~/ 3) interval = interval * 3 + 1;
+  while (interval < a.length ~/ 3) {
+    interval = interval * 3 + 1;
+  }
   return interval;
 }

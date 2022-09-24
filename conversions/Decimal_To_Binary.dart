@@ -1,7 +1,7 @@
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
-import "dart:math" show pow;
+import 'dart:math' show pow;
 
 /*
  * This method converts a decimal number 
@@ -9,14 +9,14 @@ import "dart:math" show pow;
  * algorithm
  */
 void bitwiseConversion(var n) {
-  int b = 0, c = 0, d;
-  print("Bitwise conversion.\n");
+  int b = 0, c = 0, d = 0;
+  print('Bitwise conversion.\n');
   while (n != 0) {
     d = (n & 1);
     b += d * (pow(10, c++).toInt());
     n >>= 1;
   }
-  print("\tBinary number: $b");
+  print('\tBinary number: $b');
 }
 
 //Main method

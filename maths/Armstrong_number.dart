@@ -7,7 +7,7 @@ bool Armstrong_no(var x) {
   var sum = 0;
   while (n != 0) {
     var r = n % 10;
-    sum = sum + pow(r, d);
+    sum = sum + (pow(r, d) as int);
     n = n ~/ 10;
   }
   return sum == x;
@@ -16,9 +16,9 @@ bool Armstrong_no(var x) {
 void main() {
   for (var x in [0, 10, 370, 371]) {
     if (Armstrong_no(x)) {
-      print("${x} is armstrong number");
+      print('$x is armstrong number');
     } else {
-      print("${x} is not Armstrong number");
+      print('$x is not Armstrong number');
     }
   }
 }

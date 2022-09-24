@@ -15,12 +15,12 @@ void main() {
   try {
     print(decimal_to_any(10, 37)); //Expected Error
   } on FormatException {
-    print("Base value is not supported");
+    print('Base value is not supported');
   }
 }
 
 String decimal_to_any(int value, int base) {
-  var ALPHABET_VALUES = {
+  var ALPHABETVALUES = {
     10: 'A',
     11: 'B',
     12: 'C',
@@ -49,9 +49,9 @@ String decimal_to_any(int value, int base) {
     35: 'Z'
   };
 
-  if (value == 0) return "0";
+  if (value == 0) return '0';
 
-  if (base < 2 || base > 36) throw FormatException("Base not supported!");
+  if (base < 2 || base > 36) throw FormatException('Base not supported!');
 
   bool negative = false;
   if (value < 0) {
@@ -59,14 +59,14 @@ String decimal_to_any(int value, int base) {
     value *= -1;
   }
 
-  String output = "";
+  String output = '';
   while (value > 0) {
     int remainder = value % base;
     value = value ~/ base;
     output =
-        (remainder < 10 ? remainder.toString() : ALPHABET_VALUES[remainder]) +
+        (remainder < 10 ? remainder.toString() : ALPHABETVALUES[remainder])! +
             output;
   }
 
-  return negative ? '-' + output : output;
+  return negative ? '-$output' : output;
 }

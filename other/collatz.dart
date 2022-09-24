@@ -12,19 +12,19 @@ void main() {
   //The number
   double n = 20;
   //curr_no stores number n
-  double curr_no = n;
+  double currNo = n;
   //Loop till series reaches 1
-  while (curr_no != 1) {
+  while (currNo != 1) {
     //condition for even number
-    if (curr_no % 2 == 0) {
-      curr_no = curr_no / 2;
-      print(curr_no.toString() + "->");
+    if (currNo % 2 == 0) {
+      currNo = currNo / 2;
+      print('$currNo->');
     }
     //condition for odd number
     else {
-      curr_no = (curr_no * 3) + 1;
-      print(curr_no.toString() + "->");
+      currNo = (currNo * 3) + 1;
+      print('$currNo->');
     }
   }
-  print("1");
+  print('1');
 }

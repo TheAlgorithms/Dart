@@ -1,5 +1,5 @@
 moveDisk(String fp, String tp) {
-  print('moving disk from ' + fp + ' to ' + tp);
+  print('moving disk from $fp to $tp');
 }
 
 moveTower(int height, var fromPole, var toPole, var withPole) {

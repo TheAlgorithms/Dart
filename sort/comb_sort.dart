@@ -35,9 +35,9 @@ void main() {
   //Get the dummy array
   List arr = [1, 451, 562, 2, 99, 78, 5];
   // for printing the array before sorting
-  print("Before sorting the array: $arr\n");
+  print('Before sorting the array: $arr\n');
   // applying combSort function
   combSort(arr);
   // printing the sortedBool value
-  print("After sorting the array: $arr");
+  print('After sorting the array: $arr');
 }

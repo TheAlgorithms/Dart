@@ -1,7 +1,7 @@
 /// Approximate definite integral of f in [a, b] interval
 double simpson(double Function(double) f, double a, double b, int n) {
   if (n <= 0) {
-    throw ArgumentError("n have to be greater than 0");
+    throw ArgumentError('n have to be greater than 0');
   }
 
   double step = (b - a) / n;

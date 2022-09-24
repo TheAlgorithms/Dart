@@ -36,8 +36,8 @@ main() {
   print(permutations([1, 2]));
   print(permutations([1, 2, 3]));
 
-  print("3! = ${permutations([1, 2, 3]).length}");
-  print("4! = ${permutations([1, 2, 3, 4]).length}");
-  print("5! = ${permutations([1, 2, 3, 4, 5]).length}");
-  print("6! = ${permutations([1, 2, 3, 4, 5, 6]).length}");
+  print('3! = ${permutations([1, 2, 3]).length}');
+  print('4! = ${permutations([1, 2, 3, 4]).length}');
+  print('5! = ${permutations([1, 2, 3, 4, 5]).length}');
+  print('6! = ${permutations([1, 2, 3, 4, 5, 6]).length}');
 }

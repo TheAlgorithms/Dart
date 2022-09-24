@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 int majorityElement(List<int> arr, int n) {
   arr.sort();
 
-  var count = 1, max_ele = -1, temp = arr[0], ele = 0, f = 0;
+  var count = 1, maxEle = -1, temp = arr[0], ele = 0, f = 0;
 
   for (int i = 1; i < n; i++) {
     if (temp == arr[i]) {
@@ -12,11 +12,11 @@ int majorityElement(List<int> arr, int n) {
       count = 1;
       temp = arr[i];
     }
-    if (max_ele < count) {
-      max_ele = count;
+    if (maxEle < count) {
+      maxEle = count;
       ele = arr[i];
 
-      if (max_ele > (n / 2)) {
+      if (maxEle > (n / 2)) {
         f = 1;
         break;
       }
@@ -27,7 +27,7 @@ int majorityElement(List<int> arr, int n) {
 
 // Driver code
 void main() {
-  test("majorityElement", () {
+  test('majorityElement', () {
     List<int> a1 = [1, 2, 2, 2, 2, 5, 1];
     expect(majorityElement(a1, a1.length), equals(2));
 
@@ -35,7 +35,7 @@ void main() {
     expect(majorityElement(a2, a2.length), equals(30));
   });
 
-  test("majorityElement returns -1 when there is no dominant element", () {
+  test('majorityElement returns -1 when there is no dominant element', () {
     List<int> a1 = [3, 3, 22, 21, 21, 5, 21];
     expect(majorityElement(a1, a1.length), equals(-1));
 
