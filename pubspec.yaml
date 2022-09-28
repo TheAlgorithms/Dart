@@ -11,4 +11,4 @@ dev_dependencies:
   stack: ^0.2.1
 
 environment:
-  sdk: '>=2.12.0 <3.0.0'
+  sdk: '>=2.17.0-206.0.dev <3.0.0'
