@@ -1,9 +1,14 @@
 
 ## Array
+  * [Sorted Squared Array](https://github.com/TheAlgorithms/Dart/blob/master/array/sorted_squared_array.dart)
+  * [Two Sum](https://github.com/TheAlgorithms/Dart/blob/master/array/two_sum.dart)
   * [Validate Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/array/validate_subsequence.dart)
 
 ## Backtracking
   * [Open Knight Tour](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/open_knight_tour.dart)
+
+## Chinese Remainder Theorem
+  * [Chinese Remainder Theorem](https://github.com/TheAlgorithms/Dart/blob/master/chinese_remainder_theorem/chinese_remainder_theorem.dart)
 
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
