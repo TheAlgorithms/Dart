@@ -1,11 +1,6 @@
 import 'package:test/test.dart';
 
-String truncateString(String string,
-    {int maxNumberOfWords, String suffix = '...'}) {
-  return (string.length - 3) < maxNumberOfWords
-      ? "$string$suffix"
-      : '${string.substring(0, string.substring(0, maxNumberOfWords - suffix.length).lastIndexOf(" "))}$suffix';
-}
+import '../strings/truncate_string.dart';
 
 void main() {
   test(
