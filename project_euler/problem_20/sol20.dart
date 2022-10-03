@@ -31,21 +31,15 @@ int sum(int number) {
 void main() {
   group("Solution 20", () {
     test("Test 1", () {
-      var matcher = 1;
-      var actual = sum(1);
-      expect(actual, matcher);
+      expect(1, sum(1));
     });
 
     test("Test 2", () {
-      var matcher = 3;
-      var actual = sum(5);
-      expect(actual, matcher);
+      expect(3, sum(5));
     });
 
     test("Test 3", () {
-      var matcher = 27;
-      var actual = sum(10);
-      expect(actual, matcher);
+      expect(27, sum(10));
     });
   });
 }
