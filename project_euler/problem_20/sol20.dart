@@ -7,6 +7,8 @@ and the sum of the digits in the number 10! is 3 + 6 + 2 + 8 + 8 + 0 + 0 = 27.
 Find the sum of the digits in the number 100!
 */
 
+import 'package:test/test.dart';
+
 // To Calculate Factorial
 int factorial(int number) {
   int factorial = 1;
@@ -16,7 +18,7 @@ int factorial(int number) {
   return factorial;
 }
 
-// To Calcuate Sum
+// To Calculate Sum
 int sum(int number) {
   int sum = 0;
   for (int i = factorial(number); i > 0; i = (i / 10).floor()) {
@@ -27,6 +29,23 @@ int sum(int number) {
 
 // Driver Code
 void main() {
-  int number = 100;
-  print(sum(number));
+  group("Solution 20", () {
+    test("Test 1", () {
+      var matcher = 1;
+      var actual = sum(1);
+      expect(actual, matcher);
+    });
+
+    test("Test 2", () {
+      var matcher = 3;
+      var actual = sum(5);
+      expect(actual, matcher);
+    });
+
+    test("Test 3", () {
+      var matcher = 27;
+      var actual = sum(10);
+      expect(actual, matcher);
+    });
+  });
 }
