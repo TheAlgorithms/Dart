@@ -68,45 +68,73 @@ int solveNQueen(int row, int size) {
   return ways;
 }
 
+//This Function is used to refilled board with default value for testing purpose only.
+// You can remove it, if you are using single test case.
+get resetBoard {
+  board = List.generate(20, (i) => List.generate(20, (j) => 0));
+}
+
 void main() {
+  /* 
+  Test Cases
+  Size Expected Values
+  1 :  1
+  2 :  0
+  3 :  0
+  4 :  2
+  5 :  10
+  6 :  4
+  7 :  40
+  8 :  92
+  9 :  352
+  10 : 724
+
+  */
   test("N Queen #testcase 1", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 1);
-    equals(1);
+    resetBoard;
+    expect(solveNQueen(0, 1), equals(1));
   });
+
   test("N Queen #testcase 2", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 2);
-    equals(0);
+    resetBoard;
+    expect(solveNQueen(0, 2), equals(0));
   });
+
   test("N Queen #testcase 3", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 3);
-    equals(0);
+    resetBoard;
+    expect(solveNQueen(0, 3), equals(0));
   });
+
   test("N Queen #testcase 4", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 4);
-    equals(2);
+    resetBoard;
+    expect(solveNQueen(0, 4), equals(2));
   });
+
   test("N Queen #testcase 5", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 5);
-    equals(10);
+    resetBoard;
+    expect(solveNQueen(0, 5), equals(10));
   });
+
   test("N Queen #testcase 6", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 6);
-    equals(4);
+    resetBoard;
+    expect(solveNQueen(0, 6), equals(4));
   });
+
   test("N Queen #testcase 7", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 7);
-    equals(40);
+    resetBoard;
+    expect(solveNQueen(0, 7), equals(40));
   });
+
   test("N Queen #testcase 8", () {
-    board = List.generate(20, (i) => List.generate(20, (j) => 0));
-    solveNQueen(0, 8);
-    equals(92);
+    resetBoard;
+    expect(solveNQueen(0, 8), equals(92));
+  });
+  test("N Queen #testcase 9", () {
+    resetBoard;
+    expect(solveNQueen(0, 9), equals(352));
+  });
+  test("N Queen #testcase 10", () {
+    resetBoard;
+    expect(solveNQueen(0, 10), equals(724));
   });
 }
