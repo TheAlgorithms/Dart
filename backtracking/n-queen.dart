@@ -70,7 +70,7 @@ int solveNQueen(int row, int size) {
 
 //This Function is used to refilled board with default value for testing purpose only.
 // You can remove it, if you are using single test case.
-get resetBoard {
+void resetBoard() {
   board = List.generate(20, (i) => List.generate(20, (j) => 0));
 }
 
@@ -91,50 +91,50 @@ void main() {
 
   */
   test("N Queen #testcase 1", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 1), equals(1));
   });
 
   test("N Queen #testcase 2", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 2), equals(0));
   });
 
   test("N Queen #testcase 3", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 3), equals(0));
   });
 
   test("N Queen #testcase 4", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 4), equals(2));
   });
 
   test("N Queen #testcase 5", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 5), equals(10));
   });
 
   test("N Queen #testcase 6", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 6), equals(4));
   });
 
   test("N Queen #testcase 7", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 7), equals(40));
   });
 
   test("N Queen #testcase 8", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 8), equals(92));
   });
   test("N Queen #testcase 9", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 9), equals(352));
   });
   test("N Queen #testcase 10", () {
-    resetBoard;
+    resetBoard();
     expect(solveNQueen(0, 10), equals(724));
   });
 }
