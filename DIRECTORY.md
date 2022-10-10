@@ -5,6 +5,7 @@
   * [Validate Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/array/validate_subsequence.dart)
 
 ## Backtracking
+  * [N-Queen](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/n-queen.dart)
   * [Open Knight Tour](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/open_knight_tour.dart)
 
 ## Chinese Remainder Theorem
