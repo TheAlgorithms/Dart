@@ -16,5 +16,22 @@ void main() {
       expect(truncateString(stringToTruncate, maxNumberOfWords: 40),
           equals("The beautiful thing with learning is..."));
     },
-  );
+  ); //pass
+
+  test(
+    "Open source is Awsome",
+    () {
+      String stringToTruncate = "Open source is Awsome";
+      expect(truncateString(stringToTruncate, maxNumberOfWords: 15),
+          equals("Open source..."));
+    },
+  ); // pass
+  test(
+    "The Dart Programming Language is cool",
+    () {
+      String stringToTruncate = "The Dart Programming Language";
+      expect(truncateString(stringToTruncate, maxNumberOfWords: 10),
+          equals("The Dart..."));
+    },
+  ); // fails
 }
