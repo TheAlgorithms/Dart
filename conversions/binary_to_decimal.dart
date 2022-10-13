@@ -1,30 +1,40 @@
 import "dart:math" show pow;
 
-void main() {
-  print(binary_to_decimal("-111")); // -7
-  print(binary_to_decimal(" 101011 ")); // 43
-  try {
-    print(binary_to_decimal("1a1")); //error
-  } catch (ex) {
-    print(ex);
-  }
-}
+import 'package:test/test.dart';
 
-int binary_to_decimal(String bin_string) {
-  bin_string = bin_string.trim();
-  if (bin_string == null || bin_string == "") {
+int binaryToDecimal(String binaryString) {
+  binaryString = binaryString.trim();
+  if (binaryString == null || binaryString == "") {
     throw Exception("An empty value was passed to the function");
   }
-  bool is_negative = bin_string[0] == "-";
-  if (is_negative) bin_string = bin_string.substring(1);
-  int decimal_val = 0;
-  for (int i = 0; i < bin_string.length; i++) {
-    if ("01".contains(bin_string[i]) == false) {
+  bool isNegative = binaryString[0] == "-";
+  if (isNegative) binaryString = binaryString.substring(1);
+  int decimalValue = 0;
+  for (int i = 0; i < binaryString.length; i++) {
+    if ("01".contains(binaryString[i]) == false) {
       throw Exception("Non-binary value was passed to the function");
     } else {
-      decimal_val +=
-          pow(2, bin_string.length - i - 1) * int.parse((bin_string[i]));
+      decimalValue +=
+          pow(2, binaryString.length - i - 1) * int.parse((binaryString[i]));
     }
   }
-  return is_negative ? -1 * decimal_val : decimal_val;
+  return isNegative ? -1 * decimalValue : decimalValue;
+}
+
+void main() {
+  test('test case 1', () {
+    expect(binaryToDecimal("-111"), -7);
+  });
+  test('test case 2', () {
+    expect(binaryToDecimal("101011"), 43);
+  });
+
+  test('test case 3', () {
+    try {
+      binaryToDecimal("1a1");
+    } catch (e) {
+      expect('Exception: Non-binary value was passed to the function',
+          e.toString());
+    }
+  });
 }
