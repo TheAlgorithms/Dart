@@ -14,7 +14,8 @@ int binaryToDecimal(String binaryString) {
     if ("01".contains(binaryString[i]) == false) {
       throw Exception("Non-binary value was passed to the function");
     } else {
-      decimalValue += pow(2, binaryString.length - i - 1) * int.parse((binaryString[i]));
+      decimalValue +=
+          pow(2, binaryString.length - i - 1) * int.parse((binaryString[i]));
     }
   }
   return isNegative ? -1 * decimalValue : decimalValue;
@@ -32,7 +33,8 @@ void main() {
     try {
       binaryToDecimal("1a1");
     } catch (e) {
-      expect('Exception: Non-binary value was passed to the function', e.toString());
+      expect('Exception: Non-binary value was passed to the function',
+          e.toString());
     }
   });
 }
