@@ -1,5 +1,7 @@
 import "dart:math" show pow;
 
+import 'package:test/test.dart';
+
 int binaryToDecimal(String binaryString) {
   binaryString = binaryString.trim();
   if (binaryString == null || binaryString == "") {
@@ -19,11 +21,18 @@ int binaryToDecimal(String binaryString) {
 }
 
 void main() {
-  print(binaryToDecimal("-111")); // -7
-  print(binaryToDecimal(" 101011 ")); // 43
-  try {
-    print(binaryToDecimal("1a1")); //error
-  } catch (ex) {
-    print(ex);
-  }
+  test('test case 1', () {
+    expect(binaryToDecimal("-111"), -7);
+  });
+  test('test case 2', () {
+    expect(binaryToDecimal("101011"), 43);
+  });
+
+  test('test case 3', () {
+    try {
+      binaryToDecimal("1a1");
+    } catch (e) {
+      expect('Exception: Non-binary value was passed to the function', e.toString());
+    }
+  });
 }
