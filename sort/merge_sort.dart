@@ -4,8 +4,9 @@ void merge(List list, int lIndex, int mIndex, int rIndex) {
   int lSize = mIndex - lIndex + 1;
   int rSize = rIndex - mIndex;
 
-  List lList = new List(lSize);
-  List rList = new List(rSize);
+  List lList = []..length = lSize;
+
+  List rList = []..length = rSize;
 
   for (int i = 0; i < lSize; i++) lList[i] = list[lIndex + i];
   for (int j = 0; j < rSize; j++) rList[j] = list[mIndex + j + 1];

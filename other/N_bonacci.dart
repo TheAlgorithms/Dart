@@ -1,7 +1,8 @@
 import 'package:test/test.dart';
 
 List N_bonacci(int n, int m) {
-  List v = new List(m);
+  List v = []..length = m;
+
   var i;
   for (i = 0; i < m; i++) {
     v[i] = 0;
