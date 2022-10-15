@@ -70,7 +70,8 @@ class HashMap {
   List<LinkedList> buckets;
 
   HashMap(int hsize) {
-    buckets = new List<LinkedList>(hsize);
+    buckets = []..length = hsize;
+
     for (int i = 0; i < hsize; i++) {
       buckets[i] = new LinkedList();
     }

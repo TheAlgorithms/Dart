@@ -6,7 +6,7 @@ const int MAX_SIZE = 10;
 
 class CircularQueue<T> {
   int start = -1, end = -1;
-  List<T> queue = new List<T>(MAX_SIZE);
+  List<T> queue = []..length = MAX_SIZE;
 
   // insert elements into the queue
   void enque(T element) {

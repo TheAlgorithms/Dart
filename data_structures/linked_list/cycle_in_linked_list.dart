@@ -79,7 +79,7 @@ Node findCyclicNode(Node headNode) {
 
 void main() {
   LinkedList linkedList = LinkedList();
-  List<Node> allNodes = List();
+  List<Node> allNodes = [];
   for (var i = 0; i <= 10; i++) {
     Node newNode = createNode(i);
     linkedList.insert(newNode);

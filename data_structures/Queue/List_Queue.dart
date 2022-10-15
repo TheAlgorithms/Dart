@@ -5,7 +5,7 @@ const int MAX_SIZE = 10;
 
 class ListQueue<T> {
   int count = 0;
-  List<T> queue = new List<T>(MAX_SIZE);
+  List<T> queue = []..length = MAX_SIZE;
 
   //Checks if the queue has elements (not empty)
   bool hasElements() {
