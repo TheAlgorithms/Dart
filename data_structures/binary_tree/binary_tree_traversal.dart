@@ -67,37 +67,37 @@ void main() {
   root.right.left.left.right = TreeNode(9);
 
   List<int> result;
-  result = List();
+  result = [];
 
   test(('inOrder traversal'), () {
-    result = List();
+    result = [];
     expect(inOrder(root, result), equals([4, 2, 6, 5, 1, 8, 9, 7, 3]));
   });
 
   test(('preOrder traversal'), () {
-    result = List();
+    result = [];
     expect(preOrder(root, result), equals([1, 2, 4, 5, 6, 3, 7, 8, 9]));
   });
 
   test(('postOrder traversal'), () {
-    result = List();
+    result = [];
     expect(postOrder(root, result), equals([4, 6, 5, 2, 9, 8, 7, 3, 1]));
   });
 
   test(('postOrder traversal'), () {
-    result = List();
+    result = [];
     root = null;
     expect(postOrder(root, result), equals([]));
   });
 
   test(('inOrder traversal'), () {
-    result = List();
+    result = [];
     root = null;
     expect(inOrder(root, result), equals([]));
   });
 
   test(('preOrder traversal'), () {
-    result = List();
+    result = [];
     root = null;
     expect(preOrder(root, result), equals([]));
   });
