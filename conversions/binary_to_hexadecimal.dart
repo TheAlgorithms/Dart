@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
 //Binary number to hexadecimal number conversion
-Map<String, String> hex_table = {
+Map<String, String> hexTable = {
   "0000": '0',
   "0001": '1',
   "0010": '2',
@@ -21,58 +21,58 @@ Map<String, String> hex_table = {
 };
 
 // function to take a binary string and to return hex value
-String binary_to_hexadecimal(String bin_string) {
+String binaryToHexadecimal(String binaryString) {
   // checking for unexpected values
-  bin_string = bin_string.trim();
-  if (bin_string == null || bin_string == "") {
+  binaryString = binaryString.trim();
+  if (binaryString == null || binaryString == "") {
     throw new FormatException("An empty value was passed to the function");
   }
   try {
-    int.parse(bin_string);
+    int.parse(binaryString);
   } catch (e) {
     throw new FormatException("An invalid value was passed to the function");
   }
 
   // negative number check
-  bool is_negative = bin_string[0] == "-";
-  if (is_negative) bin_string = bin_string.substring(1);
+  bool isNegative = binaryString[0] == "-";
+  if (isNegative) binaryString = binaryString.substring(1);
 
   // add min 0's in the end to make right substring length divisible by 4
-  var len_bin = bin_string.length;
-  for (int i = 1; i <= (4 - len_bin % 4) % 4; i++)
-    bin_string = '0' + bin_string;
+  var binaryStringLength = binaryString.length;
+  for (int i = 1; i <= (4 - binaryStringLength % 4) % 4; i++)
+    binaryString = '0' + binaryString;
 
   // coverting the binary values to hex by diving into substring
-  String hex_val = "";
+  String hexValue = "";
   int i = 0;
-  while (i != bin_string.length) {
-    String bin_curr = bin_string.substring(i, i + 4);
-    hex_val += hex_table[bin_curr];
+  while (i != binaryString.length) {
+    String bin_curr = binaryString.substring(i, i + 4);
+    hexValue += hexTable[bin_curr];
     i += 4;
   }
 
   // returning the value
-  if (is_negative) {
-    return "-" + hex_val;
+  if (isNegative) {
+    return "-" + hexValue;
   }
-  return hex_val;
+  return hexValue;
 }
 
 // driver function
 void main() {
   test("binary_to_hexadecimal -1111", () {
-    expect(binary_to_hexadecimal("-1111"), equals("-F"));
+    expect(binaryToHexadecimal("-1111"), equals("-F"));
   });
 
   test("binary_to_hexadecimal 101011", () {
-    expect(binary_to_hexadecimal("101011"), equals("2B"));
+    expect(binaryToHexadecimal("101011"), equals("2B"));
   });
 
   test("binary_to_hexadecimal rasies error when number is invalid", () {
-    expect(() => binary_to_hexadecimal("-1011a01"), throwsFormatException);
+    expect(() => binaryToHexadecimal("-1011a01"), throwsFormatException);
   });
 
   test("binary_to_hexadecimal of empty string raises error", () {
-    expect(() => binary_to_hexadecimal(""), throwsFormatException);
+    expect(() => binaryToHexadecimal(""), throwsFormatException);
   });
 }
