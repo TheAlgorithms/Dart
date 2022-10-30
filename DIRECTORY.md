@@ -58,6 +58,7 @@
   * [Coin Change](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/coin_change.dart)
   * [Kadanes Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/kadanes_algorithm.dart)
   * [Longest Common Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/longest_common_subsequence.dart)
+  * [Longest Common Substring](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/longest_common_substring.dart)
   * [Min Number Of Jumps](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/min_number_of_jumps.dart)
 
 ## Graphs
