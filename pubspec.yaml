@@ -5,9 +5,12 @@ repository: https://github.com/TheAlgorithms/Dart
 dependencies:
   test: ^1.15.4
   coverage: ^1.6.0
+  match: ^0.4.1
 
 dev_dependencies:
   stack: ^0.2.1
+  build_runner:
+  match_generator: ^0.4.1
 
 environment:
   sdk: ">=2.10.0 <3.0.0"
