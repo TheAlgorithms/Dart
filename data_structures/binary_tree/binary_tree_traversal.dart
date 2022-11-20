@@ -1,3 +1,5 @@
+import 'dart:collection';
+
 import 'package:test/test.dart';
 
 class TreeNode {
@@ -55,6 +57,27 @@ List<int> postOrder(TreeNode root, List<int> result) {
   return result;
 }
 
+List<int> levelOrder(TreeNode root, List<int> result) {
+  Queue<TreeNode> q = Queue();
+  if (root != null) {
+    q.add(root);
+  }
+
+  while (!q.isEmpty) {
+    TreeNode curr = q.first;
+    q.removeFirst();
+    result.add(curr.data);
+    if (curr.left != null) {
+      q.addLast(curr.left);
+    }
+    if (curr.right != null) {
+      q.addLast(curr.right);
+    }
+  }
+
+  return result;
+}
+
 void main() {
   var root = TreeNode(1);
   root.left = TreeNode(2);
@@ -67,38 +90,50 @@ void main() {
   root.right.left.left.right = TreeNode(9);
 
   List<int> result;
-  result = List();
+  result = List.empty(growable: true);
 
   test(('inOrder traversal'), () {
-    result = List();
+    result = List.empty(growable: true);
     expect(inOrder(root, result), equals([4, 2, 6, 5, 1, 8, 9, 7, 3]));
   });
 
   test(('preOrder traversal'), () {
-    result = List();
+    result = List.empty(growable: true);
     expect(preOrder(root, result), equals([1, 2, 4, 5, 6, 3, 7, 8, 9]));
   });
 
   test(('postOrder traversal'), () {
-    result = List();
+    result = List.empty(growable: true);
     expect(postOrder(root, result), equals([4, 6, 5, 2, 9, 8, 7, 3, 1]));
   });
 
+  test(('levelOrder traversal'), () {
+    // https://www.geeksforgeeks.org/level-order-tree-traversal/
+    result = List.empty(growable: true);
+    expect(levelOrder(root, result), equals([1, 2, 3, 4, 5, 7, 6, 8, 9]));
+  });
+
   test(('postOrder traversal'), () {
-    result = List();
+    result = List.empty(growable: true);
     root = null;
     expect(postOrder(root, result), equals([]));
   });
 
   test(('inOrder traversal'), () {
-    result = List();
+    result = List.empty(growable: true);
     root = null;
     expect(inOrder(root, result), equals([]));
   });
 
   test(('preOrder traversal'), () {
-    result = List();
+    result = List.empty(growable: true);
     root = null;
     expect(preOrder(root, result), equals([]));
+  });
+
+  test(('levelOrder traversal'), () {
+    result = List.empty(growable: true);
+    root = null;
+    expect(levelOrder(root, result), equals([]));
   });
 }
