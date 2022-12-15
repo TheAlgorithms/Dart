@@ -1,5 +1,8 @@
 import 'dart:math';
 
+import 'package:test/expect.dart';
+import 'package:test/scaffolding.dart';
+
 const int RUN = 32;
 void insertionSort(List list, int left, int right) {
   for (int i = left + 1; i <= right; i++) {
@@ -65,9 +68,21 @@ void timSort(List list, int n) {
 }
 
 void main() {
-  //Get the array
-  List arr = [12, 213, 45, 9, 107];
-  print("Before sorting: $arr\n");
-  timSort(arr, arr.length);
-  print("After sorting: $arr");
+  test('test case 1', () {
+    List arr = [12, 213, 45, 9, 107];
+    timSort(arr, arr.length);
+    expect(arr, [9, 12, 45, 107, 213]);
+  });
+
+  test('test case 2', () {
+    List arr = [];
+    timSort(arr, arr.length);
+    expect(arr, []);
+  });
+
+  test('test case 3', () {
+    List arr = [-1, 0, 1];
+    timSort(arr, arr.length);
+    expect(arr, [-1, 0, 1]);
+  });
 }
