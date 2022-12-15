@@ -5,6 +5,7 @@
 * [ ] Add an algorithm?
 * [ ] Fix a bug or typo in an existing algorithm?
 * [ ] Documentation change?
+* [ ] Add/Update/Fix test cases.
 
 
 ### **Checklist:**
