@@ -49,7 +49,8 @@ String decimalToAny(int value, int base) {
     int remainder = value % base;
     value = value ~/ base;
     output =
-        (remainder < 10 ? remainder.toString() : ALPHABET_VALUES[remainder]) + output;
+        (remainder < 10 ? remainder.toString() : ALPHABET_VALUES[remainder]) +
+            output;
   }
 
   return negative ? '-' + output : output;
