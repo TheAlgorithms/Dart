@@ -18,7 +18,8 @@ void insertionSort(List list, int left, int right) {
 
 void merge(List list, int left, int middle, int right) {
   int length1 = middle - left + 1, length2 = right - middle;
-  List leftList = new List(length1), rightList = new List(length2);
+  List leftList = List.filled(length1, null),
+      rightList = new List.filled(length2, null);
 
   for (int i = 0; i < length1; i++) {
     leftList[i] = list[left + i];
