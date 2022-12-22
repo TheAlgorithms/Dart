@@ -6,7 +6,6 @@ Welcome to [TheAlgorithms/Dart](https://github.com/TheAlgorithms/Dart)!
 * Fork this [repo](https://github.com/TheAlgorithms/Dart).
 * If Already Forked, Then make sure to sync your fork.
 * Make some changes and pull a request
-* Your algorithm must be able to run on [dartpad](https://dartpad.dev/)
 * [Automated tests are run](https://github.com/TheAlgorithms/Dart/actions) on all pull requests
     * `dart analyze` is mandatory
     * `dart format` is mandatory
