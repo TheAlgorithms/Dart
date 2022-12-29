@@ -33,7 +33,7 @@ bool hasPathSum(TreeNode root, int targetSum) {
   return traverse(root, targetSum, 0);
 }
 
-void main(List<String> args) {
+void main() {
   TreeNode root = TreeNode(
     5,
     TreeNode(
