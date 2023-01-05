@@ -17,7 +17,7 @@ class UniqueBST {
   }
 
   int numTrees(int n) {
-    List<int> dp = List.filled(20, -1);
+    List<int> dp = List.filled(n + 1, -1);
     return this.solve(n, dp);
   }
 }
