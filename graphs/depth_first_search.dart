@@ -14,7 +14,7 @@ class Graph {
     /// each node will have a list as value which stores
     /// the nodes to which it is connected to
     for (int i = 0; i < this.nodes.length; i++) {
-      this.graph[nodes[i]] = List();
+      this.graph[nodes[i]] = [];
     }
   }
 
@@ -32,7 +32,7 @@ class Graph {
 
   void addNodes(int newNode) {
     this.nodes.add(newNode);
-    this.graph[newNode] = List();
+    this.graph[newNode] = [];
   }
 
   void addEdges(int start, int end) {
@@ -59,7 +59,7 @@ List<int> depthFirstSearch(Graph graph, int numberOfNodes, int startNode) {
   List<bool> visitedNodes =
       new List<bool>.generate(numberOfNodes, (index) => false);
 
-  List<int> answer = List();
+  List<int> answer = [];
   depthFirstSearchHelper(graph.graph, visitedNodes, startNode, answer);
   return answer;
 }
