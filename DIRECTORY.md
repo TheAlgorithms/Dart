@@ -8,9 +8,6 @@
   * [N-Queen](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/n-queen.dart)
   * [Open Knight Tour](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/open_knight_tour.dart)
 
-## Chinese Remainder Theorem
-  * [Chinese Remainder Theorem](https://github.com/TheAlgorithms/Dart/blob/master/chinese_remainder_theorem/chinese_remainder_theorem.dart)
-
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_hexadecimal.dart)
@@ -109,6 +106,7 @@
 ## Other
   * [Ackermann](https://github.com/TheAlgorithms/Dart/blob/master/other/ackermann.dart)
   * [Binpow](https://github.com/TheAlgorithms/Dart/blob/master/other/binpow.dart)
+  * [Chinese Remainder Theorem](https://github.com/TheAlgorithms/Dart/blob/master/other/chinese_remainder_theorem.dart)
   * [Collatz](https://github.com/TheAlgorithms/Dart/blob/master/other/collatz.dart)
   * [Fisher Yates Shuffle](https://github.com/TheAlgorithms/Dart/blob/master/other/fisher_yates_shuffle.dart)
   * [Fizzbuzz](https://github.com/TheAlgorithms/Dart/blob/master/other/FizzBuzz.dart)
@@ -184,3 +182,6 @@
   * [Remove Duplicates](https://github.com/TheAlgorithms/Dart/blob/master/strings/remove%20duplicates.dart)
   * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
   * [Reverse Words Of String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_words_of_string.dart)
+
+## Trees
+  * [Path Sum](https://github.com/TheAlgorithms/Dart/blob/master/trees/path_sum.dart)
