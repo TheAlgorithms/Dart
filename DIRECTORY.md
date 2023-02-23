@@ -1,5 +1,6 @@
 
 ## Array
+  * [Move Zeroes](https://github.com/TheAlgorithms/Dart/blob/master/array/move_zeroes.dart)
   * [Sorted Squared Array](https://github.com/TheAlgorithms/Dart/blob/master/array/sorted_squared_array.dart)
   * [Two Sum](https://github.com/TheAlgorithms/Dart/blob/master/array/two_sum.dart)
   * [Validate Subsequence](https://github.com/TheAlgorithms/Dart/blob/master/array/validate_subsequence.dart)
