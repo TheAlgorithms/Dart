@@ -51,7 +51,8 @@ List<int> mergeSort(List<int> list, int lIndex, int rIndex) {
 
 void main() {
   List<int> list = [5, 4, 3, 2, 1];
-  test('test case 1', () => expect(mergeSort(list, 0, list.length - 1), [1, 2, 3, 4, 5]));
+  test('test case 1',
+      () => expect(mergeSort(list, 0, list.length - 1), [1, 2, 3, 4, 5]));
 
   List<int> list1 = [];
   test('test case 2', () => expect(mergeSort(list1, 0, list1.length - 1), []));
@@ -63,10 +64,12 @@ void main() {
   List<int> list3 = [-1, -11, -1221, -123121, -1111111];
   test(
       'test case 4',
-      () => expect(
-          mergeSort(list3, 0, list3.length - 1), [-1111111, -123121, -1221, -11, -1]));
+      () => expect(mergeSort(list3, 0, list3.length - 1),
+          [-1111111, -123121, -1221, -11, -1]));
 
   List<int> list4 = [11, 1, 1200, -1, 5];
-  test('test case 1',
-      () => expect(mergeSort(list4, 0, list4.length - 1), [-1, 1, 5, 11, 1200]));
+  test(
+      'test case 1',
+      () =>
+          expect(mergeSort(list4, 0, list4.length - 1), [-1, 1, 5, 11, 1200]));
 }
