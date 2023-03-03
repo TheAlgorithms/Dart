@@ -1,5 +1,7 @@
-import 'dart:math';
+// Leetcode problem: https://leetcode.com/problems/car-pooling/
+// Solution Explanation: https://leetcode.com/problems/car-pooling/solutions/3252690/dart-time-o-n-o-1-space-solution/
 
+import 'dart:math';
 import 'package:test/test.dart';
 
 bool carPooling(List<List<int>> trips, int capacity) {
