@@ -33,7 +33,6 @@
     * [Binary Tree Traversal](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/binary_tree/binary_tree_traversal.dart)
   * Hashmap
     * [Hashing](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/HashMap/Hashing.dart)
-    * [Hashmap Impl](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/HashMap/hashmap_impl.dart)
   * Heap
     * Binary Heap
       * [Max Heap](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/Heap/Binary_Heap/Max_heap.dart)
