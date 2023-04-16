@@ -1,6 +1,6 @@
 void main() {
-  var n = 5;
-  if(n>=0 && n.runtimeType == int){
+  int n = 5;
+  if(n>=0){
     var fac = factorial(n);
   print("$n! = $fac"); /* output: 5! = 120 */
   }else{
