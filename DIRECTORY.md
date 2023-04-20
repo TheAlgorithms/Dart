@@ -181,6 +181,7 @@
   * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/tim_Sort.dart)
 
 ## Strings
+  * [Isomorphic Strings](https://github.com/TheAlgorithms/Dart/blob/master/strings/isomorphic_strings.dart)
   * [Knuth Morris Prat](https://github.com/TheAlgorithms/Dart/blob/master/strings/knuth_morris_prat.dart)
   * [Remove Duplicates](https://github.com/TheAlgorithms/Dart/blob/master/strings/remove%20duplicates.dart)
   * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
