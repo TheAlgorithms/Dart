@@ -1,5 +1,6 @@
 import 'package:test/test.dart';
 
+// Leetcode problem url: https://leetcode.com/problems/isomorphic-strings/
 bool isIsomorphic(String string1, String string2) {
   Map<String, String> sMap = {};
   Map<String, String> tMap = {};
