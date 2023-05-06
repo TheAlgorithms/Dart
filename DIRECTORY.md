@@ -42,6 +42,7 @@
   * Linked List
     * [Cycle In Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/cycle_in_linked_list.dart)
     * [Linked List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/linked_list.dart)
+    * [Merge Sorted List](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/linked_list/merge_sorted_list.dart)
   * Quad Tree
     * [Quad Tree](https://github.com/TheAlgorithms/Dart/blob/master/data_structures/quad_tree/quad_tree.dart)
   * Queue
@@ -62,6 +63,7 @@
   * [Min Number Of Jumps](https://github.com/TheAlgorithms/Dart/blob/master/dynamic_programming/min_number_of_jumps.dart)
 
 ## Graphs
+  * [Area Of Island](https://github.com/TheAlgorithms/Dart/blob/master/graphs/area_of_island.dart)
   * [Breadth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/breadth_first_search.dart)
   * [Depth First Search](https://github.com/TheAlgorithms/Dart/blob/master/graphs/depth_first_search.dart)
   * [Nearest Neighbour Algorithm](https://github.com/TheAlgorithms/Dart/blob/master/graphs/nearest_neighbour_algorithm.dart)
@@ -181,6 +183,7 @@
   * [Tim Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/tim_Sort.dart)
 
 ## Strings
+  * [Isomorphic Strings](https://github.com/TheAlgorithms/Dart/blob/master/strings/isomorphic_strings.dart)
   * [Knuth Morris Prat](https://github.com/TheAlgorithms/Dart/blob/master/strings/knuth_morris_prat.dart)
   * [Remove Duplicates](https://github.com/TheAlgorithms/Dart/blob/master/strings/remove%20duplicates.dart)
   * [Reverse String](https://github.com/TheAlgorithms/Dart/blob/master/strings/reverse_string.dart)
