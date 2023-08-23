@@ -17,7 +17,7 @@ class Node {
 }
 
 /*In order traversal of the tree*/
-void display(var tree) {
+void display(Node tree) {
   if (tree == null) {
     return;
   }
@@ -39,7 +39,7 @@ void display(var tree) {
  *This is the recursive function to find the depth of
  * binary tree.
 */
-double depth_of_tree(var tree) {
+double depth_of_tree(Node tree) {
   if (tree == null) {
     return 0;
   } else {
@@ -55,7 +55,7 @@ double depth_of_tree(var tree) {
 }
 
 /*This function returns that is it full binary tree or not*/
-bool is_full_binary_tree(var tree) {
+bool is_full_binary_tree(Node tree) {
   if (tree == null) {
     return true;
   }
