@@ -28,10 +28,10 @@ void heapify(List arr, var n, var i) {
   var r = 2 * i + 2;
 
   // If left child is lager than root
-  if (l < n && arr[l] > arr[largest]) largest = l;
+  if (l < n && arr[l as int] > arr[largest]) largest = l;
 
   // If right child is larger than largest so far
-  if (r < n && arr[r] > arr[largest]) largest = r;
+  if (r < n && arr[r as int] > arr[largest]) largest = r;
 
   // If largest is not root
   if (largest != i) {

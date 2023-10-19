@@ -13,6 +13,7 @@ void bitwiseConversion(var n) {
   print("Bitwise conversion.\n");
   while (n != 0) {
     d = (n & 1);
+
     b += d * (pow(10, c++).toInt());
     n >>= 1;
   }

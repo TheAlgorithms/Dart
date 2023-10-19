@@ -2,8 +2,8 @@
 //Email:stepfencurryxiao@gmail.com
 
 class Node {
-  int data;
-  Node next;
+  int? data;
+  Node? next;
 
   Node(int data) {
     this.data = data;
@@ -12,8 +12,8 @@ class Node {
 }
 
 class LinkedList {
-  Node head;
-  int size;
+  Node? head;
+  int? size;
 
   LinkedList() {
     head = null;
@@ -23,7 +23,7 @@ class LinkedList {
   void insert(int data) {
     Node newnode = new Node(data);
 
-    size++;
+    if (size != null) size = size! + 1;
 
     if (head == null) {
       head = newnode;
@@ -38,15 +38,16 @@ class LinkedList {
       print("underFlow!");
       return;
     } else {
-      Node curr = head;
+      Node curr = head!;
       if (curr.data == data) {
         head = curr.next;
-        size--;
+
+        if (size != null) size = size! - 1;
         return;
       } else {
-        while (curr.next.next != null) {
-          if (curr.next.data == data) {
-            curr.next = curr.next.next;
+        while (curr.next!.next != null) {
+          if (curr.next!.data == data) {
+            curr.next = curr.next!.next;
             return;
           }
         }
@@ -56,7 +57,7 @@ class LinkedList {
   }
 
   void display() {
-    Node temp = head;
+    Node? temp = head;
     while (temp != null) {
       print(temp.data.toString());
       temp = temp.next;
@@ -66,11 +67,11 @@ class LinkedList {
 }
 
 class HashMap {
-  int hsize;
-  List<LinkedList> buckets;
+  late int hsize;
+  late List<LinkedList?> buckets = [];
 
   HashMap(int hsize) {
-    buckets = new List<LinkedList>(hsize);
+    buckets = new List.filled(hsize, null);
     for (int i = 0; i < hsize; i++) {
       buckets[i] = new LinkedList();
     }
@@ -87,18 +88,18 @@ class HashMap {
 
   void insertHash(int key) {
     int hash = hashing(key);
-    buckets[hash].insert(key);
+    buckets[hash]!.insert(key);
   }
 
   void deleteHash(int key) {
     int hash = hashing(key);
-    buckets[hash].delete(key);
+    buckets[hash]!.delete(key);
   }
 
   void displayHashtable() {
     for (int i = 0; i < hsize; i++) {
       print("Bucket $i:");
-      buckets[i].display();
+      buckets[i]!.display();
     }
   }
 }

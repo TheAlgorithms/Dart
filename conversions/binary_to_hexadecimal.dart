@@ -24,7 +24,7 @@ Map<String, String> hexTable = {
 String binaryToHexadecimal(String binaryString) {
   // checking for unexpected values
   binaryString = binaryString.trim();
-  if (binaryString == null || binaryString == "") {
+  if (binaryString == "") {
     throw new FormatException("An empty value was passed to the function");
   }
   try {
@@ -47,7 +47,7 @@ String binaryToHexadecimal(String binaryString) {
   int i = 0;
   while (i != binaryString.length) {
     String bin_curr = binaryString.substring(i, i + 4);
-    hexValue += hexTable[bin_curr];
+    hexValue += hexTable[bin_curr]!;
     i += 4;
   }
 

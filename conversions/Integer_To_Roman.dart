@@ -39,7 +39,7 @@ List<String> RomanNumbers = [
   "I"
 ];
 
-List<String> integer_to_roman(int num) {
+List<String>? integer_to_roman(int num) {
   if (num < 0) {
     return null;
   }

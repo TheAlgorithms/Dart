@@ -3,8 +3,8 @@
 
 class Node<T> {
   //the data of the Node
-  T data;
-  Node next;
+  T? data;
+  Node? next;
 
   Node(T data) {
     this.data = data;
@@ -14,10 +14,10 @@ class Node<T> {
 
 class LinkedListStack<T> {
   //Top of stack
-  Node<T> head;
+  Node<T?>? head;
 
   //Size of stack
-  int size;
+  int? size;
 
   LinkedListStack() {
     this.head = null;
@@ -30,20 +30,20 @@ class LinkedListStack<T> {
     Node<T> newNode = new Node<T>(element);
     newNode.next = this.head;
     this.head = newNode;
-    this.size++;
+    if (this.size != null) this.size = this.size! + 1;
   }
 
   //Pop element from top at the stack
 
-  T pop() {
-    T returnData = null;
+  T? pop() {
+    T? returnData = null;
     if (size == 0) {
       print("The stack is empty!!!");
     } else {
-      Node<T> destroy = this.head;
-      this.head = this.head.next;
+      Node<T?> destroy = this.head!;
+      this.head = this.head!.next as Node<T?>?;
       returnData = destroy.data;
-      this.size--;
+      if (this.size != null) this.size = this.size! - 1;
     }
     return returnData;
   }
@@ -52,7 +52,7 @@ class LinkedListStack<T> {
     return this.size == 0;
   }
 
-  int getSize() {
+  int? getSize() {
     return this.size;
   }
 }

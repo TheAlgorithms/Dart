@@ -4,7 +4,7 @@ import 'package:test/test.dart';
 
 int binaryToDecimal(String binaryString) {
   binaryString = binaryString.trim();
-  if (binaryString == null || binaryString == "") {
+  if (binaryString == "") {
     throw FormatException("An empty value was passed to the function");
   }
   bool isNegative = binaryString[0] == "-";
@@ -14,8 +14,8 @@ int binaryToDecimal(String binaryString) {
     if ("01".contains(binaryString[i]) == false) {
       throw FormatException("Non-binary value was passed to the function");
     } else {
-      decimalValue +=
-          pow(2, binaryString.length - i - 1) * int.parse((binaryString[i]));
+      decimalValue += pow(2, binaryString.length - i - 1) *
+          int.parse((binaryString[i])) as int;
     }
   }
   return isNegative ? -1 * decimalValue : decimalValue;

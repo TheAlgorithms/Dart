@@ -24,7 +24,7 @@ Map<String, String> bin_table = {
 String hexadecimal_to_binary(String hex_value) {
   // checking for unexpected values
   hex_value = hex_value.trim();
-  if (hex_value == null || hex_value == "") {
+  if (hex_value == "") {
     throw new FormatException("An empty value was passed to the function");
   }
 
@@ -40,7 +40,7 @@ String hexadecimal_to_binary(String hex_value) {
     if (!bin_table.containsKey(hex_cur)) {
       throw new FormatException("An invalid value was passed to the function");
     }
-    bin_val += bin_table[hex_cur];
+    bin_val += bin_table[hex_cur]!;
     i++;
   }
 

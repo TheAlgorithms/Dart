@@ -4,7 +4,7 @@
 
 //Function sort the array using gnome sort
 void gnomeSort(List arr, var n) {
-  if (arr == null || n == 0) return;
+  if (n == 0) return;
   int first = 1;
   int second = 2;
 

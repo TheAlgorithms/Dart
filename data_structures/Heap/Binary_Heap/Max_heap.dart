@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
 class MaxHeap {
-  List<int> heap;
+  List<int>? heap;
 
   void buildHeap(List<int> array) {
     this.heap = _heapify(array);
@@ -15,28 +15,28 @@ class MaxHeap {
     return array;
   }
 
-  int peek() {
+  int? peek() {
     if (!isEmpty()) {
-      return this.heap[0];
+      return this.heap![0];
     }
     return null;
   }
 
   bool isEmpty() {
-    return this.heap.length == 0;
+    return this.heap!.length == 0;
   }
 
   void _siftUp(int currentIndex) {
     int parentIndex = (currentIndex - 1) ~/ 2;
     while (
-        parentIndex >= 0 && this.heap[parentIndex] < this.heap[currentIndex]) {
-      _swap(parentIndex, currentIndex, this.heap);
+        parentIndex >= 0 && this.heap![parentIndex] < this.heap![currentIndex]) {
+      _swap(parentIndex, currentIndex, this.heap!);
       currentIndex = parentIndex;
       parentIndex = (currentIndex - 1) ~/ 2;
     }
   }
 
-  void _siftDown(int currentIndex, int endIndex, List<int> heap) {
+  void _siftDown(int currentIndex, int endIndex, List<int>? heap) {
     int childOneIndex = (2 * currentIndex) + 1;
     int childTwoIndex;
 
@@ -44,13 +44,13 @@ class MaxHeap {
       childTwoIndex =
           2 * currentIndex + 2 <= endIndex ? 2 * currentIndex + 2 : -1;
       int indexToSwap;
-      if (childTwoIndex != -1 && heap[childTwoIndex] > heap[childOneIndex]) {
+      if (childTwoIndex != -1 && heap![childTwoIndex] > heap[childOneIndex]) {
         indexToSwap = childTwoIndex;
       } else {
         indexToSwap = childOneIndex;
       }
 
-      if (heap[currentIndex] < heap[indexToSwap]) {
+      if (heap![currentIndex] < heap[indexToSwap]) {
         _swap(currentIndex, indexToSwap, heap);
         currentIndex = indexToSwap;
         childOneIndex = (2 * currentIndex) + 1;
@@ -61,15 +61,15 @@ class MaxHeap {
   }
 
   void insert(int value) {
-    this.heap.add(value);
-    _siftUp(this.heap.length - 1);
+    this.heap!.add(value);
+    _siftUp(this.heap!.length - 1);
   }
 
-  int remove() {
+  int? remove() {
     if (!isEmpty()) {
-      _swap(0, this.heap.length - 1, this.heap);
-      int maxElement = this.heap.removeLast();
-      _siftDown(0, this.heap.length - 1, this.heap);
+      _swap(0, this.heap!.length - 1, this.heap!);
+      int maxElement = this.heap!.removeLast();
+      _siftDown(0, this.heap!.length - 1, this.heap);
       return maxElement;
     }
     return null;

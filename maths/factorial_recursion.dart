@@ -5,4 +5,4 @@ void main() {
 }
 
 /* calculate factorial of n*/
-int factorial(var n) => n == 0 || n == 1 ? 1 : n * factorial(n - 1);
+int? factorial(var n) => n == 0 || n == 1 ? 1 : n * factorial(n - 1);

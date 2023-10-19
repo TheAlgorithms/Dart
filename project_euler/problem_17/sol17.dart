@@ -10,7 +10,6 @@
  * NOTE: Do not count spaces or hyphens. For example, 342 (three hundred and forty-two) contains 23 letters and 115 (one hundred and fifteen) contains 20 letters. 
  * The use of "and" when writing out numbers is in compliance with British usage.
  */
-
 import 'dart:math';
 
 const ONES = [
@@ -59,7 +58,7 @@ String inWords = "";
 convertToWords(int number) {
   String numString = number.toString();
   int length = numString.length;
-  int place = pow(10, length - 1);
+  int place = pow(10, length - 1) as int;
 
   if (number == 0) return inWords = "Zero";
 
@@ -107,7 +106,8 @@ calculateWithRange({int start = 1, end = 1000}) {
   }
 
   for (int i = start; i <= end; i++) {
-    count += convertToWords(i).length;
+    int wordCount = convertToWords(i).length();
+    count += wordCount;
   }
 
   print(count);

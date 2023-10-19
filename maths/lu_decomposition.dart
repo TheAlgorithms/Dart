@@ -20,19 +20,19 @@ class LUPDecomposition {
 }
 
 class Matrix {
-  List<List<double>> _values;
+  List<List<double>>? _values;
 
   @override
   String toString() => this._values.toString();
 
-  int get nRows => this._values.length;
-  int get nColumns => this.nRows == 0 ? 0 : this._values[0].length;
+  int get nRows => this._values!.length;
+  int get nColumns => this.nRows == 0 ? 0 : this._values![0].length;
 
   bool get isSquare => this.nRows == this.nColumns;
 
-  List<List<double>> get rows => this._values;
+  List<List<double>>? get rows => this._values;
 
-  List<double> operator [](int n) => this._values[n];
+  List<double> operator [](int n) => this._values![n];
 
   Matrix operator +(Matrix other) {
     if (this.nRows != other.nRows || this.nColumns != other.nColumns) {
@@ -124,7 +124,7 @@ class Matrix {
 
       if (maxIndex != i) {
         swap(pivot, i, maxIndex);
-        swap(output.rows, i, maxIndex);
+        swap(output.rows!, i, maxIndex);
 
         pivot[matrixSize]++;
       }
@@ -209,12 +209,12 @@ class Matrix {
     for (int i = 0; i < size; i++) {
       List<double> row = List.generate(size, (x) => 0);
       row[i] = 0;
-      this._values.add(row);
+      this._values!.add(row);
     }
   }
 
   Matrix.from(Matrix matrix) {
-    this._values = matrix.rows.map((row) => List<double>.from(row)).toList();
+    this._values = matrix.rows!.map((row) => List<double>.from(row)).toList();
   }
 
   Matrix.zeros(int nRows, int nColumns) {
@@ -225,7 +225,7 @@ class Matrix {
       for (int j = 0; j < nColumns; j++) {
         row.add(0);
       }
-      this._values.add(row);
+      this._values!.add(row);
     }
   }
 
@@ -272,7 +272,7 @@ List<double> solve(Matrix x, List<double> y) {
 List<double> ordinaryLeastSquare(Matrix x, Matrix y) {
   return ((x.transposition() * x).inversion() * x.transposition() * y)
       .transposition()
-      .rows[0];
+      .rows![0];
 }
 
 double f(double x, double y) {

@@ -21,7 +21,7 @@ void pigeonholeSort(List arr) {
   int range = max - min;
   range++;
 
-  List phole = new List(range);
+  List phole = new List.filled(range, null);
   for (int i = 0; i < range; i++) {
     phole[i] = 0;
   }

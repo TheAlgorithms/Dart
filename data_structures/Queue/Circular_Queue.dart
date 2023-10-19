@@ -6,7 +6,7 @@ const int MAX_SIZE = 10;
 
 class CircularQueue<T> {
   int start = -1, end = -1;
-  List<T> queue = new List<T>(MAX_SIZE);
+  List<T?> queue = new List.filled(MAX_SIZE, null);
 
   // insert elements into the queue
   void enque(T element) {
@@ -30,12 +30,12 @@ class CircularQueue<T> {
   }
 
   // remove elements from the queue
-  T deque() {
+  T? deque() {
     if (start == -1) {
       print("The queue is empty!!!");
       return null;
     }
-    T here = queue[start];
+    T? here = queue[start];
     if (start == end) {
       start = -1;
       end = -1;

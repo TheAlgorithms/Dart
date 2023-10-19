@@ -23,7 +23,7 @@ String decimal_to_hexadecimal(int decimal_val) {
   }
   String hex_string = "";
   while (decimal_val > 0) {
-    String hex_val = "";
+    String? hex_val = "";
     int remainder = decimal_val % 16;
     decimal_val = decimal_val ~/ 16;
     if (hex_table.containsKey(remainder.toString())) {
@@ -31,7 +31,7 @@ String decimal_to_hexadecimal(int decimal_val) {
     } else {
       hex_val = remainder.toString();
     }
-    hex_string = hex_val + hex_string;
+    hex_string = hex_val! + hex_string;
   }
   return negative ? "-" + hex_string : hex_string;
 }
