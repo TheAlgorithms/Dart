@@ -1,4 +1,13 @@
 import 'dart:math';
+///This algorithm uses the bucket sort algorithm to sort a list of doubles.
+///The algorithm is as follows:
+///1. Find the maximum and minimum values in the list.
+///2. Create a list of buckets, where each bucket is a list of doubles.
+///3. For each value in the list, add it to the bucket corresponding to its index.
+///4. Sort each bucket.
+///5. Concatenate the buckets together.
+///The algorithm is O(n) in the best case, and O(n^2) in the worst case.
+///Source: https://en.wikipedia.org/wiki/Bucket_sort
 
 void bucketSort(List<double> arr) {
   int n = arr.length;
