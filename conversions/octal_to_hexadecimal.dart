@@ -1,4 +1,5 @@
 import "dart:math" show pow;
+
 import 'package:test/test.dart';
 
 // octal number to hex number
@@ -15,7 +16,7 @@ Map<String, String> hex_table = {
 String ocatal_to_hex(String oct_val) {
   // checking for unexpected values
   oct_val = oct_val.trim();
-  if (oct_val == null || oct_val == "") {
+  if (oct_val == "") {
     throw new FormatException("An empty value was passed to the function");
   }
 
@@ -41,7 +42,7 @@ String ocatal_to_hex(String oct_val) {
   // converting octal to decimal
   int dec_val = 0, i = 0;
   while (oct != 0) {
-    dec_val = dec_val + ((oct % 10) * pow(8, i));
+    dec_val = dec_val + ((oct % 10) * (pow(8, i) as int));
     i++;
     oct = oct ~/ 10;
   }
@@ -52,7 +53,7 @@ String ocatal_to_hex(String oct_val) {
   }
   String hex_string = "";
   while (dec_val > 0) {
-    String hex_val = "";
+    String? hex_val = "";
     int remainder = dec_val % 16;
     dec_val = dec_val ~/ 16;
     if (hex_table.containsKey(remainder.toString())) {
@@ -60,7 +61,7 @@ String ocatal_to_hex(String oct_val) {
     } else {
       hex_val = remainder.toString();
     }
-    hex_string = hex_val + hex_string;
+    hex_string = hex_val! + hex_string;
   }
 
   // returning the value

@@ -1,8 +1,8 @@
 //Find mean of a list of numbers.
 
 average(List numbers) {
-  var sum = 0;
-  for (var x in numbers) {
+  int sum = 0;
+  for (int x in numbers) {
     sum += x;
   }
   var avg = sum / numbers.length;

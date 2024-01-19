@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import "dart:math" show pow;
 
 Map<String, int> hex_table = {
@@ -21,19 +23,22 @@ void main() {
 
 int hexadecimal_to_decimal(String hex_string) {
   hex_string = hex_string.trim().toUpperCase();
-  if (hex_string == null || hex_string == "") {
+  if (hex_string == "") {
     throw Exception("An empty value was passed to the function");
   }
   bool is_negative = hex_string[0] == "-";
   if (is_negative) hex_string = hex_string.substring(1);
   int decimal_val = 0;
   for (int i = 0; i < hex_string.length; i++) {
-    if (int.parse(hex_string[i], onError: (e) => null) == null &&
+    if (int.parse(hex_string[i],
+                onError: ((e) => null) as int Function(String)?) ==
+            null &&
         hex_table.containsKey(hex_string[i]) == false) {
       throw Exception("Non-hex value was passed to the function");
     } else {
       decimal_val += pow(16, hex_string.length - i - 1) *
-          int.parse((hex_string[i]), onError: (e) => hex_table[hex_string[i]]);
+          int.parse((hex_string[i]),
+              onError: (e) => hex_table[hex_string[i]]!) as int;
     }
   }
   return is_negative ? -1 * decimal_val : decimal_val;

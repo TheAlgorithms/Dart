@@ -2,7 +2,7 @@
 //Author:Shawn
 //Email:stepfencurryxiao@gmail.com
 
-int ternarySearch(var l, var r, var key, var arr) {
+int? ternarySearch(var l, var r, var key, var arr) {
   if (r >= 1) {
     //Find the mid1 and mid2
     var mid1 = (l + (r - l) / 3).toInt();

@@ -25,10 +25,10 @@ class Node<T> extends Rectangle<num> {
   final List<Node<T>> _children = <Node<T>>[];
 
   factory Node(num left, num top, num width, num height,
-          {int maxDepth, int maxItems}) =>
+          {int? maxDepth, int? maxItems}) =>
       Node._(left, top, width, height, maxDepth, maxItems, 0);
 
-  Node._(num left, num top, num width, num height, int maxDepth, int maxItems,
+  Node._(num left, num top, num width, num height, int? maxDepth, int? maxItems,
       int depth)
       : maxDepth = maxDepth ?? default_max_depth,
         maxItems = maxItems ?? default_max_items,
@@ -177,7 +177,7 @@ void main() {
         for (int i = 0; i < numberOfItems; i++) {
           items[i] =
               Point(rand.nextDouble() * width, rand.nextDouble() * height);
-          expect(tree.insert(i, items[i]), isTrue);
+          expect(tree.insert(i, items[i]!), isTrue);
         }
 
         // set up a box that is 1/10th the size of the total space
@@ -192,7 +192,7 @@ void main() {
         // simple iteration over all items, comparing each to the given range
         var startTime = DateTime.now();
         final foundA =
-            items.keys.where((key) => range.containsPoint(items[key])).toList();
+            items.keys.where((key) => range.containsPoint(items[key]!)).toList();
         var iterationTime = DateTime.now().difference(startTime);
 
         // quad tree query rules out whole quadrants full of points when possible

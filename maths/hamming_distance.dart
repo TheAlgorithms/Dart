@@ -2,7 +2,7 @@
 // the number of positions at which the corresponding symbols are different.
 // https://en.wikipedia.org/wiki/Hamming_distance
 
-int hamming_distance(String stringA, String stringB) {
+int? hamming_distance(String stringA, String stringB) {
   //Calculates Hamming Distance
   int distance;
 
@@ -24,7 +24,7 @@ int hamming_distance(String stringA, String stringB) {
 void main() {
   String stringA;
   String stringB;
-  int dist;
+  int? dist;
 
   stringA = 'karolin';
   stringB = 'kathrin';

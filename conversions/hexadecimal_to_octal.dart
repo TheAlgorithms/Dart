@@ -1,4 +1,5 @@
 import "dart:math" show pow;
+
 import 'package:test/test.dart';
 
 // Hexadecimal number to octal number conversion program
@@ -6,7 +7,7 @@ String hexadecimal_to_octal(String hex_val) {
   int dec = 0;
 
   // checking for null string passed to function
-  if (hex_val == null || hex_val == "") {
+  if (hex_val == "") {
     throw new FormatException("An empty value was passed to the function");
   }
 
@@ -29,43 +30,42 @@ String hexadecimal_to_octal(String hex_val) {
       case '7':
       case '8':
       case '9':
-        dec = dec + int.parse(ch) * pow(16, c);
+        dec = dec + int.parse(ch) * (pow(16, c) as int);
         c--;
         break;
       case 'a':
       case 'A':
-        dec = dec + 10 * pow(16, c);
+        dec = dec + 10 * (pow(16, c) as int);
         c--;
         break;
       case 'b':
       case 'B':
-        dec = dec + 11 * pow(16, c);
+        dec = dec + 11 * (pow(16, c) as int);
         c--;
         break;
       case 'c':
       case 'C':
-        dec = dec + 12 * pow(16, c);
+        dec = dec + 12 * (pow(16, c) as int);
         c--;
         break;
       case 'd':
       case 'D':
-        dec = dec + 13 * pow(16, c);
+        dec = dec + 13 * (pow(16, c) as int);
         c--;
         break;
       case 'e':
       case 'E':
-        dec = dec + 14 * pow(16, c);
+        dec = dec + 14 * (pow(16, c) as int);
         c--;
         break;
       case 'f':
       case 'F':
-        dec = dec + 15 * pow(16, c);
+        dec = dec + 15 * (pow(16, c) as int);
         c--;
         break;
       default:
         throw new FormatException(
             "An invalid value was passed to the function");
-        break;
     }
   }
 

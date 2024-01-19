@@ -15,14 +15,14 @@ List<String> nearestNeighbourSearch(Graph graph) {
   List<String> path = [];
   Set<int> unvisitedNodes = Set.from(Iterable.generate(graph.nodes.length));
 
-  int currentNode = 0;
+  int? currentNode = 0;
   while (unvisitedNodes.isNotEmpty) {
     unvisitedNodes.remove(currentNode);
-    int nearestNeighbour;
-    double nearestNeighbourDistance;
+    int? nearestNeighbour;
+    late double nearestNeighbourDistance;
 
     for (int neighbour in unvisitedNodes) {
-      double neighbourDistance = graph.adjacencyMatrix[currentNode][neighbour];
+      double neighbourDistance = graph.adjacencyMatrix[currentNode!][neighbour];
       if (nearestNeighbour == null ||
           neighbourDistance < nearestNeighbourDistance) {
         nearestNeighbour = neighbour;
@@ -30,7 +30,7 @@ List<String> nearestNeighbourSearch(Graph graph) {
       }
     }
 
-    path.add(graph.nodes[currentNode]);
+    path.add(graph.nodes[currentNode!]);
     currentNode = nearestNeighbour;
   }
 

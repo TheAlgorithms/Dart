@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
 class Node<T> {
-  Node<T> next;
+  Node<T>? next;
   T value;
 
   Node(this.value);
@@ -9,16 +9,16 @@ class Node<T> {
 }
 
 class LinkedListIterator<T> extends Iterator<T> {
-  Node<T> _current;
+  Node<T>? _current;
 
   @override
   bool moveNext() => _current != null;
 
   @override
   T get current {
-    T currentValue = this._current.value;
+    T currentValue = this._current!.value;
 
-    this._current = this._current.next;
+    this._current = this._current!.next;
 
     return currentValue;
   }
@@ -30,7 +30,7 @@ class LinkedList<T> extends Iterable<T> {
   int _length = 0;
   int get length => this._length;
 
-  Node<T> _head;
+  Node<T>? _head;
 
   @override
   Iterator<T> get iterator => new LinkedListIterator<T>(this._head);
@@ -42,10 +42,10 @@ class LinkedList<T> extends Iterable<T> {
     }
 
     if (this._head != null) {
-      Node<T> current = this._head;
+      Node<T>? current = this._head;
       while (current?.next != null) {
-        if (current.next.value == item) {
-          current.next = current.next.next;
+        if (current!.next!.value == item) {
+          current.next = current.next!.next;
           this._length--;
         }
 
@@ -54,10 +54,10 @@ class LinkedList<T> extends Iterable<T> {
     }
   }
 
-  T pop() {
+  T? pop() {
     if (this._head != null) {
-      T value = this._head.value;
-      this._head = this._head.next;
+      T value = this._head!.value;
+      this._head = this._head!.next;
       this._length--;
 
       return value;
@@ -75,12 +75,12 @@ class LinkedList<T> extends Iterable<T> {
     if (this._head == null) {
       this._head = new Node(item);
     } else {
-      Node<T> current = this._head;
+      Node<T>? current = this._head;
       while (current?.next != null) {
-        current = current.next;
+        current = current!.next;
       }
 
-      current.next = Node(item);
+      current!.next = Node(item);
     }
     this._length++;
   }

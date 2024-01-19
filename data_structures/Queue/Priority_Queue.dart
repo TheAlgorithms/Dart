@@ -1,5 +1,5 @@
 class PriorityQueue<T> {
-  List<QueueItem<T>> _dataStore = <QueueItem<T>>[];
+  List<QueueItem<T?>> _dataStore = <QueueItem<T>>[];
 
   int get size => _dataStore.length;
 
@@ -11,30 +11,30 @@ class PriorityQueue<T> {
     for (int i = 0; i < _dataStore.length; i++) {
       if (priority < _dataStore[i].priority) {
         added = true;
-        _dataStore.insert(i, queueItem);
+        _dataStore.insert(i, queueItem as QueueItem<T?>);
         break;
       }
     }
     if (!added) {
-      _dataStore.add(queueItem);
+      _dataStore.add(queueItem as QueueItem<T?>);
     }
   }
 
-  T dequeue() {
+  T? dequeue() {
     if (_dataStore.isNotEmpty) {
       return _dataStore.removeAt(0).item;
     }
     return null;
   }
 
-  T get front {
+  T? get front {
     if (_dataStore.isNotEmpty) {
       return _dataStore.first.item;
     }
     return null;
   }
 
-  T get end {
+  T? get end {
     if (_dataStore.isNotEmpty) {
       return _dataStore.last.item;
     }

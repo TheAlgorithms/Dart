@@ -6,7 +6,7 @@ import 'package:test/scaffolding.dart';
 const int RUN = 32;
 void insertionSort(List list, int left, int right) {
   for (int i = left + 1; i <= right; i++) {
-    int temp = list[i];
+    int? temp = list[i];
     int j = i - 1;
     while (j >= left && list[j] > temp) {
       list[j + 1] = list[j];
