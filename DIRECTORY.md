@@ -167,10 +167,12 @@
   * [Ternary Search](https://github.com/TheAlgorithms/Dart/blob/master/search/ternary_Search.dart)
 
 ## Sort
+  * [Bitonic Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/bitonic_sort.dart)
   * [Bubble Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/bubble_Sort.dart)
   * [Cocktail Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/cocktail_sort.dart)
   * [Comb Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/comb_sort.dart)
   * [Count Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/count_sort.dart)
+  * [Cycle Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/cycle_sort.dart) 
   * [Gnome Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/gnome_Sort.dart)
   * [Heap Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/heap_Sort.dart)
   * [Insert Sort](https://github.com/TheAlgorithms/Dart/blob/master/sort/insert_Sort.dart)
