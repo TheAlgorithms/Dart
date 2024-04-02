@@ -3,8 +3,8 @@ import 'package:test/test.dart';
 // Question URL: https://leetcode.com/problems/path-sum/description/
 class TreeNode {
   int val;
-  TreeNode left;
-  TreeNode right;
+  TreeNode? left;
+  TreeNode? right;
   TreeNode([this.val = 0, this.left, this.right]);
 }
 
@@ -15,7 +15,7 @@ bool isLeaf(TreeNode node) {
   return false;
 }
 
-bool traverse(TreeNode node, int targetSum, int runningSum) {
+bool traverse(TreeNode? node, int targetSum, int runningSum) {
   if (node == null) {
     return false;
   }
