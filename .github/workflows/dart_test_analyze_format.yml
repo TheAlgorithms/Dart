@@ -7,6 +7,8 @@ jobs:
       image: google/dart
     steps:
       - uses: actions/checkout@v2
+      # - run: (echo 'deb http://deb.debian.org/debian buster main contrib non-free') > /etc/apt/sources.list.d/buster.list
+      - run: apt-get update && apt-get install --no-install-recommends -y -q lcov
       - run: dart pub get
       - run: dart format --set-exit-if-changed .
       - run: dart test --coverage .
