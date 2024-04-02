@@ -2,8 +2,8 @@
 //Email:stepfencurryxiao@gmail.com
 
 class Node {
-  int data;
-  Node next;
+  int? data;
+  Node? next;
 
   Node(int data) {
     this.data = data;
@@ -12,12 +12,11 @@ class Node {
 }
 
 class LinkedList {
-  Node head;
+  Node? head;
   int size;
 
-  LinkedList() {
+  LinkedList({this.size = 0}) {
     head = null;
-    size = 0;
   }
 
   void insert(int data) {
@@ -38,15 +37,15 @@ class LinkedList {
       print("underFlow!");
       return;
     } else {
-      Node curr = head;
-      if (curr.data == data) {
-        head = curr.next;
+      Node? curr = head;
+      if (curr?.data == data) {
+        head = curr?.next;
         size--;
         return;
       } else {
-        while (curr.next.next != null) {
-          if (curr.next.data == data) {
-            curr.next = curr.next.next;
+        while (curr?.next?.next != null) {
+          if (curr?.next?.data == data) {
+            curr?.next = curr.next?.next;
             return;
           }
         }
@@ -56,7 +55,7 @@ class LinkedList {
   }
 
   void display() {
-    Node temp = head;
+    Node? temp = head;
     while (temp != null) {
       print(temp.data.toString());
       temp = temp.next;
@@ -69,8 +68,8 @@ class HashMap {
   int hsize;
   List<LinkedList> buckets;
 
-  HashMap(int hsize) {
-    buckets = new List<LinkedList>(hsize);
+  HashMap({this.hsize = 0, this.buckets = const []}) {
+    buckets = new List.generate(hsize, (a) => LinkedList());
     for (int i = 0; i < hsize; i++) {
       buckets[i] = new LinkedList();
     }
@@ -104,7 +103,7 @@ class HashMap {
 }
 
 void main() {
-  HashMap h = new HashMap(7);
+  HashMap h = new HashMap(hsize: 7);
 
   print("Add key 5");
   h.insertHash(5);

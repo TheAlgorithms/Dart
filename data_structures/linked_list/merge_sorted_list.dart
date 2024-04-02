@@ -2,23 +2,23 @@
 import 'package:test/test.dart';
 
 class ListNode {
-  int val;
-  ListNode next;
+  int? val;
+  ListNode? next;
   ListNode({this.val = 0, this.next});
 }
 
-extension PrintLinkedList on ListNode {
+extension PrintLinkedList on ListNode? {
   void printLinkedList() {
-    ListNode node = this;
+    ListNode? node = this;
     while (node != null) {
       print(node.val);
       node = node.next;
     }
   }
 
-  List<int> listValues() {
-    List<int> values = [];
-    ListNode node = this;
+  List<int?> listValues() {
+    List<int?> values = [];
+    ListNode? node = this;
     while (node != null) {
       values.add(node.val);
       node = node.next;
@@ -27,7 +27,7 @@ extension PrintLinkedList on ListNode {
   }
 }
 
-ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+ListNode? mergeTwoLists(ListNode? list1, ListNode? list2) {
   if (list1 == null) {
     return list2;
   } else if (list2 == null) {
@@ -35,7 +35,7 @@ ListNode mergeTwoLists(ListNode list1, ListNode list2) {
   }
   ListNode head = list1;
 
-  if (list1.val < list2.val) {
+  if ((list1.val ?? 0) < (list2.val ?? 0)) {
     head = list1;
     list1 = list1.next;
   } else {
@@ -43,26 +43,26 @@ ListNode mergeTwoLists(ListNode list1, ListNode list2) {
     list2 = list2.next;
   }
 
-  ListNode node = head;
+  ListNode? node = head;
 
   while (list1 != null || list2 != null) {
     if (list1 != null && list2 != null) {
-      if (list1.val < list2.val) {
-        node.next = list1;
+      if ((list1.val ?? 0) < (list2.val ?? 0)) {
+        node?.next = list1;
         list1 = list1.next;
       } else {
-        node.next = list2;
+        node?.next = list2;
         list2 = list2.next;
       }
     } else if (list1 != null) {
-      node.next = list1;
+      node?.next = list1;
       list1 = list1.next;
     } else {
-      node.next = list2;
-      list2 = list2.next;
+      node?.next = list2;
+      list2 = list2?.next;
     }
 
-    node = node.next;
+    node = node?.next;
   }
   return head;
 }

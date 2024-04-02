@@ -3,18 +3,18 @@ import 'package:test/scaffolding.dart';
 
 class ArrayStack<T> {
   /// [stack]
-  List<T> _stack;
+  List<T?> _stack = [];
 
   /// [_count] is the number of element in the stack
-  int _count;
+  int _count = 0;
 
   /// [_size] of stack
-  int _size;
+  int _size = 0;
 
   //Init the array stack
   ArrayStack(int size) {
     this._size = size;
-    this._stack = List<T>.filled(_size, null);
+    this._stack = List<T?>.filled(_size, null);
     this._count = 0;
   }
 
@@ -29,17 +29,17 @@ class ArrayStack<T> {
   }
 
   /// Pop the last element inserted from the [_stack].
-  T pop() {
+  T? pop() {
     if (_count == 0) {
       return null;
     }
-    T pop_data = _stack[_count - 1];
+    T? pop_data = _stack[_count - 1];
     _stack[_count - 1] = null;
     _count--;
     return pop_data;
   }
 
-  List<T> get stack {
+  List<T?> get stack {
     return _stack;
   }
 }
