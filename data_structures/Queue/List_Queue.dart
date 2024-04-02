@@ -5,7 +5,7 @@ const int MAX_SIZE = 10;
 
 class ListQueue<T> {
   int count = 0;
-  List<T> queue = new List<T>(MAX_SIZE);
+  List<T?> queue = List.filled(MAX_SIZE, null);
 
   //Checks if the queue has elements (not empty)
   bool hasElements() {
@@ -27,8 +27,8 @@ class ListQueue<T> {
   }
 
   //Takes the next element from the queue
-  T deque() {
-    T result = null;
+  T? deque() {
+    T? result = null;
     if (count == 0) {
       print("The queue is empty!!!");
     } else {

@@ -56,10 +56,10 @@ const AND = 'And';
 
 String inWords = "";
 
-convertToWords(int number) {
+String convertToWords(int number) {
   String numString = number.toString();
   int length = numString.length;
-  int place = pow(10, length - 1);
+  int place = pow(10, length - 1).toInt();
 
   if (number == 0) return inWords = "Zero";
 

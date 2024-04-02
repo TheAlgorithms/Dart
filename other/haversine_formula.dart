@@ -12,7 +12,7 @@ class Coordinates {
   Coordinates(this.latitude, this.longitude);
 }
 
-double haversine(fi) => pow(sin(fi / 2), 2);
+double haversine(fi) => pow(sin(fi / 2), 2).toDouble();
 
 /// Convert [angle] to radians
 double radians(double angle) => (angle * pi) / 180;

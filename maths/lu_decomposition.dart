@@ -20,19 +20,19 @@ class LUPDecomposition {
 }
 
 class Matrix {
-  List<List<double>> _values;
+  List<List<double>> values;
 
   @override
-  String toString() => this._values.toString();
+  String toString() => this.values.toString();
 
-  int get nRows => this._values.length;
-  int get nColumns => this.nRows == 0 ? 0 : this._values[0].length;
+  int get nRows => this.values.length;
+  int get nColumns => this.nRows == 0 ? 0 : this.values[0].length;
 
   bool get isSquare => this.nRows == this.nColumns;
 
-  List<List<double>> get rows => this._values;
+  List<List<double>> get rows => this.values;
 
-  List<double> operator [](int n) => this._values[n];
+  List<double> operator [](int n) => this.values[n];
 
   Matrix operator +(Matrix other) {
     if (this.nRows != other.nRows || this.nColumns != other.nColumns) {
@@ -48,7 +48,7 @@ class Matrix {
       values.add(newRow);
     }
 
-    return new Matrix(values);
+    return new Matrix(values: values);
   }
 
   Matrix operator -(Matrix other) {
@@ -66,7 +66,7 @@ class Matrix {
       values.add(newRow);
     }
 
-    return new Matrix(values);
+    return new Matrix(values: values);
   }
 
   Matrix times(double n) {
@@ -99,7 +99,7 @@ class Matrix {
       values.add(newRow);
     }
 
-    return new Matrix(values);
+    return new Matrix(values: values);
   }
 
   LUPDecomposition decompose() {
@@ -203,33 +203,33 @@ class Matrix {
     }
   }
 
-  Matrix.eye(int size) {
-    this._values = [];
+  Matrix.eye(int size, {this.values = const []}) {
+    this.values = [];
 
     for (int i = 0; i < size; i++) {
       List<double> row = List.generate(size, (x) => 0);
       row[i] = 0;
-      this._values.add(row);
+      this.values.add(row);
     }
   }
 
-  Matrix.from(Matrix matrix) {
-    this._values = matrix.rows.map((row) => List<double>.from(row)).toList();
+  Matrix.from(Matrix matrix, {this.values = const []}) {
+    this.values = matrix.rows.map((row) => List<double>.from(row)).toList();
   }
 
-  Matrix.zeros(int nRows, int nColumns) {
-    this._values = [];
+  Matrix.zeros(int nRows, int nColumns, {this.values = const []}) {
+    this.values = [];
 
     for (int i = 0; i < nRows; i++) {
       List<double> row = [];
       for (int j = 0; j < nColumns; j++) {
         row.add(0);
       }
-      this._values.add(row);
+      this.values.add(row);
     }
   }
 
-  Matrix(List<List<double>> values) {
+  Matrix({List<List<double>> this.values = const []}) {
     if (values.length != 0) {
       int rowLength = values[0].length;
       if (values.any((row) => row.length != rowLength)) {
@@ -237,7 +237,7 @@ class Matrix {
       }
     }
 
-    this._values = values;
+    this.values = values;
   }
 }
 
@@ -280,7 +280,7 @@ double f(double x, double y) {
 }
 
 void main() {
-  Matrix a = new Matrix([
+  Matrix a = new Matrix(values: [
     [3, 2, -1],
     [2, -2, 4],
     [-1, 0.5, -1]

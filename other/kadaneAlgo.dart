@@ -8,7 +8,7 @@ int max(int a, int b) {
 }
 
 // Function to find the Maximum contiguous Sum in the array
-int maxSubArraySum(List a, int size) {
+int maxSubArraySum(List<int> a, int size) {
   int max_so_far = a[0];
   int curr_max = a[0];
 
@@ -21,7 +21,7 @@ int maxSubArraySum(List a, int size) {
 
 // main function for validation of the above
 int main() {
-  List a = [-2, -3, 4, -1, -2, 1, 5, -3];
+  List<int> a = [-2, -3, 4, -1, -2, 1, 5, -3];
   int n = a.length;
   int max_sum = maxSubArraySum(a, n);
   print("Maximum contiguous sum is " + max_sum.toString());

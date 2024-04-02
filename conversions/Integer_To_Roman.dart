@@ -41,7 +41,7 @@ List<String> RomanNumbers = [
 
 List<String> integer_to_roman(int num) {
   if (num < 0) {
-    return null;
+    return [];
   }
 
   List<String> result = [];

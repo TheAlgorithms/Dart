@@ -1,7 +1,7 @@
 import 'package:test/test.dart';
 
 class MinHeap {
-  List<int> heap;
+  List<int> heap = [];
 
   void buildHeap(List<int> array) {
     this.heap = _heapify(array);
@@ -15,7 +15,7 @@ class MinHeap {
     return array;
   }
 
-  int peek() {
+  int? peek() {
     if (!isEmpty()) {
       return this.heap[0];
     }
@@ -65,7 +65,7 @@ class MinHeap {
     _siftUp(this.heap.length - 1);
   }
 
-  int remove() {
+  int? remove() {
     if (!isEmpty()) {
       _swap(0, this.heap.length - 1, this.heap);
       int minElement = this.heap.removeLast();

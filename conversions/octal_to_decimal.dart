@@ -7,7 +7,7 @@ import 'package:test/test.dart';
 String ocatal_to_decimal(String oct_val) {
   // checking for unexpected values
   oct_val = oct_val.trim();
-  if (oct_val == null || oct_val == "") {
+  if (oct_val.isEmpty) {
     throw new FormatException("An empty value was passed to the function");
   }
 
@@ -33,7 +33,7 @@ String ocatal_to_decimal(String oct_val) {
   // converting octal to decimal
   int dec_val = 0, i = 0;
   while (oct != 0) {
-    dec_val = dec_val + ((oct % 10) * pow(8, i));
+    dec_val = dec_val + ((oct % 10) * pow(8, i).toInt());
     i++;
     oct = oct ~/ 10;
   }
