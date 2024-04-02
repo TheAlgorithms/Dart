@@ -3,7 +3,7 @@ import 'package:test/test.dart';
 //Title:  Nth Fibonacci Number using Dynamic Programming
 //Author: Richik Chanda
 //Email:  richikchanda1999@gmail.com
-List<int> dp;
+List<int> dp = [];
 int mod = (1e9 + 7).toInt();
 
 //Get the nth Fibonacci number modulo 10^9 + 7 since it can be a very large number

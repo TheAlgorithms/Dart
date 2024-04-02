@@ -9,7 +9,7 @@ int hamming_distance(String stringA, String stringB) {
   //strings must be of equal length
   if (stringA.length != stringB.length) {
     print('String lengths must be same!');
-    return null;
+    return 0;
   } else {
     distance = 0;
     for (var i = 0; i < stringA.length; i++) {
