@@ -3,7 +3,7 @@ import 'dart:math' show Random;
 // quickSort
 // O(n*log n)
 void main() {
-  var list = List<int>();
+  var list = <int>[];
   Random random = new Random();
   for (var i = 0; i < 100; i++) {
     list.add(random.nextInt(100));
