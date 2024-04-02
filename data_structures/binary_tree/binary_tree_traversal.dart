@@ -3,34 +3,34 @@ import 'dart:collection';
 import 'package:test/test.dart';
 
 class TreeNode {
-  int data;
-  var leftNode = null;
-  var rightNode = null;
+  int? data;
+  TreeNode? leftNode = null;
+  TreeNode? rightNode = null;
 
-  int get value {
+  int? get value {
     return this.data;
   }
 
-  TreeNode get left {
+  TreeNode? get left {
     return this.leftNode;
   }
 
-  void set left(TreeNode value) {
+  void set left(TreeNode? value) {
     this.leftNode = value;
   }
 
-  void set right(TreeNode value) {
+  void set right(TreeNode? value) {
     this.rightNode = value;
   }
 
-  TreeNode get right {
+  TreeNode? get right {
     return this.rightNode;
   }
 
   TreeNode(this.data);
 }
 
-List<int> inOrder(TreeNode root, List<int> result) {
+List<int?> inOrder(TreeNode? root, List<int?> result) {
   if (root != null) {
     inOrder(root.left, result);
     result.add(root.value);
@@ -39,7 +39,7 @@ List<int> inOrder(TreeNode root, List<int> result) {
   return result;
 }
 
-List<int> preOrder(TreeNode root, List<int> result) {
+List<int?> preOrder(TreeNode? root, List<int?> result) {
   if (root != null) {
     result.add(root.value);
     preOrder(root.left, result);
@@ -48,7 +48,7 @@ List<int> preOrder(TreeNode root, List<int> result) {
   return result;
 }
 
-List<int> postOrder(TreeNode root, List<int> result) {
+List<int?> postOrder(TreeNode? root, List<int?> result) {
   if (root != null) {
     postOrder(root.left, result);
     postOrder(root.right, result);
@@ -57,21 +57,21 @@ List<int> postOrder(TreeNode root, List<int> result) {
   return result;
 }
 
-List<int> levelOrder(TreeNode root, List<int> result) {
-  Queue<TreeNode> q = Queue();
+List<int?> levelOrder(TreeNode? root, List<int?> result) {
+  Queue<TreeNode?> q = Queue();
   if (root != null) {
     q.add(root);
   }
 
   while (!q.isEmpty) {
-    TreeNode curr = q.first;
+    TreeNode? curr = q.first;
     q.removeFirst();
-    result.add(curr.data);
-    if (curr.left != null) {
-      q.addLast(curr.left);
+    result.add(curr?.data);
+    if (curr?.left != null) {
+      q.addLast(curr?.left);
     }
-    if (curr.right != null) {
-      q.addLast(curr.right);
+    if (curr?.right != null) {
+      q.addLast(curr?.right);
     }
   }
 
@@ -79,15 +79,15 @@ List<int> levelOrder(TreeNode root, List<int> result) {
 }
 
 void main() {
-  var root = TreeNode(1);
+  TreeNode? root = TreeNode(1);
   root.left = TreeNode(2);
   root.right = TreeNode(3);
-  root.left.left = TreeNode(4);
-  root.left.right = TreeNode(5);
-  root.left.right.left = TreeNode(6);
-  root.right.left = TreeNode(7);
-  root.right.left.left = TreeNode(8);
-  root.right.left.left.right = TreeNode(9);
+  root.left?.left = TreeNode(4);
+  root.left?.right = TreeNode(5);
+  root.left?.right?.left = TreeNode(6);
+  root.right?.left = TreeNode(7);
+  root.right?.left?.left = TreeNode(8);
+  root.right?.left?.left?.right = TreeNode(9);
 
   List<int> result;
   result = List.empty(growable: true);

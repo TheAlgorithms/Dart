@@ -18,8 +18,8 @@ List<String> nearestNeighbourSearch(Graph graph) {
   int currentNode = 0;
   while (unvisitedNodes.isNotEmpty) {
     unvisitedNodes.remove(currentNode);
-    int nearestNeighbour;
-    double nearestNeighbourDistance;
+    int? nearestNeighbour;
+    double nearestNeighbourDistance = 0;
 
     for (int neighbour in unvisitedNodes) {
       double neighbourDistance = graph.adjacencyMatrix[currentNode][neighbour];
@@ -31,7 +31,7 @@ List<String> nearestNeighbourSearch(Graph graph) {
     }
 
     path.add(graph.nodes[currentNode]);
-    currentNode = nearestNeighbour;
+    currentNode = nearestNeighbour ?? 0;
   }
 
   return path;

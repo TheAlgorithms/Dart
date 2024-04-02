@@ -21,7 +21,7 @@ void main() {
 
 String binaryToOctal(String binaryString) {
   binaryString = binaryString.trim();
-  if (binaryString == null || binaryString == "") {
+  if (binaryString.isEmpty) {
     throw new FormatException("An empty value was passed to the function");
   }
   bool isNegative = binaryString[0] == "-";

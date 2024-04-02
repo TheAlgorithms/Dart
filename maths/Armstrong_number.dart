@@ -7,7 +7,7 @@ bool Armstrong_no(var x) {
   var sum = 0;
   while (n != 0) {
     var r = n % 10;
-    sum = sum + pow(r, d);
+    sum = sum + pow(r, d).toInt();
     n = n ~/ 10;
   }
   return sum == x;

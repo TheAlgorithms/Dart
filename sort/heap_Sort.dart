@@ -19,11 +19,11 @@ void sort(List arr) {
   }
 }
 
-void heapify(List arr, var n, var i) {
+void heapify(List arr, var n, int i) {
   //Init largest as root
   var largest = i;
   //left = 2*i + 1
-  var l = 2 * i + 1;
+  int l = 2 * i + 1;
   //right = 2*i + 2
   var r = 2 * i + 2;
 
