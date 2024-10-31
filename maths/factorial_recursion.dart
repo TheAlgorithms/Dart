@@ -1,8 +1,9 @@
 void main() {
-  var n = 5;
-  var fac = factorial(n);
-  print("$n! = $fac"); /* output: 5! = 120 */
+  int n = 5;
+  int fac = factorial(n);
+  print("$n! = $fac"); // Output: 5! = 120
 }
 
-/* calculate factorial of n*/
-int factorial(var n) => n == 0 || n == 1 ? 1 : n * factorial(n - 1);
+// Calculates the factorial of a given integer [n].
+// Returns 1 if [n] is 0 or 1; otherwise returns n * factorial(n - 1).
+int factorial(int n) => n <= 1 ? 1 : n * factorial(n - 1);
