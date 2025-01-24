@@ -11,6 +11,9 @@
   * [N-Queen](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/n-queen.dart)
   * [Open Knight Tour](https://github.com/TheAlgorithms/Dart/blob/master/backtracking/open_knight_tour.dart)
 
+## Ciphers
+  * [Base64 Encoding](https://github.com/TheAlgorithms/Dart/blob/master/ciphers/base64_encoding.dart)
+
 ## Conversions
   * [Binary To Decimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_decimal.dart)
   * [Binary To Hexadecimal](https://github.com/TheAlgorithms/Dart/blob/master/conversions/binary_to_hexadecimal.dart)
