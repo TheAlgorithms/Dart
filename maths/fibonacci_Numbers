@@ -1,0 +1,55 @@
+import 'dart:io';
+
+class Fibonacci {
+  List<int> sequence = [0, 1];
+
+  int get(int index) {
+    if (index - (sequence.length - 2) >= 1) {
+      for (var i = 0; i < index - (sequence.length - 2); i++) {
+        sequence.add(sequence.last + sequence[sequence.length - 2]);
+      }
+    }
+    return sequence[index];
+  }
+
+  List<int> getSequence(int n) {
+    List<int> sequence = [0, 1];
+    for (var i = 2; i <= n; i++) {
+      sequence.add(sequence[i - 1] + sequence[i - 2]);
+    }
+    return sequence;
+  }
+}
+
+void main() {
+  print(
+      '''
+Fibonacci Series Using Dynamic Programming
+
+Enter the number of Fibonacci numbers you want to calculate
+in the prompt below. (To exit enter exit or Ctrl-C)
+''');
+
+  var fibonacci = Fibonacci();
+
+  while (true) {
+    var prompt = stdin.readLineSync()!.trim();
+    if (prompt == 'exit') {
+      break;
+    }
+
+    try {
+      var n = int.parse(prompt);
+      var sequence = fibonacci.getSequence(n);
+
+      var output = "";
+      for (var number in sequence) {
+        output += "${number} ";
+      }
+
+      print(output);
+    } catch (e) {
+      print('Enter a number or "exit"');
+    }
+  }
+}
